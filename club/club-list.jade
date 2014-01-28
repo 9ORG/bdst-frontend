@@ -1,0 +1,97 @@
+doctype html
+//if lt IE 7
+	html.no-js.lt-ie9.lt-ie8.lt-ie7
+//if IE 7
+	html.no-js.lt-ie9.lt-ie8
+//if IE 8
+	html.no-js.lt-ie9
+//[if gt IE 8]><!
+html.no-js
+	//<![endif]
+
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+
+		title 社团管理平台 | 为学生和社团提供一站式服务
+
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width')
+
+		link(rel='stylesheet', href='../css/layout.css')
+		link(rel='stylesheet', href='../lib/animate.min.css')
+		script(src="../lib/jquery-1.10.2.min.js")
+		script(src='../script/layout.js')
+
+	body
+		//if lt IE 7
+			p.chromeframe.
+			You are using an outdated browser.
+			Please <a href="http://browsehappy.com/">upgrade your browser</a> or
+			<a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>
+			to improve your experience.
+
+		include header
+ 
+		#body-container
+			#main-content-club-list.main-content-full
+				#club-list
+					h1.inline 已有社团列表
+					.tiny-description-bar 128个社团
+					.hr
+					.club-list-box
+						ul.box-content
+							li
+								.club-avatar-large
+									img(src="../img/logo.png")
+								.club-list-name
+									a(href="#") 鼓玩儿打击乐社
+							li
+								.club-avatar-large
+									img(src="../img/club-avatar-default.png")
+								.club-list-name
+									a(href="#") 口琴协会
+							li
+								.club-avatar-large
+									img(src="../img/club-avatar-default.png")
+								.club-list-name
+									a(href="#") 北京大学青年志愿者协会
+							li
+								.club-avatar-large
+									img(src="../img/club-avatar-default.png")
+								.club-list-name
+									a(href="#") 足球协会
+							li
+								.club-avatar-large
+									img(src="../img/club-avatar-default.png")
+								.club-list-name
+									a(href="#") 北京大学研究生与青年工作部
+							li
+								.club-avatar-large
+									img(src="../img/club-avatar-default.png")
+								.club-list-name
+									a(href="#") 山鹰社
+							li
+								.club-avatar-large
+									img(src="../img/club-avatar-default.png")
+								.club-list-name
+									a(href="#") 青年天文学会
+							li
+								.club-avatar-large
+									img(src="../img/club-avatar-default.png")
+								.club-list-name
+									a(href="#") 学生瑜伽爱好者协会
+							li
+								.club-avatar-large
+									img(src="../img/club-avatar-default.png")
+								.club-list-name
+									a(href="#") 计算机应用设计协会
+							li
+								.club-avatar-large
+									img(src="../img/club-avatar-default.png")
+								.club-list-name
+									a(href="#") 阿卡贝拉清唱社
+							.clear
+			.clear
+
+		include footer
