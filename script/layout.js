@@ -17,13 +17,20 @@ $(document).ready(function(){
 		});
 	});
 
-	$(".pupup-tips").focusin(function(){
+	$(".popup-check").focusout(function(){
+		var id = $(this).attr("id");
+		// $("#"+id+"-check").removeClass("animated fadeInLeft");
+		// $("#"+id+"-check").addClass("animated fadeInLeft");
+		$("#"+id+"-check").removeClass("hidden");
+	});
+
+	$(".popup-tips").focusin(function(){
 		var id = $(this).attr("id");
 		$("#"+id+"-tips").removeClass("animated fadeOutLeft");
 		$("#"+id+"-tips").addClass("animated fadeInLeft");
 		$("#"+id+"-tips").removeClass("hidden");
 	});
-	$(".pupup-tips").focusout(function(){
+	$(".popup-tips").focusout(function(){
 		var id = $(this).attr("id");
 		$("#"+id+"-tips").removeClass("animated fadeInLeft");
 		$("#"+id+"-tips").addClass("animated fadeOutLeft",function(){
