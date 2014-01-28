@@ -34,7 +34,7 @@ html.no-js
 		include header
  
 		#body-container
-			#sidebar.animated.fadeInDown
+			#sidebar
 				ul#side-menu
 					li 个人信息
 						ul.side-menu-button
@@ -43,7 +43,7 @@ html.no-js
 					li 社团管理
 						ul.side-menu-button
 							li
-								a(href="user-club-list.html") 已加入社团
+								a.current(href="#") 已加入社团
 					li 活动管理
 						ul.side-menu-button
 							li
@@ -51,64 +51,38 @@ html.no-js
 					li 参与讨论
 						ul.side-menu-button
 							li
-								a(href="user-message-list") 接收记录
+								a(href="user-message-list.html") 接收记录
 			#main-content
 				#user-state.column-3-2.column-span
-					h1.inline Hola. kyzamiz!
+					h2.inline 已加入社团
 					.hr
-					.user-state-box
-						.user-club
-							.box-content
-								h3.inline 社团
-								p.description-card(style="margin-top:0px;float:left") 参加计算机应用设计协会、北大青年摄影协会等 
-									a(href="#") 5个社团
+					.user-club-box
+						.box-content
+							p.description-card 参加计算机应用设计协会、北大青年摄影协会等 5个社团
+							.clear
+							ul.box-content
+								li.club-avatar
+									img
+								li.club-avatar
+									img
+								li.club-avatar
+									img
+								li.club-avatar
+									img
+								li.club-avatar
+									img
 								.clear
-								ul
-									li.club-avatar
-										img
-									li.club-avatar
-										img
-									li.club-avatar
-										img
-									li.club-avatar
-										img
-									li.club-avatar
-										img
-									.clear
-						.user-activity
-							.box-content
-								h3.inline 活动
-								p.description-card(style="margin-top:0px;float:left") 参加周末PS讲座、清明放风筝比赛等 
-									a(href="#") 20个活动
-								.clear
-								ul
-									li.activity-avatar
-										img
-									li.activity-avatar
-										img
-									li.activity-avatar
-										img
-									li.activity-avatar
-										img
-									li.activity-avatar
-										img
-									li.activity-avatar
-										img
-									.clear
 				#message.column-3-1
-					h2.inline 通知(2)
-					a.tiny-menu-bar(href="#") 显示全部
-					a.tiny-menu-bar(href="#") 清除全部
+					h2.inline 入会申请
 					.hr
 					.message-box
 						ul.box-content
 							li.message-card
 								a(href="#") 计算机应用设计协会
-								|  已同意你的加入
+								|  审核中
 							li.message-card
 								a(href="#") 北大青年摄影协会
-								|  给你发送一条 
-								a(href="#") 新通知
+								|  拒绝了你的申请
 			.clear
 
 		include footer

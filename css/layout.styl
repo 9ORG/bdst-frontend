@@ -37,9 +37,9 @@ h2
 	color deep-grey
 	line-height 40px
 h3
-	font-size 16px
+	font-size 17px
 	color deep-grey
-	line-height 40px
+	line-height 36px
 
 // body
 // 	background-color #000
@@ -135,10 +135,12 @@ ul, li
 			float left
 		.column-span
 			margin-right 50px
-		p.message-card
+		.message-card
 			color light-grey
 			margin-top 10px
-		p.description-card
+			&:first-child
+				padding-top 10px
+		.description-card
 			color light-grey
 			margin-top 10px
 			padding-top 10px
@@ -155,7 +157,7 @@ ul, li
 				height 70px
 				border 1px solid light-grey
 				border-radius 100%
-				margin-right 20px
+				margin 10px 20px 0 0
 				float left
 			.info-name
 				width 60px
@@ -175,7 +177,7 @@ ul, li
 				border-color #ee0000
 			.info-check-green
 				border-color #00bb00
-			#user-avatar
+			#user-avatar-edit
 				width 200px
 				height 200px
 				border 1px solid light-grey
