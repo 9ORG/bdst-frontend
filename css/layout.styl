@@ -2,17 +2,18 @@
 @import '../lib/nib'
 
 org = #fcb03c
-// org = #ff9900
+deep-org = #ff9900
 blu = #77bfdf
 bro = #ba8879
 
 body-width = 1080px
 
-light-grey = #aaa
+border-grey = #eaeaea
+light-grey = #bcbcbc
 grey = #666
-// deep-grey = #2d333c
 deep-grey = #333
 
+extra-small = 12px
 small = 13px
 medium = 14px
 large = 16px
@@ -48,7 +49,7 @@ a
 	color deep-grey
 	font-size small
 	text-decoration none
-	transition 0.15s
+	transition 0.2s
 a:hover
 	color org
 
@@ -67,6 +68,8 @@ ul, li
 	float left
 .block
 	display block
+.overflow-scroll
+	overflow scroll
 .border-right
 	border-width 0 4px 0 0
 	border-style solid
@@ -117,7 +120,7 @@ ul, li
 						margin-top 5px
 						& > a
 							font-size medium
-	#main-content
+	.main-content
 		width 920px
 		margin 10px 0 100px 160px
 		float left
@@ -135,6 +138,18 @@ ul, li
 			float left
 		.column-span
 			margin-right 50px
+		.tiny-menu-bar
+			& > a
+				float left
+				color blu
+				font-size extra-small
+				margin-right 10px
+				margin-top 15px
+		.tiny-description-bar
+			color light-grey
+			margin-right 10px
+			margin-top 14px
+			float left
 		.message-card
 			color light-grey
 			margin-top 10px
@@ -144,18 +159,13 @@ ul, li
 			color light-grey
 			margin-top 10px
 			padding-top 10px
-		.tiny-menu-bar
-			color blu
-			margin-left 10px
-			margin-top 14px
-			float left
 		.box-content
 			margin 10px 0 20px 0
 			.club-avatar,
 			.activity-avatar
 				width 70px
 				height 70px
-				border 1px solid light-grey
+				border 1px solid border-grey
 				border-radius 100%
 				margin 10px 20px 0 0
 				float left
@@ -169,7 +179,7 @@ ul, li
 				width 260px
 				height 30px
 				line-height 30px
-				font-size 12px
+				font-size extra-small
 				color bro
 				margin 20px 10px 0 0
 				float left
@@ -177,32 +187,28 @@ ul, li
 				border-color #ee0000
 			.info-check-green
 				border-color #00bb00
-			#user-avatar-edit
+			#user-avatar-large
 				width 200px
 				height 200px
-				border 1px solid light-grey
+				border 1px solid border-grey
 				margin 10px 20px 0 0px
 		.plain-button
-			// width 100px
 			height 30px
-			font-size 12px
+			font-size extra-small
 			color blu
 			line-height 30px
 			margin 20px 10px 0 0
 			float left
-			// &:hover
-			// 	color org
-			// 	cursor pointer
 		input
 			height 20px
 			line-height 20px
 			color grey
 			margin 20px 20px 0 0
 			padding 5px
-			border 1px solid #eaeaea
+			border 1px solid border-grey
 			float left
 			&[type="radio"]
-				width 12px
+				width extra-small
 				margin: 25px 10px 0 0
 			&[type="checkbox"]
 				margin: 25px 10px 0 0
@@ -225,12 +231,99 @@ ul, li
 		select
 			margin 26px 20px 0 0
 			float left
-		.small
+		.short
 			width 80px
 		.normal
 			width 168px
-		.full
+		.long
 			width 450px
+		table
+			min-width 100%
+			margin-top 10px
+			border-collapse separate
+			border-spacing 0
+			overflow scoll
+			thead
+				tr:first-child
+					th:first-child
+						border-top-left-radius 4px
+					th:last-child
+						border-top-right-radius 4px
+						border-right-width 1px
+			tbody
+				tr
+					transition 0.2s
+					// expression((this.sectionRowIndex%2==0)?"#f9f9f9":"#fff"
+					&:hover
+						background-color #f9f9f9
+					&.font-color-grey
+						color light-grey
+					td:last-child
+						border-right-width 1px
+				tr:last-child
+					td
+						border-bottom-width 1px
+					td:first-child
+						border-bottom-left-radius 4px
+					td:last-child
+						border-bottom-right-radius 4px
+			td
+				text-align center
+				&.align-left
+					text-align left
+			th
+				// color org
+				background-color #f9f9f9
+			th, td
+				height 20px
+				line-height 20px
+				border-style solid
+				border-color border-grey
+				border-width 1px 0 0 1px
+				padding 8px
+				&.w30
+					min-width 28px
+					width 28px
+				&.w60
+					min-width 60px
+					width 60px
+				&.w140
+					min-width 140px
+					width 140px
+				&.w220
+					min-width 220px
+					width 220px
+				&.m220
+					min-width 220px
+				input[type="checkbox"]
+					margin 0 8px 0 8px
+				a
+					color blu
+					font-size extra-small
+					margin-right 10px
+					&:last-child
+						margin-right 0px
+		.batch-menu-bar
+			float left
+			& > a
+				color blu
+				font-size extra-small
+				margin-right 10px
+				float left
+				&:first-child
+					margin-left 0px
+		.page-bar
+			float right
+			& > a
+				color blu
+				font-size extra-small
+				margin-left 10px
+				float left
+			& > span
+				color light-grey
+				font-size extra-small
+				margin-left 10px
+				float left
 
 header
 	width 100%
@@ -246,23 +339,14 @@ header
 		position fixed
 		top 0
 	#top-bar
-		background-color rgba(255,255,255,0.9)
-		// background-color #000
-		// box-shadow inset 0 5px org
-		box-shadow 0 1px 3px 0 rgba(51,51,51,0.2)
-		// border-width 5px 0 0px 0
-		// border-style solid
-		// border-top-color deep-grey
-		// border-bottom-color #e9e9e9
+		background-color rgba(255,255,255,0.85)
+		box-shadow 0 1px 3px 0 rgba(51,51,51,0.15)
 		#top-bar-content-container
 			width body-width
 			height 80px
 			margin-left auto
 			margin-right auto
-			// border-bottom 1px solid #eee
 			#top-logo
-				// padding 13px 10px 7px 10px
-				// width 60px
 				float left
 			#top-logo-text
 				margin 10px 20px 10px 20px
@@ -285,7 +369,6 @@ header
 				font-size medium
 				float right
 				#username
-					// margin-left 10px
 					line-height 80px
 					float right
 					& > a
@@ -304,9 +387,8 @@ footer
 	#foot-bar
 		width 100%
 		height 200px
-		// background-color #ff9900
-		// background-color org
 		background-color deep-grey
+		margin-top 60px
 		#foot-bar-content-container
 			width body-width
 			margin-left auto
@@ -331,7 +413,6 @@ footer
 							color #fff
 			.foot-bar-info-right
 				width 300px
-				// padding-top 40px
 				float right
 				.foot-bar-title
 					font-size medium

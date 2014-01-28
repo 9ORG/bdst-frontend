@@ -52,8 +52,8 @@ html.no-js
 						ul.side-menu-button
 							li
 								a(href="user-message-list.html") 接收记录
-			#main-content
-				#user-state.column-3-2.column-span
+			#main-content-user-edit-info.main-content
+				#edit-info.column-3-2.column-span
 					h2.inline 编辑信息
 					.hr
 					.user-edit-info-box
@@ -80,9 +80,9 @@ html.no-js
 									.clear
 								li
 									.info-name 性别
-									input(type="radio", name="sex", value="male", checked)#sex-male.small
+									input(type="radio", name="sex", value="male", checked)#sex-male.short
 									.info-name 男
-									input(type="radio", name="sex", value="female")#sex-femal.small
+									input(type="radio", name="sex", value="female")#sex-femal.short
 									.info-name 女
 									.clear
 								li
@@ -96,19 +96,19 @@ html.no-js
 									.clear
 								li
 									.info-name 城市
-									select#location-province.small
+									select#location-province.short
 										option 北京市
-									select#location-city.small
+									select#location-city.short
 										option 北京市
 									.clear
 							ul.box-content
 								p.description-card 还要填院系信息哦。啥？想填GPA？……(╯‵□′)╯︵┻━┻
 								li
 									.info-name 年级
-									select#admission-year.small
+									select#admission-year.short
 										option 2009
 										option 2010
-									select#education.small
+									select#education.short
 										option 本科
 										option 硕士
 										option 博士
@@ -127,15 +127,15 @@ html.no-js
 								li
 									input(type="checkbox", name="non-school")#non-school
 									.info-name(style="width:38px") 校外
-									input(type="text", name="non-school-info")#non-school-info.full
+									input(type="text", name="non-school-info")#non-school-info.long
 									.clear
 							input(type="button", value="确认更改")
-				#message.column-3-1
+				#user-avatar.column-3-1
 					h2.inline 头像
 					.hr
 					.avatar-box
 						.box-content
-							#user-avatar-edit.inline
+							#user-avatar-large.inline
 								img
 							a(href="#", style="margin:180px 10px 0 0").plain-button 修改头像
 							.clear
