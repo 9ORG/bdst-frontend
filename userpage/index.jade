@@ -1,0 +1,111 @@
+doctype html
+//if lt IE 7
+	html.no-js.lt-ie9.lt-ie8.lt-ie7
+//if IE 7
+	html.no-js.lt-ie9.lt-ie8
+//if IE 8
+	html.no-js.lt-ie9
+//[if gt IE 8]><!
+html.no-js
+	//<![endif]
+
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+
+		title 社团管理平台 | 为学生和社团提供一站式服务
+
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width')
+
+		link(rel='stylesheet', href='../css/layout.css')
+		link(rel='stylesheet', href='../lib/animate.min.css')
+		script(src="../lib/jquery-1.10.2.min.js")
+		script(src='../script/layout.js')
+
+	body
+		//if lt IE 7
+			p.chromeframe.
+			You are using an outdated browser.
+			Please <a href="http://browsehappy.com/">upgrade your browser</a> or
+			<a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>
+			to improve your experience.
+
+		include header
+ 
+		#body-container
+			#sidebar.animated.fadeInDown
+				ul#side-menu
+					li 个人信息
+						ul.side-menu-button
+							li
+								a(href="user-edit-info.html") 编辑信息
+					li 社团管理
+						ul.side-menu-button
+							li
+								a(href="#") 已加入社团
+					li 活动管理
+						ul.side-menu-button
+							li
+								a(href="#") 已参加活动
+					li 参与讨论
+						ul.side-menu-button
+							li
+								a(href="#") 接收记录
+			#main-content
+				#user-state.column-3-2.column-span
+					h1.inline Hola. kyzamiz!
+					.hr
+					.user-state-box
+						.user-club
+							h2.inline 社团
+							p.tiny-menu-bar(style="color:#aaa") 参加计算机应用设计协会、北大青年摄影协会等 
+								a(href="#") 5个社团
+							.clear
+							.box-content
+								.club-avatar
+									img
+								.club-avatar
+									img
+								.club-avatar
+									img
+								.club-avatar
+									img
+								.club-avatar
+									img
+								.clear
+						.user-activity
+							h2.inline 活动
+							p.tiny-menu-bar(style="color:#aaa") 参加周末PS讲座、清明放风筝比赛等 
+								a(href="#") 20个活动
+							.clear
+							.box-content
+								.activity-avatar
+									img
+								.activity-avatar
+									img
+								.activity-avatar
+									img
+								.activity-avatar
+									img
+								.activity-avatar
+									img
+								.activity-avatar
+									img
+								.clear
+				#message.column-3-1
+					h2.inline 通知(2)
+					a.tiny-menu-bar(href="#") 显示全部
+					a.tiny-menu-bar(href="#") 清除全部
+					.hr
+					.message-box
+						p.message-card
+							a(href="#") 计算机应用设计协会
+							|  已同意你的加入
+						p.message-card
+							a(href="#") 北大青年摄影协会
+							|  给你发送一条 
+							a(href="#") 新通知
+			.clear
+
+		include footer

@@ -1,0 +1,338 @@
+@import '../lib/animate.css'
+@import '../lib/nib'
+
+org = #fcb03c
+// org = #ff9900
+blu = #77bfdf
+bro = #ba8879
+
+body-width = 1080px
+
+light-grey = #aaa
+grey = #666
+// deep-grey = #2d333c
+deep-grey = #333
+
+small = 13px
+medium = 14px
+large = 16px
+
+*
+	margin 0
+	padding 0
+
+body, p
+	font-family "微软雅黑", "Microsoft Yahei", "黑体", "Arial", "Hei", sans-serif
+	color grey
+	font-size small
+
+p
+	margin-top 10px
+h1
+	font-size 26px
+	color deep-grey
+	line-height 40px
+h2
+	font-size 20px
+	color deep-grey
+	line-height 40px
+h3
+	font-size 16px
+	color deep-grey
+	line-height 40px
+
+// body
+// 	background-color #000
+
+a
+	color deep-grey
+	font-size small
+	text-decoration none
+	transition 0.15s
+a:hover
+	color org
+
+ul, li
+	margin 0
+	padding 0
+	list-style none	
+
+.clear
+	clear both
+.current
+	color org
+.inline
+	display	inline
+	margin-right 10px
+	float left
+.block
+	display block
+.border-right
+	border-width 0 4px 0 0
+	border-style solid
+	border-color org
+.hr
+	height 1px
+	background-color #e9e9e9
+	margin 5px 0 20px 0
+	clear both
+.hidden
+	display none
+.button
+	width 140px
+	height 34px
+	font-size medium
+	color #fff
+	line-height 20px
+	margin 20px 10px 0 0
+	padding 5px
+	border 1px solid blu
+	border-radius 5px
+	background-color blu
+	float left
+	&:hover
+		border-color org
+		background-color org
+
+#body-container
+	width body-width
+	min-height 460px
+	margin-top 120px
+	margin-left auto
+	margin-right auto
+	#sidebar
+		position fixed
+		top 170px
+		width 100px
+		margin-right 20px
+		float left
+		ul#side-menu
+			& > li
+				font-size small
+				color light-grey
+				margin-bottom 20px
+				text-align center
+				ul.side-menu-button
+					& > li
+						margin-top 5px
+						& > a
+							font-size medium
+	#main-content
+		width 920px
+		margin 10px 0 100px 160px
+		float left
+		.column-1-1
+			width 920px
+			float left
+		.column-2-1
+			width 435px
+			float left
+		.column-3-2
+			width 580px
+			float left
+		.column-3-1
+			width 290px
+			float left
+		.column-span
+			margin-right 50px
+		p.message-card
+			color light-grey
+			margin-top 10px
+		p.description-card
+			color light-grey
+			margin-top 10px
+			padding-top 10px
+		.tiny-menu-bar
+			color blu
+			margin-left 10px
+			margin-top 14px
+			float left
+		.box-content
+			margin 10px 0 20px 0
+			.club-avatar,
+			.activity-avatar
+				width 70px
+				height 70px
+				border 1px solid light-grey
+				border-radius 100%
+				margin-right 20px
+				float left
+			.info-name
+				width 60px
+				height 30px
+				line-height 30px
+				margin 20px 10px 0 0
+				float left
+			.info-tips
+				width 260px
+				height 30px
+				line-height 30px
+				font-size 12px
+				color bro
+				margin 20px 10px 0 0
+				float left
+			#user-avatar
+				width 200px
+				height 200px
+				border 1px solid light-grey
+				margin 10px 20px 0 0px
+		.plain-button
+			// width 100px
+			height 30px
+			font-size 12px
+			color blu
+			line-height 30px
+			margin 20px 10px 0 0
+			float left
+			// &:hover
+			// 	color org
+			// 	cursor pointer
+		input
+			height 20px
+			line-height 20px
+			color grey
+			margin 20px 20px 0 0
+			padding 5px
+			border 1px solid #eaeaea
+			float left
+			&[type="radio"]
+				width 12px
+				margin: 25px 10px 0 0
+			&[type="checkbox"]
+				margin: 25px 10px 0 0
+			&[type="button"]
+				width 140px
+				height 34px
+				font-size medium
+				color #fff
+				line-height 20px
+				margin 20px 10px 0 0
+				padding 5px
+				border 1px solid blu
+				border-radius 5px
+				background-color blu
+				float left
+				&:hover
+					border-color org
+					background-color org
+					cursor pointer
+		select
+			margin 26px 20px 0 0
+			float left
+		.small
+			width 80px
+		.normal
+			width 168px
+		.full
+			width 450px
+
+header
+	width 100%
+	height 80px
+	overflow visible
+	position fixed
+	top 0
+	z-index 9
+	#top-line
+		width 100%
+		height 5px
+		background-color #000
+		position fixed
+		top 0
+	#top-bar
+		background-color rgba(255,255,255,0.9)
+		// background-color #000
+		// box-shadow inset 0 5px org
+		box-shadow 0 1px 3px 0 rgba(51,51,51,0.2)
+		// border-width 5px 0 0px 0
+		// border-style solid
+		// border-top-color deep-grey
+		// border-bottom-color #e9e9e9
+		#top-bar-content-container
+			width body-width
+			height 80px
+			margin-left auto
+			margin-right auto
+			// border-bottom 1px solid #eee
+			#top-logo
+				// padding 13px 10px 7px 10px
+				// width 60px
+				float left
+			#top-logo-text
+				margin 10px 20px 10px 20px
+				line-height 60px
+				font-size 26px
+				float left
+				color #fcb03c
+			ul#top-nav
+				& > li
+					margin-left 20px
+					padding-top 5px
+					display inline-block
+					float left
+					& > a
+						font-size 14px
+						line-height 80px
+			#top-user-menu
+				width 80px
+				padding-top 5px
+				font-size medium
+				float right
+				#username
+					// margin-left 10px
+					line-height 80px
+					float right
+					& > a
+						font-size 14px
+						color org
+				ul#popup-user-menu
+					& > li
+						margin-right 20px
+						display inline-block
+						float right
+						& > a
+							font-size small
+							line-height 80px
+
+footer
+	#foot-bar
+		width 100%
+		height 200px
+		// background-color #ff9900
+		// background-color org
+		background-color deep-grey
+		#foot-bar-content-container
+			width body-width
+			margin-left auto
+			margin-right auto
+			.footer-decro
+				float right
+				& > img
+					position relative
+					top -40px
+			.foot-bar-info
+				width 140px
+				margin-right 20px
+				float left
+				.foot-bar-title
+					font-size medium
+					color org
+				li.foot-bar-content
+					margin-top 5px
+					& > a
+						color rgba(255,255,255,0.4)
+						&:hover
+							color #fff
+			.foot-bar-info-right
+				width 300px
+				// padding-top 40px
+				float right
+				.foot-bar-title
+					font-size medium
+					color org
+				li.foot-bar-content
+					margin-top -5px
+					& > p
+						color rgba(255,255,255,0.4)
+						& > a:hover
+							color #fff
