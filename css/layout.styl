@@ -50,7 +50,7 @@ a
 	color deep-grey
 	font-size small
 	text-decoration none
-	transition 0.25s
+	transition .25s
 a:hover
 	color org
 
@@ -62,6 +62,8 @@ ul, li
 .clear
 	clear both
 .current
+	color org
+.current-button
 	color org
 .inline
 	display	inline
@@ -111,22 +113,57 @@ ul, li
 
 #sidebar
 	position fixed
-	top 170px
-	width 100px
+	top 165px
 	margin-right 20px
 	float left
 	ul#side-menu
+		width 100px
 		& > li
-			font-size small
+			font-size 12px
 			color light-grey
 			margin-bottom 20px
 			text-align center
+			font-weight bold
 			ul.side-menu-button
 				& > li
 					margin-top 5px
 					& > a
-						font-size medium
+						font-size small
 						font-weight bold
+	#popup-user-list-custom
+		position fixed
+		top 160px
+		margin-left 100px
+		.tri-pointer
+			width 4px
+			height 7px
+			float left
+			margin-left -4px
+			margin-top 6px
+		& li
+			width 70px
+			border-style solid
+			border-color #000
+			border-width 0
+			padding 8px 8px 0 8px
+			text-align center
+			background-color deep-grey
+			&:first-child
+				border-top-left-radius 4px
+				border-top-right-radius 4px
+				padding-top 8px
+			&:last-child
+				// border-width 1px
+				border-bottom-left-radius 4px
+				border-bottom-right-radius 4px
+				padding-bottom 11px
+			& > a
+				color #fff
+				font-size 12px
+				font-weight bold
+				&:hover
+					color org
+
 .main-content
 	width 920px
 	margin 10px 0 100px 160px
@@ -163,15 +200,17 @@ ul, li
 		&:hover
 			.activity-list-name
 				color org
-				background-color rgba(0,0,0,0.8)
-				// background-color rgba(255,255,255,1)
+				// background-color rgba(0,0,0,.8)
+				background-color rgba(255,255,255,1)
+			.activity-avatar-cover
+				background-color rgba(0,0,0,.05)
 	.box-content
 		.club-avatar-large
 			width 154px
 			height 154px
 			border 1px solid border-grey
 			border-radius 100%
-			transition 0.25s
+			transition .25s
 			margin 0 10px 0 10px
 			overflow hidden
 			& > img
@@ -202,16 +241,20 @@ ul, li
 			text-align center
 			color deep-grey
 			font-weight bold
-			background-color rgba(255,255,255,0.8)
-			transition 0.75s
+			background-color rgba(255,255,255,.8)
+			transition .25s
 			float left
 			z-index 1000
 
 .main-content
 	.user-club-list-box
 	.user-activity-list-box
+	.admin-user-list-box
+	.admin-activity-list-box
 		& li:hover
 			.club-avatar
+			.activity-avatar
+			.user-avatar
 				border-color org
 
 .main-content
@@ -223,6 +266,8 @@ ul, li
 			font-size extra-small
 			margin-right 10px
 			margin-top 15px
+			&:first-child
+				margin-left 5px
 	.tiny-description-bar
 		color light-grey
 		margin-right 10px
@@ -241,11 +286,12 @@ ul, li
 		margin 20px 0 10px 0
 		.club-avatar,
 		.activity-avatar
+		.user-avatar
 			width 70px
 			height 70px
 			border 1px solid border-grey
 			border-radius 100%
-			transition 0.25s
+			transition .25s
 			margin 10px 20px 0 0
 			overflow hidden
 			float left
@@ -271,6 +317,7 @@ ul, li
 		.info-check-green
 			border-color #00bb00
 		#user-avatar-large
+		#club-avatar-large
 			width 200px
 			height 200px
 			border 1px solid border-grey
@@ -287,8 +334,9 @@ ul, li
 		line-height 20px
 		color grey
 		margin 20px 20px 0 0
-		padding 5px
+		padding 5px 8px 5px 8px
 		border 1px solid border-grey
+		font-size 12px
 		float left
 		&[type="radio"]
 			width extra-small
@@ -300,10 +348,10 @@ ul, li
 			height 34px
 			font-size medium
 			color #fff
-			transition 0.25s
+			transition .25s
 			line-height 20px
-			margin 20px 10px 0 0
-			padding 5px
+			margin 40px 10px 0 0
+			padding 5px 8px 5px 8px
 			border 1px solid blu
 			border-radius 5px
 			background-color blu
@@ -314,6 +362,16 @@ ul, li
 				cursor pointer
 	select
 		margin 26px 20px 0 0
+		float left
+	textarea
+		width 450px
+		height 120px
+		ling-height 20px
+		color grey
+		margin 20px 20px 0 0
+		padding 9px 8px 9px 8px
+		border 1px solid border-grey
+		font-size 12px
 		float left
 	.short
 		width 80px
@@ -336,7 +394,7 @@ ul, li
 					border-right-width 1px
 		tbody
 			tr
-				transition 0.25s
+				transition .25s
 				&:hover
 					background-color #f9f9f9
 				&.font-color-grey
@@ -423,8 +481,8 @@ header
 		position fixed
 		top 0
 	#top-bar
-		background-color rgba(255,255,255,0.85)
-		box-shadow 0 1px 3px 0 rgba(51,51,51,0.15)
+		background-color rgba(255,255,255,.85)
+		box-shadow 0 1px 3px 0 rgba(51,51,51,.15)
 		#top-bar-content-container
 			width body-width
 			height 80px
@@ -439,20 +497,20 @@ header
 				float left
 				color org
 			#top-admin-name
-				margin 10px 0px 10px 20px
-				padding-top 2px
-				line-height 60px
-				font-size 20px
-				float left
-				// color deep-grey
-				color blu
-				font-weight bold
 				& > a
-					// color light-grey
+					margin 10px 0px 10px 20px
+					padding-top 2px
+					line-height 60px
+					font-size 20px
+					float left
 					color deep-grey
+					font-weight bold
+				#change-admin > a
+					margin-top 38px
+					float left
 					font-size 12px
 					font-weight bold
-					margin-left 5px
+					margin-left 6px
 			ul#top-nav
 				& > li
 					margin-left 20px
@@ -477,9 +535,11 @@ header
 					cursor pointer
 				ul#popup-user-menu
 					& > li
-						margin-right 20px
+						margin-right 10px
 						display inline-block
 						float right
+						&:first-child
+							margin-right 20px
 						& > a
 							font-size small
 							font-weight bold
@@ -511,7 +571,7 @@ footer
 				li.foot-bar-content
 					margin-top 5px
 					& > a
-						color rgba(255,255,255,0.4)
+						color rgba(255,255,255,.4)
 						&:hover
 							color #fff
 			.foot-bar-info-right
@@ -523,6 +583,6 @@ footer
 				li.foot-bar-content
 					margin-top -5px
 					& > p
-						color rgba(255,255,255,0.4)
+						color rgba(255,255,255,.4)
 						& > a:hover
 							color #fff

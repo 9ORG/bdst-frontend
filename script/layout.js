@@ -38,4 +38,18 @@ $(document).ready(function(){
 		});
 	});
 
+	$(".popup-custom-button").mouseenter(function(){
+		$("#popup-user-list-custom").removeClass("animated fadeOutLeft");
+		$("#popup-user-list-custom").addClass("animated fadeInLeft");
+		$(".popup-custom-button").addClass("current-button");
+		$("#popup-user-list-custom").removeClass("hidden");
+	});
+	$(".popup-custom").mouseleave(function(){
+		$("#popup-user-list-custom").removeClass("animated fadeInLeft");
+		$(".popup-custom-button").removeClass("current-button");
+		$("#popup-user-list-custom").addClass("animated fadeOutLeft",function(){
+			$("#popup-user-list-custom").addClass("hidden");
+		});
+	});
+
 });

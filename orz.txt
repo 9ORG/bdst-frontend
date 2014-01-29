@@ -11,6 +11,9 @@
 ① 昵称和生日的输入框focusout后检查是否符合格式要求（昵称的具体要求还要问下后端），符合则给输入框添加类.info-check-green，不符合则添加.info-check-right
 ② 当勾选校外时，disable年级、院系和学号，否则disable校外输入框
 
+3. layout.jq
+似乎没写好，.hidden加不上。addClass这个事件没有callback吗？……有没有办法上一个动作发生后1s再发生下一个动作……对不起我是JS白痴TUT
+
 最后. 所有页面
 ① 帮我看看有没有哪里写的不对……表单什么的……完全不懂啊？！
 ② 帮忙检查在windows上显示是否正常……Thanks!罒v罒
