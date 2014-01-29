@@ -1,0 +1,183 @@
+doctype html
+//if lt IE 7
+	html.no-js.lt-ie9.lt-ie8.lt-ie7
+//if IE 7
+	html.no-js.lt-ie9.lt-ie8
+//if IE 8
+	html.no-js.lt-ie9
+//[if gt IE 8]><!
+html.no-js
+	//<![endif]
+
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+
+		title 社团管理平台 | 为学生和社团提供一站式服务
+
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width')
+
+		link(rel='stylesheet', href='../css/layout.css')
+		link(rel='stylesheet', href='../lib/animate.min.css')
+		script(src="../lib/jquery-1.10.2.min.js")
+		script(src='../script/layout.js')
+
+	body
+		//if lt IE 7
+			p.chromeframe.
+			You are using an outdated browser.
+			Please <a href="http://browsehappy.com/">upgrade your browser</a> or
+			<a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>
+			to improve your experience.
+
+		#main-content-user-activity-list
+			#activity-list.column-1-1
+				h2.inline 已参加活动
+				.tiny-description-bar 20个活动
+				.hr
+				.user-activity-box
+					.box-content.overflow-scroll
+						table
+							thead
+								tr
+									th#select.w30
+									th#activity-id.w60 活动编号
+									th#message-shortcut.w60 短信代码
+									th#activity-name.w220 活动名称
+									th#activity-host.w140 活动主办方
+									th#status.w60 状态
+									th#manage.m220 管理操作
+							tbody
+								tr
+									td
+										input(type="checkbox")
+									td 001
+									td psjz
+									td 周末PS讲座
+									td 计算机应用设计协会
+									td 已签到
+									td
+										a(href="#") 详细信息
+										a(href="#") 活动讨论区
+										a(href="#") 退出活动
+								tr
+									td
+										input(type="checkbox")
+									td 002
+									td bdnl
+									td CUBA北大男篮
+									td 篮球协会
+									td 报名成功
+									td
+										a(href="#") 详细信息
+										a(href="#") 活动讨论区
+										a(href="#") 退出活动
+								tr.font-color-grey
+									td
+										input(type="checkbox")
+									td 003
+									td bdst
+									td 《北大社团》招募中
+									td 学生团体部
+									td 报名失败
+									td
+										a(href="#") 详细信息
+										a(href="#") 活动讨论区
+										a(href="#") 退出活动
+								tr
+									td
+										input(type="checkbox")
+									td 004
+									td zojl
+									td “网络语言与青年文化”中欧学生交流研讨会
+									td 中欧交流协会
+									td 待审核
+									td
+										a(href="#") 详细信息
+										a(href="#") 活动讨论区
+										a(href="#") 退出活动
+								tr
+									td
+										input(type="checkbox")
+									td 005
+									td yhsq
+									td 元火动漫社15周年社庆
+									td 元火动漫社
+									td 待审核
+									td
+										a(href="#") 详细信息
+										a(href="#") 活动讨论区
+										a(href="#") 退出活动
+								tr
+									td
+										input(type="checkbox")
+									td 001
+									td psjz
+									td 周末PS讲座
+									td 计算机应用设计协会
+									td 已签到
+									td
+										a(href="#") 详细信息
+										a(href="#") 活动讨论区
+										a(href="#") 退出活动
+								tr
+									td
+										input(type="checkbox")
+									td 002
+									td bdnl
+									td CUBA北大男篮
+									td 篮球协会
+									td 报名成功
+									td
+										a(href="#") 详细信息
+										a(href="#") 活动讨论区
+										a(href="#") 退出活动
+								tr.font-color-grey
+									td
+										input(type="checkbox")
+									td 003
+									td bdst
+									td 《北大社团》招募中
+									td 学生团体部
+									td 报名失败
+									td
+										a(href="#") 详细信息
+										a(href="#") 活动讨论区
+										a(href="#") 退出活动
+								tr
+									td
+										input(type="checkbox")
+									td 004
+									td zojl
+									td “网络语言与青年文化”中欧学生交流研讨会
+									td 中欧交流协会
+									td 待审核
+									td
+										a(href="#") 详细信息
+										a(href="#") 活动讨论区
+										a(href="#") 退出活动
+								tr
+									td
+										input(type="checkbox")
+									td 005
+									td yhsq
+									td 元火动漫社15周年社庆
+									td 元火动漫社
+									td 待审核
+									td
+										a(href="#") 详细信息
+										a(href="#") 活动讨论区
+										a(href="#") 退出活动
+					.batch-menu-bar
+						a(href="#") 全部选中
+						a(href="#") 批量退出
+					.page-bar
+						a(href="#") 1
+						a(href="#") 2
+						a(href="#") 3
+						span ...
+						a(href="#") 10
+						span /
+						a(href="#") 显示全部
+			.clear

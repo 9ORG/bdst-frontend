@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"></html>
+<![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"></html>
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"></html>
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>社团管理平台 | 为学生和社团提供一站式服务</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../lib/animate.min.css">
+    <script src="../lib/jquery-1.10.2.min.js"></script>
+    <script src="../script/layout.js"></script>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+    <p class="chromeframe"></p>
+    <You>are using an outdated browser.</You>
+    <Please><a href="http://browsehappy.com/">upgrade your browser</a> or</Please><a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>
+    <to>improve your experience.</to>
+    <![endif]-->
+    <script src="../script/other.js"></script>
+    <div id="main-content-user-edit-info">
+      <div id="edit-info" class="column-3-2 column-span">
+        <h2 class="inline">编辑信息</h2>
+        <div class="hr"></div>
+        <div class="user-edit-info-box">
+          <form>
+            <ul class="box-content">
+              <p class="description-card">更改手机号码和邮箱，会变更你的登陆账号。</p>
+              <li>
+                <div class="info-name">手机号码</div>
+                <input type="text" disabled="disabled" name="phone-num" placeholder="18610096949" id="phone-num" class="normal"><a href="#" class="plain-button">修改手机号码</a><a href="#" class="plain-button">修改登录密码</a>
+                <div class="clear"></div>
+              </li>
+              <li>
+                <div class="info-name">邮箱</div>
+                <input type="text" disabled="disabled" name="email" placeholder="summerz0501@126.com" id="email" class="normal"><a href="#" class="plain-button">修改邮箱</a>
+                <div class="clear"></div>
+              </li>
+            </ul>
+            <ul class="box-content">
+              <p class="description-card">填写真实的信息，你会遇见更多可能感兴趣的人。</p>
+              <li>
+                <div class="info-name">真实姓名</div>
+                <input type="text" id="real-name" class="normal popup-tips">
+                <div id="real-name-tips" class="info-tips hidden">只有与你同社团的人才会看到</div>
+                <div class="clear"></div>
+              </li>
+              <li>
+                <div class="info-name">性别</div>
+                <input type="radio" name="sex" value="male" checked id="sex-male" class="short">
+                <div class="info-name">男</div>
+                <input type="radio" name="sex" value="female" id="sex-femal" class="short">
+                <div class="info-name">女</div>
+                <div class="clear"></div>
+              </li>
+              <li>
+                <div class="info-name">昵称</div>
+                <input type="text" name="nick-name" id="nick-name" class="normal popup-tips popup-check">
+                <div id="nick-name-tips" class="info-tips hidden">2-14字符，字母、汉字、数字及下划线可用</div>
+                <div class="clear"></div>
+              </li>
+              <li>
+                <div class="info-name">生日</div>
+                <input type="text" name="birthday" placeholder="yyyy-mm-dd" id="birthday" class="normal popup-check">
+                <div class="clear"></div>
+              </li>
+              <li>
+                <div class="info-name">城市</div>
+                <select id="location-province" class="short">
+                  <option>北京市</option>
+                </select>
+                <select id="location-city" class="short">
+                  <option>北京市</option>
+                </select>
+                <div class="clear"></div>
+              </li>
+            </ul>
+            <ul class="box-content">
+              <p class="description-card">还要填院系信息哦。啥？想填GPA？……(╯‵□′)╯︵┻━┻</p>
+              <li>
+                <div class="info-name">年级</div>
+                <select id="admission-year" class="short">
+                  <option>2009</option>
+                  <option>2010</option>
+                </select>
+                <select id="education" class="short">
+                  <option>本科</option>
+                  <option>硕士</option>
+                  <option>博士</option>
+                </select>
+                <div class="clear"></div>
+              </li>
+              <li>
+                <div class="info-name">院系</div>
+                <select style="width:180px" id="department" class="normal">
+                  <option>数学科学学院</option>
+                  <option>新闻与传播学院</option>
+                </select>
+                <div class="clear"></div>
+              </li>
+              <li>
+                <div class="info-name">学号</div>
+                <input type="text" name="school-id" id="school-id" class="normal popup-tips">
+                <div id="school-id-tips" class="info-tips hidden">只有你所参加社团的管理员才会看到</div>
+                <div class="clear"></div>
+              </li>
+              <li>
+                <input type="checkbox" name="non-school" id="non-school">
+                <div style="width:38px" class="info-name">校外</div>
+                <input type="text" name="non-school-info" id="non-school-info" class="long">
+                <div class="clear"></div>
+              </li>
+            </ul>
+            <input type="button" value="确认更改">
+          </form>
+        </div>
+      </div>
+      <div id="user-avatar" class="column-3-1">
+        <h2 class="inline">头像</h2>
+        <div class="hr"></div>
+        <div class="avatar-box">
+          <div class="box-content">
+            <div id="user-avatar-large" class="inline"><img></div><a href="#" style="margin:180px 10px 0 0" class="plain-button">修改头像</a>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </body>
+</html>

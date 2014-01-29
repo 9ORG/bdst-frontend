@@ -1,0 +1,27 @@
+header
+	#top-bar.animated.fadeInDown
+		#top-bar-content-container
+			#top-logo
+				//- img(src="../img/logo.png", width="60px", height="60px")
+				img(src="../img/top-logo.png")
+			#top-logo-text 社团管理平台
+			ul#top-nav
+				li
+					a#club(href="javascript:void(0);") 社团
+				li
+					a#activity(href="../activity/activity-list.html") 活动
+				li
+					a#user.current(href="index.html") 我的参与
+				li
+					a(href="#",target="_blank") 在线借教室
+			#top-user-menu
+				#username
+					a(href="index.html") kyzamizzzzzzzz
+				ul#popup-user-menu.hidden
+					li
+						a.menu-logout(href="#") 登出
+					li
+						a.menu-background(href="#") 管理后台
+					li
+						a.menu-setting(href="#") 设置
+	#top-line.animated.fadeInDown

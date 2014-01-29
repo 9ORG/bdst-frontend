@@ -1,0 +1,63 @@
+doctype html
+//if lt IE 7
+	html.no-js.lt-ie9.lt-ie8.lt-ie7
+//if IE 7
+	html.no-js.lt-ie9.lt-ie8
+//if IE 8
+	html.no-js.lt-ie9
+//[if gt IE 8]><!
+html.no-js
+	//<![endif]
+
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+
+		title 社团管理平台 | 为学生和社团提供一站式服务
+
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width')
+
+		link(rel='stylesheet', href='../css/layout.css')
+		link(rel='stylesheet', href='../lib/animate.min.css')
+		script(src="../lib/jquery-1.10.2.min.js")
+		script(src='../script/layout.js')
+
+	body
+		//if lt IE 7
+			p.chromeframe.
+			You are using an outdated browser.
+			Please <a href="http://browsehappy.com/">upgrade your browser</a> or
+			<a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>
+			to improve your experience.
+
+		#main-content-user-club-list
+			#club-list.column-3-2.column-span
+				h2.inline 已加入社团
+				.tiny-description-bar 5个社团
+				.hr
+				.user-club-box
+					ul.box-content
+						li.club-avatar
+							img
+						li.club-avatar
+							img
+						li.club-avatar
+							img
+						li.club-avatar
+							img
+						li.club-avatar
+							img
+						.clear
+			#club-application.column-3-1
+				h2.inline 入会申请
+				.hr
+				.message-box
+					ul.box-content
+						li.message-card
+							a(href="#") 计算机应用设计协会
+							|  审核中
+						li.message-card
+							a(href="#") 北大青年摄影协会
+							|  拒绝了你的申请
+		.clear

@@ -1,0 +1,122 @@
+doctype html
+//if lt IE 7
+	html.no-js.lt-ie9.lt-ie8.lt-ie7
+//if IE 7
+	html.no-js.lt-ie9.lt-ie8
+//if IE 8
+	html.no-js.lt-ie9
+//[if gt IE 8]><!
+html.no-js
+	//<![endif]
+
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+
+		title 社团管理平台 | 为学生和社团提供一站式服务
+
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width')
+
+		link(rel='stylesheet', href='../css/layout.css')
+		link(rel='stylesheet', href='../lib/animate.min.css')
+		script(src="../lib/jquery-1.10.2.min.js")
+		script(src='../script/layout.js')
+
+	body
+		//if lt IE 7
+			p.chromeframe.
+			You are using an outdated browser.
+			Please <a href="http://browsehappy.com/">upgrade your browser</a> or
+			<a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>
+			to improve your experience.
+		script(src='../script/other.js')
+
+		#main-content-user-edit-info
+			#edit-info.column-3-2.column-span
+				h2.inline 编辑信息
+				.hr
+				.user-edit-info-box
+					form
+						ul.box-content
+							p.description-card 更改手机号码和邮箱，会变更你的登陆账号。
+							li
+								.info-name 手机号码
+								input(type="text", disabled="disabled", name="phone-num" placeholder="18610096949")#phone-num.normal
+								a(href="#").plain-button 修改手机号码
+								a(href="#").plain-button 修改登录密码
+								.clear
+							li
+								.info-name 邮箱
+								input(type="text", disabled="disabled", name="email" placeholder="summerz0501@126.com")#email.normal
+								a(href="#").plain-button 修改邮箱
+								.clear
+						ul.box-content
+							p.description-card 填写真实的信息，你会遇见更多可能感兴趣的人。
+							li
+								.info-name 真实姓名
+								input(type="text")#real-name.normal.popup-tips
+								#real-name-tips.info-tips.hidden 只有与你同社团的人才会看到
+								.clear
+							li
+								.info-name 性别
+								input(type="radio", name="sex", value="male", checked)#sex-male.short
+								.info-name 男
+								input(type="radio", name="sex", value="female")#sex-femal.short
+								.info-name 女
+								.clear
+							li
+								.info-name 昵称
+								input(type="text", name="nick-name")#nick-name.normal.popup-tips.popup-check
+								#nick-name-tips.info-tips.hidden 2-14字符，字母、汉字、数字及下划线可用
+								.clear
+							li
+								.info-name 生日
+								input(type="text", name="birthday", placeholder="yyyy-mm-dd")#birthday.normal.popup-check
+								.clear
+							li
+								.info-name 城市
+								select#location-province.short
+									option 北京市
+								select#location-city.short
+									option 北京市
+								.clear
+						ul.box-content
+							p.description-card 还要填院系信息哦。啥？想填GPA？……(╯‵□′)╯︵┻━┻
+							li
+								.info-name 年级
+								select#admission-year.short
+									option 2009
+									option 2010
+								select#education.short
+									option 本科
+									option 硕士
+									option 博士
+								.clear
+							li
+								.info-name 院系
+								select(style="width:180px")#department.normal
+									option 数学科学学院
+									option 新闻与传播学院
+								.clear
+							li
+								.info-name 学号
+								input(type="text", name="school-id")#school-id.normal.popup-tips
+								#school-id-tips.info-tips.hidden 只有你所参加社团的管理员才会看到
+								.clear
+							li
+								input(type="checkbox", name="non-school")#non-school
+								.info-name(style="width:38px") 校外
+								input(type="text", name="non-school-info")#non-school-info.long
+								.clear
+						input(type="button", value="确认更改")
+			#user-avatar.column-3-1
+				h2.inline 头像
+				.hr
+				.avatar-box
+					.box-content
+						#user-avatar-large.inline
+							img
+						a(href="#", style="margin:180px 10px 0 0").plain-button 修改头像
+						.clear
+			.clear
