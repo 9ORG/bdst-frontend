@@ -1,0 +1,17 @@
+jQuery(document).ready(function(){
+          $('#side-menu-edit-info').click(function(){
+            $("#main-content-index").load("user-edit-info.html");
+          });
+          $('#side-menu-club-list').click(function(){
+            $("#main-content-index").load("user-club-list.html");
+          });
+          $('#side-menu-activity-list').click(function(){
+            $("#main-content-index").load("user-activity-list.html");
+          });
+          $('#side-menu-message-list').click(function(){
+              $("#main-content-index").load("user-message-list.html");
+            }); 
+          $('#club').click(function(){
+              $('#body-container').load("../club/club-list.html");
+            });
+        });
