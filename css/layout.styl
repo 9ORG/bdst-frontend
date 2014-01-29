@@ -9,7 +9,7 @@ bro = #ba8879
 body-width = 1080px
 
 border-grey = #eaeaea
-light-grey = #cacaca
+light-grey = #bababa
 grey = #666
 deep-grey = #333
 
@@ -107,7 +107,8 @@ ul, li
 
 .main-content-full
 	width body-width
-	margin 160px auto 120px auto
+	margin 160px auto 140px auto
+
 #sidebar
 	position fixed
 	top 170px
@@ -125,6 +126,7 @@ ul, li
 					margin-top 5px
 					& > a
 						font-size medium
+						font-weight bold
 .main-content
 	width 920px
 	margin 10px 0 100px 160px
@@ -146,7 +148,7 @@ ul, li
 
 .main-content-full
 	.club-list-box li
-		margin 20px 20px 10px 20px
+		margin 20px 20px 20px 20px
 		display inline
 		float left
 		&:hover
@@ -158,6 +160,11 @@ ul, li
 		margin 2px 2px 2px 2px
 		display inline
 		float left
+		&:hover
+			.activity-list-name
+				color org
+				background-color rgba(0,0,0,0.8)
+				// background-color rgba(255,255,255,1)
 	.box-content
 		.club-avatar-large
 			width 154px
@@ -175,13 +182,30 @@ ul, li
 			height 13px
 			line-height 13px
 			text-align center
-			margin 20px 0 20px 0
+			font-weight bold
+			margin 20px 0 0px 0
 		.activity-avatar-large
 			width 266px
 			height 195px
 			overflow hidden
 			& > img
 				width 266px
+				float left
+				z-index -1000
+		.activity-list-name
+			width 246px
+			height 40px
+			margin-top -40px
+			padding 0 10px 0 10px
+			font-size medium
+			line-height 40px
+			text-align center
+			color deep-grey
+			font-weight bold
+			background-color rgba(255,255,255,0.8)
+			transition 0.75s
+			float left
+			z-index 1000
 
 .main-content
 	.user-club-list-box
@@ -214,7 +238,7 @@ ul, li
 		margin-top 10px
 		padding-top 10px
 	.box-content
-		margin 10px 0 20px 0
+		margin 10px 0 10px 0
 		.club-avatar,
 		.activity-avatar
 			width 70px
@@ -333,6 +357,7 @@ ul, li
 		th
 			// color org
 			background-color #f9f9f9
+			font-weight bold
 		th, td
 			height 20px
 			line-height 20px
@@ -422,10 +447,12 @@ header
 					& > a
 						font-size 14px
 						line-height 80px
+						font-weight bold
 			#top-user-menu
 				width 80px
 				padding-top 5px
 				font-size medium
+				font-weight bold
 				float right
 				#username
 					line-height 80px
@@ -433,6 +460,7 @@ header
 					& > a
 						font-size 14px
 						color org
+						font-weight bold
 				ul#popup-user-menu
 					& > li
 						margin-right 20px
@@ -440,6 +468,7 @@ header
 						float right
 						& > a
 							font-size small
+							font-weight bold
 							line-height 80px
 
 footer
@@ -464,6 +493,7 @@ footer
 				.foot-bar-title
 					font-size medium
 					color org
+					font-weight bold
 				li.foot-bar-content
 					margin-top 5px
 					& > a

@@ -31,153 +31,179 @@ html.no-js
 			<a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>
 			to improve your experience.
 
-		#main-content-user-activity-list
-			#activity-list.column-1-1
-				h2.inline 已参加活动
-				.tiny-description-bar 20个活动
-				.hr
-				.user-activity-box
-					.box-content.overflow-scroll
-						table
-							thead
-								tr
-									th#select.w30
-									th#activity-id.w60 活动编号
-									th#message-shortcut.w60 短信代码
-									th#activity-name.w220 活动名称
-									th#activity-host.w140 活动主办方
-									th#status.w60 状态
-									th#manage.m220 管理操作
-							tbody
-								tr
-									td
-										input(type="checkbox")
-									td 001
-									td psjz
-									td 周末PS讲座
-									td 计算机应用设计协会
-									td 已签到
-									td
-										a(href="#") 详细信息
-										a(href="#") 活动讨论区
-										a(href="#") 退出活动
-								tr
-									td
-										input(type="checkbox")
-									td 002
-									td bdnl
-									td CUBA北大男篮
-									td 篮球协会
-									td 报名成功
-									td
-										a(href="#") 详细信息
-										a(href="#") 活动讨论区
-										a(href="#") 退出活动
-								tr.font-color-grey
-									td
-										input(type="checkbox")
-									td 003
-									td bdst
-									td 《北大社团》招募中
-									td 学生团体部
-									td 报名失败
-									td
-										a(href="#") 详细信息
-										a(href="#") 活动讨论区
-										a(href="#") 退出活动
-								tr
-									td
-										input(type="checkbox")
-									td 004
-									td zojl
-									td “网络语言与青年文化”中欧学生交流研讨会
-									td 中欧交流协会
-									td 待审核
-									td
-										a(href="#") 详细信息
-										a(href="#") 活动讨论区
-										a(href="#") 退出活动
-								tr
-									td
-										input(type="checkbox")
-									td 005
-									td yhsq
-									td 元火动漫社15周年社庆
-									td 元火动漫社
-									td 待审核
-									td
-										a(href="#") 详细信息
-										a(href="#") 活动讨论区
-										a(href="#") 退出活动
-								tr
-									td
-										input(type="checkbox")
-									td 001
-									td psjz
-									td 周末PS讲座
-									td 计算机应用设计协会
-									td 已签到
-									td
-										a(href="#") 详细信息
-										a(href="#") 活动讨论区
-										a(href="#") 退出活动
-								tr
-									td
-										input(type="checkbox")
-									td 002
-									td bdnl
-									td CUBA北大男篮
-									td 篮球协会
-									td 报名成功
-									td
-										a(href="#") 详细信息
-										a(href="#") 活动讨论区
-										a(href="#") 退出活动
-								tr.font-color-grey
-									td
-										input(type="checkbox")
-									td 003
-									td bdst
-									td 《北大社团》招募中
-									td 学生团体部
-									td 报名失败
-									td
-										a(href="#") 详细信息
-										a(href="#") 活动讨论区
-										a(href="#") 退出活动
-								tr
-									td
-										input(type="checkbox")
-									td 004
-									td zojl
-									td “网络语言与青年文化”中欧学生交流研讨会
-									td 中欧交流协会
-									td 待审核
-									td
-										a(href="#") 详细信息
-										a(href="#") 活动讨论区
-										a(href="#") 退出活动
-								tr
-									td
-										input(type="checkbox")
-									td 005
-									td yhsq
-									td 元火动漫社15周年社庆
-									td 元火动漫社
-									td 待审核
-									td
-										a(href="#") 详细信息
-										a(href="#") 活动讨论区
-										a(href="#") 退出活动
-					.batch-menu-bar
-						a(href="#") 全部选中
-						a(href="#") 批量退出
-					.page-bar
-						a(href="#") 1
-						a(href="#") 2
-						a(href="#") 3
-						span ...
-						a(href="#") 10
-						span /
-						a(href="#") 显示全部
+		include header
+
+		#body-container
+			#sidebar.animated.fadeInDown
+				ul#side-menu
+					li 个人信息
+						ul.side-menu-button
+							li
+								a(href="user-edit-info.html") 编辑信息
+					li 社团管理
+						ul.side-menu-button
+							li
+								a(href="user-club-list.html") 已加入社团
+					li 活动管理
+						ul.side-menu-button
+							li
+								a.current(href="#") 已参加活动
+					li 参与讨论
+						ul.side-menu-button
+							li
+								a(href="user-message-list.html") 接收记录
+			.main-content
+				#main-content-user-activity-list
+					#activity-list.column-1-1
+						h2.inline 已参加活动
+						.tiny-description-bar 20个活动
+						.hr
+						.user-activity-box
+							.box-content.overflow-scroll
+								table
+									thead
+										tr
+											th#select.w30
+											th#activity-id.w60 活动编号
+											th#message-shortcut.w60 短信代码
+											th#activity-name.w220 活动名称
+											th#activity-host.w140 活动主办方
+											th#status.w60 状态
+											th#manage.m220 管理操作
+									tbody
+										tr
+											td
+												input(type="checkbox")
+											td 001
+											td psjz
+											td 周末PS讲座
+											td 计算机应用设计协会
+											td 已签到
+											td
+												a(href="#") 详细信息
+												a(href="#") 活动讨论区
+												a(href="#") 退出活动
+										tr
+											td
+												input(type="checkbox")
+											td 002
+											td bdnl
+											td CUBA北大男篮
+											td 篮球协会
+											td 报名成功
+											td
+												a(href="#") 详细信息
+												a(href="#") 活动讨论区
+												a(href="#") 退出活动
+										tr.font-color-grey
+											td
+												input(type="checkbox")
+											td 003
+											td bdst
+											td 《北大社团》招募中
+											td 学生团体部
+											td 报名失败
+											td
+												a(href="#") 详细信息
+												a(href="#") 活动讨论区
+												a(href="#") 退出活动
+										tr
+											td
+												input(type="checkbox")
+											td 004
+											td zojl
+											td “网络语言与青年文化”中欧学生交流研讨会
+											td 中欧交流协会
+											td 待审核
+											td
+												a(href="#") 详细信息
+												a(href="#") 活动讨论区
+												a(href="#") 退出活动
+										tr
+											td
+												input(type="checkbox")
+											td 005
+											td yhsq
+											td 元火动漫社15周年社庆
+											td 元火动漫社
+											td 待审核
+											td
+												a(href="#") 详细信息
+												a(href="#") 活动讨论区
+												a(href="#") 退出活动
+										tr
+											td
+												input(type="checkbox")
+											td 001
+											td psjz
+											td 周末PS讲座
+											td 计算机应用设计协会
+											td 已签到
+											td
+												a(href="#") 详细信息
+												a(href="#") 活动讨论区
+												a(href="#") 退出活动
+										tr
+											td
+												input(type="checkbox")
+											td 002
+											td bdnl
+											td CUBA北大男篮
+											td 篮球协会
+											td 报名成功
+											td
+												a(href="#") 详细信息
+												a(href="#") 活动讨论区
+												a(href="#") 退出活动
+										tr.font-color-grey
+											td
+												input(type="checkbox")
+											td 003
+											td bdst
+											td 《北大社团》招募中
+											td 学生团体部
+											td 报名失败
+											td
+												a(href="#") 详细信息
+												a(href="#") 活动讨论区
+												a(href="#") 退出活动
+										tr
+											td
+												input(type="checkbox")
+											td 004
+											td zojl
+											td “网络语言与青年文化”中欧学生交流研讨会
+											td 中欧交流协会
+											td 待审核
+											td
+												a(href="#") 详细信息
+												a(href="#") 活动讨论区
+												a(href="#") 退出活动
+										tr
+											td
+												input(type="checkbox")
+											td 005
+											td yhsq
+											td 元火动漫社15周年社庆
+											td 元火动漫社
+											td 待审核
+											td
+												a(href="#") 详细信息
+												a(href="#") 活动讨论区
+												a(href="#") 退出活动
+							.batch-menu-bar
+								a(href="#") 全部选中
+								a(href="#") 批量退出
+							.page-bar
+								a(href="#") 1
+								a(href="#") 2
+								a(href="#") 3
+								span ...
+								a(href="#") 10
+								span /
+								a(href="#") 显示全部
+							.clear
+					.clear
 			.clear
+
+		include footer
