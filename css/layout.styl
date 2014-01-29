@@ -146,14 +146,20 @@ ul, li
 
 .main-content-full
 	.club-list-box li
-		margin 10px 20px 10px 20px
+		margin 20px 20px 10px 20px
 		display inline
 		float left
+		&:hover
+			.club-avatar-large
+				border-color org
+			.club-list-name a
+				color org
 	.club-avatar-large
 		width 154px
 		height 154px
 		border 1px solid border-grey
 		border-radius 100%
+		transition 0.25s
 		margin 0 10px 0 10px
 		overflow hidden
 		& > img
@@ -165,6 +171,13 @@ ul, li
 		line-height 13px
 		text-align center
 		margin 20px 0 20px 0
+
+.main-content
+	.user-club-list-box
+	.user-activity-list-box
+		& li:hover
+			.club-avatar
+				border-color org
 
 .main-content
 .main-content-full
@@ -197,9 +210,13 @@ ul, li
 			height 70px
 			border 1px solid border-grey
 			border-radius 100%
+			transition 0.25s
 			margin 10px 20px 0 0
 			overflow hidden
 			float left
+			& > img
+				width 70px
+				height 70px
 		.info-name
 			width 60px
 			height 30px
