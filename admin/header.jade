@@ -5,23 +5,16 @@ header
 				//- img(src="../img/logo.png", width="60px", height="60px")
 				img(src="../img/top-logo.png")
 			#top-logo-text 社团管理平台
-			ul#top-nav
-				li
-					a#club(href="../club/club-list.html") 社团
-				li
-					a#activity(href="../activity/activity-list.html") 活动
-				li
-					a#user(href="../userpage/index.html") 我的参与
-				li
-					a(href="#",target="_blank") 在线借教室
+			#top-admin-name
+				| 计算机应用设计协会
+				a(href="#") (切换)
 			#top-user-menu
-				#username
-					a(href="index.html") kyzamizzzzzzzz
+				#username kyzamizzzzzzzz
 				ul#popup-user-menu.hidden
 					li
 						a.menu-logout(href="#") 登出
 					li
-						a.menu-background(href="index.html") 管理后台
+						a.menu-background(href="../userpage/index.html") 返回个人
 					li
 						a.menu-setting(href="../userpage/user-edit-info.html") 设置
 	#top-line.animated.fadeInDown

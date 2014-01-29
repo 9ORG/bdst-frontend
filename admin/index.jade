@@ -1,0 +1,136 @@
+doctype html
+//if lt IE 7
+	html.no-js.lt-ie9.lt-ie8.lt-ie7
+//if IE 7
+	html.no-js.lt-ie9.lt-ie8
+//if IE 8
+	html.no-js.lt-ie9
+//[if gt IE 8]><!
+html.no-js
+	//<![endif]
+
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+
+		title 社团管理平台 | 为学生和社团提供一站式服务
+
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width')
+
+		link(rel='stylesheet', href='../css/layout.css')
+		link(rel='stylesheet', href='../lib/animate.min.css')
+		script(src="../lib/jquery-1.10.2.min.js")
+		script(src='../script/layout.js')
+
+	body
+		//if lt IE 7
+			p.chromeframe.
+			You are using an outdated browser.
+			Please <a href="http://browsehappy.com/">upgrade your browser</a> or
+			<a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>
+			to improve your experience.
+
+		include header
+ 
+		#body-container
+			#sidebar.animated.fadeInDown
+				ul#side-menu
+					li 个人信息
+						ul.side-menu-button
+							li
+								a(href="user-edit-info.html") 编辑信息
+					li 社团管理
+						ul.side-menu-button
+							li
+								a(href="user-club-list.html") 已加入社团
+					li 活动管理
+						ul.side-menu-button
+							li
+								a(href="user-activity-list.html") 已参加活动
+					li 参与讨论
+						ul.side-menu-button
+							li
+								a(href="user-message-list.html") 接收记录
+			.main-content
+				#main-content-admin-index
+					#admin-state.column-3-2.column-span
+						h1.inline Hola. 计算机应用设计协会!
+						.hr
+						.admin-state-box
+							.admin-user-list-box
+								.box-content
+									h3.inline 会员
+									p.description-card(style="margin-top:0px;float:left") 拥有张楠、王仲禹等 
+										a(href="#") 102名会员
+									.clear
+									ul
+										li
+											a(href="#")
+												.club-avatar
+													img(src="../img/club-avatar-default.png")
+										li
+											a(href="#")
+												.club-avatar
+													img(src="../img/club-avatar-default.png")
+										li
+											a(href="#")
+												.club-avatar
+													img(src="../img/club-avatar-default.png")
+										li
+											a(href="#")
+												.club-avatar
+													img(src="../img/club-avatar-default.png")
+										li
+											a(href="#")
+												.club-avatar
+													img(src="../img/club-avatar-default.png")
+										.clear
+							.admin-activity-list-box
+								.box-content
+									h3.inline 活动
+									p.description-card(style="margin-top:0px;float:left") 拥有周末PS讲座、清明放风筝比赛等 
+										a(href="#") 20个活动
+									.clear
+									ul
+										li
+											a(href="#")
+												.club-avatar
+													img(src="../img/club-avatar-default.png")
+										li
+											a(href="#")
+												.club-avatar
+													img(src="../img/club-avatar-default.png")
+										li
+											a(href="#")
+												.club-avatar
+													img(src="../img/club-avatar-default.png")
+										li
+											a(href="#")
+												.club-avatar
+													img(src="../img/club-avatar-default.png")
+										li
+											a(href="#")
+												.club-avatar
+													img(src="../img/club-avatar-default.png")
+										.clear
+					#message.column-3-1
+						h2.inline 通知(2)
+						.tiny-menu-bar
+							a(href="#") 显示全部
+							a(href="#") 清除全部
+						.hr
+						.message-box
+							ul.box-content
+								li.message-card
+									a(href="#") 向毅明
+									|  申请加入 
+									a(href="#") 计算机应用设计协会
+								li.message-card
+									a(href="#") 张天然
+									|  退出了 
+									a(href="#") 计算机应用设计协会
+					.clear
+			.clear
+
+		include footer
