@@ -1,0 +1,270 @@
+doctype html
+//if lt IE 7
+	html.no-js.lt-ie9.lt-ie8.lt-ie7
+//if IE 7
+	html.no-js.lt-ie9.lt-ie8
+//if IE 8
+	html.no-js.lt-ie9
+//[if gt IE 8]><!
+html.no-js
+	//<![endif]
+
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+
+		title 社团管理平台 | 为学生和社团提供一站式服务
+
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width')
+
+		link(rel='stylesheet', href='../css/layout.css')
+		link(rel='stylesheet', href='../lib/animate.min.css')
+		script(src="../lib/jquery-1.10.2.min.js")
+		script(src='../script/layout.js')
+
+	body
+		//if lt IE 7
+			p.chromeframe.
+			You are using an outdated browser.
+			Please <a href="http://browsehappy.com/">upgrade your browser</a> or
+			<a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>
+			to improve your experience.
+
+		include header
+
+		#body-container
+			#sidebar.animated.fadeInDown
+				ul#side-menu
+					li 社团信息
+						ul.side-menu-button
+							li
+								a(href="admin-edit-info.html") 编辑信息
+					li 成员管理
+						ul.side-menu-button
+							li
+								a(href="admin-user-list-apply.html") 入会审核
+							li
+								a.current(href="admin-user-list-all.html") 全部成员
+							li
+								a(href="admin-user-list-admin.html") 管理员
+							li
+								a(href="admin-user-list-excel.html") Excel导入
+							li.popup-custom
+								a.popup-custom-button(href="admin-user-list-custom.html") 自定义分组
+								#popup-user-list-custom.hidden
+									.tri-pointer
+										img(src="../img/tri-pointer.png")
+									ul
+										li
+											a(href="admin-user-list-custom-group01.html") 分组一
+										li
+											a(href="#") 分组二
+										li
+											a(href="#") 分组三
+										li
+											a(href="#") 分组四
+					li 活动管理
+						ul.side-menu-button
+							li
+								a(href="admin-create-activity.html") 发起活动
+							li
+								a(href="admin-activity-list.html") 已有活动
+					li 发起讨论
+						ul.side-menu-button
+							li
+								a(href="user-create-message.html") 群发讨论
+							li
+								a(href="admin-message-list.html") 历史记录
+			.main-content
+				#main-content-admin-user-list-all
+					#admin-user-list-all.column-1-1
+						h2.inline 全部成员
+						.tiny-description-bar 共102名成员
+						.tiny-menu-bar
+							a(href="#") 增减显示信息
+							a(href="#") 搜索
+						.hr
+						.admin-user-list-all-box
+							.box-content.overflow-scroll
+								table
+									thead
+										tr
+											th#select.w30
+											th#user-apply-time.w100 加入时间
+											th#user-group.w100 分组
+											th#user-real-name.w60 姓名
+											th#user-sex.w60 性别
+											th#user-admission-year.w60 年级
+											th#user-department.w140 院系
+											//- th#apply-approach.w60 报名方式
+											th#manage.m200 管理操作
+									tbody
+										tr
+											td
+												input(type="checkbox")
+											td 2014-01-30
+											td 设计组
+											td 向毅明
+											td 男
+											td /
+											td /
+											//- td 在线
+											td
+												a(href="#") 详细信息
+												a(href="#") 发起讨论
+												a(href="#") 转移分组
+												a(href="#") 退社
+										tr
+											td
+												input(type="checkbox")
+											td 2014-01-28
+											td 骨干 技术组
+											td 王仲禹
+											td 男
+											td 2009
+											td 信息科学与技术学院
+											//- td 在线
+											td
+												a(href="#") 详细信息
+												a(href="#") 发起讨论
+												a(href="#") 转移分组
+												a(href="#") 退社
+										tr
+											td
+												input(type="checkbox")
+											td 2014-01-27
+											td 骨干 设计组
+											td 张楠
+											td 女
+											td 2010
+											td 新闻与传播学院
+											//- td 短信
+											td
+												a(href="#") 详细信息
+												a(href="#") 发起讨论
+												a(href="#") 转移分组
+												a(href="#") 退社
+										tr.font-color-grey
+											td
+												input(type="checkbox")
+											td 2014-01-20
+											td /
+											td 吴春华
+											td /
+											td /
+											td /
+											//- td 短信
+											td
+												a(href="#") 详细信息
+												a(href="#") 发起讨论
+												a(href="#") 转移分组
+												a(href="#") 退社
+										tr.font-color-grey
+											td
+												input(type="checkbox")
+											td 2014-01-20
+											td /
+											td 张天然
+											td /
+											td /
+											td /
+											//- td 短信
+											td
+												a(href="#") 详细信息
+												a(href="#") 发起讨论
+												a(href="#") 转移分组
+												a(href="#") 退社
+										tr
+											td
+												input(type="checkbox")
+											td 2014-01-30
+											td 设计组
+											td 向毅明
+											td 男
+											td /
+											td /
+											//- td 在线
+											td
+												a(href="#") 详细信息
+												a(href="#") 发起讨论
+												a(href="#") 转移分组
+												a(href="#") 退社
+										tr
+											td
+												input(type="checkbox")
+											td 2014-01-28
+											td 骨干 技术组
+											td 王仲禹
+											td 男
+											td 2009
+											td 信息科学与技术学院
+											//- td 在线
+											td
+												a(href="#") 详细信息
+												a(href="#") 发起讨论
+												a(href="#") 转移分组
+												a(href="#") 退社
+										tr
+											td
+												input(type="checkbox")
+											td 2014-01-27
+											td 骨干 设计组
+											td 张楠
+											td 女
+											td 2010
+											td 新闻与传播学院
+											//- td 短信
+											td
+												a(href="#") 详细信息
+												a(href="#") 发起讨论
+												a(href="#") 转移分组
+												a(href="#") 退社
+										tr.font-color-grey
+											td
+												input(type="checkbox")
+											td 2014-01-20
+											td /
+											td 吴春华
+											td /
+											td /
+											td /
+											//- td 短信
+											td
+												a(href="#") 详细信息
+												a(href="#") 发起讨论
+												a(href="#") 转移分组
+												a(href="#") 退社
+										tr.font-color-grey
+											td
+												input(type="checkbox")
+											td 2014-01-20
+											td /
+											td 张天然
+											td /
+											td /
+											td /
+											//- td 短信
+											td
+												a(href="#") 详细信息
+												a(href="#") 发起讨论
+												a(href="#") 转移分组
+												a(href="#") 退社
+							.batch-menu-bar
+								a(href="#") 全部选中
+								a(href="#") 批量发起讨论
+								a(href="#") 批量转移分组
+								a(href="#") 批量退社
+							.page-bar
+								a(href="#") 1
+								a(href="#") 2
+								a(href="#") 3
+								span ...
+								a(href="#") 10
+								span /
+								a(href="#") 显示全部
+							.clear
+					.clear
+			.clear
+
+		include footer

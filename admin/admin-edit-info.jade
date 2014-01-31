@@ -39,17 +39,17 @@ html.no-js
 					li 社团信息
 						ul.side-menu-button
 							li
-								a.current(href="#") 编辑信息
+								a.current(href="admin-edit-info.html") 编辑信息
 					li 成员管理
 						ul.side-menu-button
 							li
-								a(href="admin-user-list-application.html") 入会审核
+								a(href="admin-user-list-apply.html") 入会审核
 							li
 								a(href="admin-user-list-all.html") 全部成员
 							li
 								a(href="admin-user-list-admin.html") 管理员
 							li
-								a(href="admin-user-list-core.html") 骨干成员
+								a(href="admin-user-list-excel.html") Excel导入
 							li.popup-custom
 								a.popup-custom-button(href="admin-user-list-custom.html") 自定义分组
 								#popup-user-list-custom.hidden
@@ -57,7 +57,7 @@ html.no-js
 										img(src="../img/tri-pointer.png")
 									ul
 										li
-											a(href="#") 分组一
+											a(href="admin-user-list-custom-group01.html") 分组一
 										li
 											a(href="#") 分组二
 										li
@@ -67,15 +67,15 @@ html.no-js
 					li 活动管理
 						ul.side-menu-button
 							li
-								a(href="user-activity-list.html") 发起活动
+								a(href="admin-create-activity.html") 发起活动
 							li
-								a(href="admin-user-list.html") 已有活动
+								a(href="admin-activity-list.html") 已有活动
 					li 发起讨论
 						ul.side-menu-button
 							li
-								a(href="user-message-list.html") 群发讨论
+								a(href="user-create-message.html") 群发讨论
 							li
-								a(href="admin-user-list.html") 历史记录
+								a(href="admin-message-list.html") 历史记录
 			.main-content
 				#main-content-admin-edit-info
 					#admin-edit-info.column-3-2.column-span

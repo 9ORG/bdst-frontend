@@ -51,12 +51,12 @@ html.no-js
 						li 参与讨论
 							ul.side-menu-button
 								li
-									a.current(href="#") 接收记录
+									a.current(href="user-message-list.html") 接收记录
 			.main-content
 				#main-content-user-message-list
 					#message-list.column-1-1
 						h2.inline 接收记录
-						.tiny-description-bar 32个讨论
+						.tiny-description-bar 共32个讨论
 						.hr
 						.user-message-box
 							.box-content.overflow-scroll
@@ -65,10 +65,10 @@ html.no-js
 										tr
 											//- th#select.w30
 											th#message-id.w60 编号
-											th#activity-time.160w 接收时间
+											th#message-time.160w 接收时间
 											th#message-content.w220 内容预览
-											th#activity-sender.w160 发起社团
-											th#manage.m220 管理操作
+											th#message-sender.w140 发起社团
+											th#manage.m200 管理操作
 									tbody
 										tr
 											//- td

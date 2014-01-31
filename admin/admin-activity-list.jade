@@ -36,29 +36,55 @@ html.no-js
 		#body-container
 			#sidebar.animated.fadeInDown
 				ul#side-menu
-					li 个人信息
+					li 社团信息
 						ul.side-menu-button
 							li
-								a(href="user-edit-info.html") 编辑信息
-					li 社团管理
+								a(href="admin-edit-info.html") 编辑信息
+					li 成员管理
 						ul.side-menu-button
 							li
-								a(href="user-club-list.html") 已加入社团
+								a(href="admin-user-list-apply.html") 入会审核
+							li
+								a(href="admin-user-list-all.html") 全部成员
+							li
+								a(href="admin-user-list-admin.html") 管理员
+							li
+								a(href="admin-user-list-excel.html") Excel导入
+							li.popup-custom
+								a.popup-custom-button(href="admin-user-list-custom.html") 自定义分组
+								#popup-user-list-custom.hidden
+									.tri-pointer
+										img(src="../img/tri-pointer.png")
+									ul
+										li
+											a(href="admin-user-list-custom-group01.html") 分组一
+										li
+											a(href="#") 分组二
+										li
+											a(href="#") 分组三
+										li
+											a(href="#") 分组四
 					li 活动管理
 						ul.side-menu-button
 							li
-								a.current(href="user-activity-list.html") 已参加活动
-					li 参与讨论
+								a(href="admin-create-activity.html") 发起活动
+							li
+								a.current(href="admin-activity-list.html") 已有活动
+					li 发起讨论
 						ul.side-menu-button
 							li
-								a(href="user-message-list.html") 接收记录
+								a(href="user-create-message.html") 群发讨论
+							li
+								a(href="admin-message-list.html") 历史记录
 			.main-content
-				#main-content-user-activity-list
-					#activity-list.column-1-1
-						h2.inline 已参加活动
+				#main-content-admin-activity-list
+					#admin-activity-list.column-1-1
+						h2.inline 已有活动
 						.tiny-description-bar 共20个活动
+						.tiny-menu-bar
+							a(href="#") 搜索
 						.hr
-						.user-activity-box
+						.admin-activity-list-box
 							.box-content.overflow-scroll
 								table
 									thead
@@ -67,7 +93,6 @@ html.no-js
 											th#activity-id.w60 活动编号
 											th#message-shortcut.w60 短信代码
 											th#activity-name.w220 活动名称
-											th#activity-host.w140 活动主办方
 											th#status.w60 状态
 											th#manage.m200 管理操作
 									tbody
@@ -77,123 +102,143 @@ html.no-js
 											td 001
 											td psjz
 											td 周末PS讲座
-											td 计算机应用设计协会
-											td 已签到
+											td 进行中
 											td
 												a(href="#") 详细信息
+												a(href="#") 编辑
+												a(href="admin-activity-id001-user.html") 活动成员
+												a(href="#") 二维码
 												a(href="#") 活动讨论区
-												a(href="#") 退出活动
+												a(href="#") 申请删除
 										tr
 											td
 												input(type="checkbox")
 											td 002
 											td bdnl
 											td CUBA北大男篮
-											td 篮球协会
-											td 报名成功
+											td 即将开始
 											td
 												a(href="#") 详细信息
+												a(href="#") 编辑
+												a(href="#") 活动成员
+												a(href="#") 二维码
 												a(href="#") 活动讨论区
-												a(href="#") 退出活动
-										tr.font-color-grey
+												a(href="#") 申请删除
+										tr
 											td
 												input(type="checkbox")
 											td 003
 											td bdst
 											td 《北大社团》招募中
-											td 学生团体部
-											td 报名失败
+											td 即将开始
 											td
 												a(href="#") 详细信息
+												a(href="#") 编辑
+												a(href="#") 活动成员
+												a(href="#") 二维码
 												a(href="#") 活动讨论区
-												a(href="#") 退出活动
+												a(href="#") 申请删除
 										tr
 											td
 												input(type="checkbox")
 											td 004
 											td zojl
 											td “网络语言与青年文化”中欧学生交流研讨会
-											td 中欧交流协会
 											td 待审核
 											td
 												a(href="#") 详细信息
+												a(href="#") 编辑
+												a(href="#") 活动成员
+												a(href="#") 二维码
 												a(href="#") 活动讨论区
-												a(href="#") 退出活动
-										tr
+												a(href="#") 申请删除
+										tr.font-color-grey
 											td
 												input(type="checkbox")
 											td 005
 											td yhsq
 											td 元火动漫社15周年社庆
-											td 元火动漫社
-											td 待审核
+											td 已结束
 											td
 												a(href="#") 详细信息
+												a(href="#") 编辑
+												a(href="#") 活动成员
+												a(href="#") 二维码
 												a(href="#") 活动讨论区
-												a(href="#") 退出活动
+												a(href="#") 申请删除
 										tr
 											td
 												input(type="checkbox")
 											td 001
 											td psjz
 											td 周末PS讲座
-											td 计算机应用设计协会
-											td 已签到
+											td 进行中
 											td
 												a(href="#") 详细信息
+												a(href="#") 编辑
+												a(href="#") 活动成员
+												a(href="#") 二维码
 												a(href="#") 活动讨论区
-												a(href="#") 退出活动
+												a(href="#") 申请删除
 										tr
 											td
 												input(type="checkbox")
 											td 002
 											td bdnl
 											td CUBA北大男篮
-											td 篮球协会
-											td 报名成功
+											td 即将开始
 											td
 												a(href="#") 详细信息
+												a(href="#") 编辑
+												a(href="#") 活动成员
+												a(href="#") 二维码
 												a(href="#") 活动讨论区
-												a(href="#") 退出活动
-										tr.font-color-grey
+												a(href="#") 申请删除
+										tr
 											td
 												input(type="checkbox")
 											td 003
 											td bdst
 											td 《北大社团》招募中
-											td 学生团体部
-											td 报名失败
+											td 即将开始
 											td
 												a(href="#") 详细信息
+												a(href="#") 编辑
+												a(href="#") 活动成员
+												a(href="#") 二维码
 												a(href="#") 活动讨论区
-												a(href="#") 退出活动
+												a(href="#") 申请删除
 										tr
 											td
 												input(type="checkbox")
 											td 004
 											td zojl
 											td “网络语言与青年文化”中欧学生交流研讨会
-											td 中欧交流协会
 											td 待审核
 											td
 												a(href="#") 详细信息
+												a(href="#") 编辑
+												a(href="#") 活动成员
+												a(href="#") 二维码
 												a(href="#") 活动讨论区
-												a(href="#") 退出活动
-										tr
+												a(href="#") 申请删除
+										tr.font-color-grey
 											td
 												input(type="checkbox")
 											td 005
 											td yhsq
 											td 元火动漫社15周年社庆
-											td 元火动漫社
-											td 待审核
+											td 已结束
 											td
 												a(href="#") 详细信息
+												a(href="#") 编辑
+												a(href="#") 活动成员
+												a(href="#") 二维码
 												a(href="#") 活动讨论区
-												a(href="#") 退出活动
+												a(href="#") 申请删除
 							.batch-menu-bar
 								a(href="#") 全部选中
-								a(href="#") 批量退出
+								a(href="#") 批量申请删除
 							.page-bar
 								a(href="#") 1
 								a(href="#") 2
