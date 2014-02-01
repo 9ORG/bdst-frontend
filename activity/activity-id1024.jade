@@ -1,0 +1,221 @@
+doctype html
+//if lt IE 7
+	html.no-js.lt-ie9.lt-ie8.lt-ie7
+//if IE 7
+	html.no-js.lt-ie9.lt-ie8
+//if IE 8
+	html.no-js.lt-ie9
+//[if gt IE 8]><!
+html.no-js
+	//<![endif]
+
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+
+		title 社团管理平台 | 为学生和社团提供一站式服务
+
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width')
+
+		link(rel='stylesheet', href='../css/layout.css')
+		link(rel='stylesheet', href='../lib/animate.min.css')
+		script(src="../lib/jquery-1.10.2.min.js")
+		script(src='../script/layout.js')
+
+	body
+		//if lt IE 7
+			p.chromeframe.
+			You are using an outdated browser.
+			Please <a href="http://browsehappy.com/">upgrade your browser</a> or
+			<a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>
+			to improve your experience.
+
+		include header
+ 
+		#body-containerinstall
+			.main-content-full(style="margin-bottom:140px")
+				#main-content-activity-info
+					#activity-info
+						h1#activity-name.inline 周末PS讲座
+						.tiny-tab-bar
+							a#activity-detail-tab-button.current(href="#") 活动详情
+							a#activity-library-tab-button(href="#") 资料库
+						.hr
+						#activity-detail-tab
+							#activity-detail.column-3-2.column-span
+								h2.inline 活动详情
+								.tiny-description-bar 即将开始
+								.hr
+								.activity-detail-box.box-content
+									ul.detail-list
+										li
+											.detail-list-name 活动名称
+											.detail-list-content-full 周末PS讲座
+										li
+											.detail-list-name 开始时间
+											.detail-list-content 2014年1月14日 19:00
+										li
+											.detail-list-name 结束时间
+											.detail-list-content 2014年1月14日 21:00
+										li
+											.detail-list-name 主办方
+											.detail-list-content
+												a(href="../club/club-id001.html") 计算机应用设计协会
+										li
+											.detail-list-name 类型
+											.detail-list-content 讲座
+										li
+											.detail-list-name 简介
+											.detail-list-content-full
+												p 这是一段简介。
+												p 北京大学计算机应用设计协会成立于2008年，以信息科学技术学院的学术资源为依托，致力于为全校学生构建一个参与各类计算机应用设计活动的平台。
+												p 2011年暑假，协会成立了一支技术过硬的移动互联网产品开发团队，短短两年，就自主设计、开发了包括“颐和园路5号”、“好好学习十八大”、“燕园地图”等在内的9款移动应用，覆盖Android、iOS、Windows Phone三大主流移动平台，现有代码近10万行，累计编辑代码30万余行。
+												p 协会的五个技术学习小组每周活动一次，拥有协会专用服务器、开发者账号、正版软件、学习资料等开发资源，为对计算机应用设计感兴趣的同学提供了交流、学习、实践的平台，使得计算机应用设计在校园中得到普及，从而促进北京大学计算机应用设计文化的发展。
+									.clear
+								h2.inline(style="margin-top:20px") 活动评论
+								.hr
+								.activity-detail-comment-box.box-content
+									#new-comment
+										.user-avatar
+											img(src="../img/club-id001/club-id001-logo.jpg")
+										.comment-detail
+											textarea
+											button 发布评论
+										.clear
+										.hr
+									#activity-comment
+										ul.comment-list
+											li
+												.user-avatar
+													img(src="../img/club-id001/club-id001-logo.jpg")
+												.comment-detail
+													.comment-author kyzamiz
+													.comment-time 2013-04-02 15:16
+													.reply-button
+														a(href="#") 回复
+													.clear
+													.comment-content 不知道这里最多可以输入多少个字？测试用而已管理员看到了嫌烦可以给我删了……不知道这里最多可以输入多少个字？测试用而已管理员看到了嫌烦可以给我删了……不知道这里最
+												.clear
+												.hr
+											li
+												.user-avatar
+													img(src="../img/club-avatar-default.png")
+												.comment-detail
+													.comment-author kyzamiz
+													.comment-time 2013-04-02 15:16
+													.reply-button
+														a(href="#") 回复
+													.clear
+													.comment-content 不知道这里最多可以输入多少个字？测试用而已管理员看到了嫌烦可以给我删了……不知道这里最多可以输入多少个字？测试用而已管理员看到了嫌烦可以给我删了……不知道这里最
+												.clear
+												.hr
+											li
+												.user-avatar
+													img(src="../img/club-avatar-default.png")
+												.comment-detail
+													.comment-author kyzamiz
+													.comment-time 2013-04-02 15:16
+													.reply-button
+														a(href="#") 回复
+													.clear
+													.comment-content 不知道这里最多可以输入多少个字？测试用而已管理员看到了嫌烦可以给我删了……不知道这里最多可以输入多少个字？测试用而已管理员看到了嫌烦可以给我删了……不知道这里最
+												.clear
+												.hr
+											li
+												.user-avatar
+													img(src="../img/club-avatar-default.png")
+												.comment-detail
+													.comment-author kyzamiz
+													.comment-time 2013-04-02 15:16
+													.reply-button
+														a(href="#") 回复
+													.clear
+													.comment-content 不知道这里最多可以输入多少个字？测试用而已管理员看到了嫌烦可以给我删了……不知道这里最多可以输入多少个字？测试用而已管理员看到了嫌烦可以给我删了……不知道这里最
+												.clear
+												.hr
+											li
+												.user-avatar
+													img(src="../img/club-avatar-default.png")
+												.comment-detail
+													.comment-author kyzamiz
+													.comment-time 2013-04-02 15:16
+													.reply-button
+														a(href="#") 回复
+													.clear
+													.comment-content 不知道这里最多可以输入多少个字？测试用而已管理员看到了嫌烦可以给我删了……不知道这里最多可以输入多少个字？测试用而已管理员看到了嫌烦可以给我删了……不知道这里最
+												.clear
+												.hr
+										.page-bar
+											a(href="#") 1
+											a(href="#") 2
+											a(href="#") 3
+											span ...
+											a(href="#") 10
+											span /
+											a(href="#") 显示全部
+										.clear
+							#activity-apply.column-3-1
+								h2.inline 参与活动
+								.hr
+								//- .activity-calendar-box
+								.activity-avatar-poster
+									img(src="../img/club-id001/club-id001-cover1.jpg")
+								.activity-apply-box.box-content
+									.activity-apply-info 已有200人报名
+									button#apply-activity 报名参加
+							.clear
+						#activity-library-tab.hidden
+							#activity-library.column-3-2.column-span
+								h2.inline 资料库
+								.tiny-description-bar 1份文稿 2部影像 20张照片
+								.hr
+								.activity-library-list-box
+									ul.library-list.box-content
+										li
+											img(src="../img/club-avatar-default.png")
+										li
+											img(src="../img/club-avatar-default.png")
+										li
+										li
+										li
+											img(src="../img/club-avatar-default.png")
+										li
+										li
+											img(src="../img/club-avatar-default.png")
+										li
+										li
+										li
+										li
+											img(src="../img/club-avatar-default.png")
+										li
+										li
+											img(src="../img/club-avatar-default.png")
+										li
+										li
+										li
+										li
+										li
+											img(src="../img/club-avatar-default.png")
+										li
+										li
+										.clear
+									.page-bar
+											a(href="#") 1
+											a(href="#") 2
+											a(href="#") 3
+											span ...
+											a(href="#") 10
+											span /
+											a(href="#") 显示全部
+							#activity-library-upload.column-3-1
+								h2.inline 上传资料
+								.hr
+								.activity-library-upload-box 拖拽至此上传
+								.box-content
+									button#upload 浏览上传
+									.library-upload-info 或者使用普通方式
+							.clear
+			.clear
+
+		include footer

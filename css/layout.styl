@@ -8,7 +8,7 @@ bro = #ba8879
 
 body-width = 1080px
 
-border-grey = #eaeaea
+border-grey = #e9e9e9
 light-grey = #bababa
 grey = #666
 deep-grey = #333
@@ -29,6 +29,8 @@ body, p
 
 p
 	margin-top 10px
+	&:first-child
+		margin-top 0px
 h1
 	font-size 26px
 	color deep-grey
@@ -39,7 +41,7 @@ h2
 	color deep-grey
 	line-height 40px
 h3
-	font-size 17px
+	font-size large
 	color deep-grey
 	line-height 36px
 
@@ -49,6 +51,7 @@ h3
 a
 	color deep-grey
 	font-size small
+	font-weight	bold
 	text-decoration none
 	transition .25s
 a:hover
@@ -57,7 +60,24 @@ a:hover
 ul, li
 	margin 0
 	padding 0
-	list-style none	
+	list-style none
+
+button
+	width 120px
+	font-size medium
+	color #fff
+	transition .25s
+	line-height 20px
+	padding 5px 8px 5px 8px
+	font-weight bold
+	border 1px solid blu
+	border-radius 5px
+	background-color blu
+	float left
+	&:hover
+		border-color org
+		background-color org
+		cursor pointer
 
 .clear
 	clear both
@@ -107,10 +127,6 @@ ul, li
 	margin-left auto
 	margin-right auto
 
-.main-content-full
-	width body-width
-	margin 160px auto 140px auto
-
 #sidebar
 	position fixed
 	top 165px
@@ -129,7 +145,6 @@ ul, li
 					margin-top 5px
 					& > a
 						font-size small
-						font-weight bold
 	#popup-user-list-custom
 		position fixed
 		top 160px
@@ -160,12 +175,22 @@ ul, li
 			& > a
 				color #fff
 				font-size 12px
-				font-weight bold
 				&.current
 					color org
 				&:hover
 					color org
 
+.main-content-full
+	width body-width
+	margin 160px auto 140px auto
+	.column-3-2
+		width 740px
+		float left
+	.column-3-1
+		width 290px
+		float left
+	.column-span
+		margin-right 50px
 .main-content
 	width 920px
 	margin 10px 0 100px 160px
@@ -206,6 +231,83 @@ ul, li
 				background-color rgba(255,255,255,1)
 			.activity-avatar-cover
 				background-color rgba(0,0,0,.05)
+	.activity-detail > h2
+		margin-top 20px
+		&:first-child
+			margin-top 0
+	.activity-detail-box
+		& li
+			margin-bottom 10px
+			display inline
+			float left
+			&:last-child
+				margin-bottom 0
+		& .detail-list
+			// width 530px
+			float left
+	.activity-avatar-poster
+		width 288px
+		// height 288px
+		border 1px solid border-grey
+		margin 5px 0 0 0
+		padding-bottom -3px
+		transition .25s
+		overflow hidden
+		& > img
+			width 288px
+		&:hover
+			border-color org
+			cursor pointer
+	.tiny-tab-bar
+		margin-left 10px
+		float right
+		& > a
+			position relative
+			top 2px
+			padding 8px 10px 10px 10px
+			height 20px
+			border 1px solid transparent
+			font-size large
+			color blu
+			opacity .5
+			float left
+			&:first-child
+				left 1px
+			&:hover
+				color org
+				opacity 1
+			&.current
+				border-top-color border-grey
+				border-left-color border-grey
+				border-right-color border-grey
+				border-top-left-radius 4px
+				border-top-right-radius 4px
+				background-color #fff
+				color org
+				opacity 1
+	.library-list li
+			margin 2px 2px 2px 2px
+			width 142px
+			height 92px
+			border 1px solid border-grey
+			display inline
+			float left
+			transition .25s
+			overflow hidden
+			&:hover
+				border-color org
+			img
+				width 142px
+	.activity-library-upload-box
+		width 288px
+		height 190px
+		border 1px solid border-grey
+		color border-grey
+		text-align center
+		line-height 190px
+		transition .25s
+		&:hover
+			border-color org
 	.box-content
 		.club-avatar-large
 			width 154px
@@ -223,13 +325,13 @@ ul, li
 			height 13px
 			line-height 13px
 			text-align center
-			font-weight bold
 			margin 20px 0 0px 0
 		.activity-avatar-large
 			width 266px
 			height 195px
 			overflow hidden
 			& > img
+				height 195px
 				width 266px
 				float left
 				z-index -1000
@@ -242,11 +344,78 @@ ul, li
 			line-height 40px
 			text-align center
 			color deep-grey
-			font-weight bold
 			background-color rgba(255,255,255,.8)
 			transition .25s
 			float left
 			z-index 1000
+		.detail-list-name
+			width 60px
+			height 30px
+			line-height 30px
+			margin 0 10px 0 0
+			color deep-grey
+			font-weight bold
+			float left
+		.detail-list-content
+			width 200px
+			height 30px
+			line-height 30px
+			margin 0 10px 0 0
+			float left
+		.detail-list-content-full
+			// width 440px
+			width 670px
+			// height 160px
+			margin 6px 0 0 0
+			overflow scroll
+			float left
+		.comment-list
+		#new-comment
+			.hr
+				margin 20px 0 20px 0
+			li:last-child
+				.hr
+					margin-bottom 10px
+			.user-avatar
+				margin-top 0px
+			.comment-detail
+				width 648px
+				padding-top 5px
+				float left
+				.comment-author
+					margin 0 10px 0 0
+					float left
+				.comment-time
+					margin 0 10px 0 0
+					color light-grey
+					float left
+				.reply-button a
+					font-size 12px
+					color blu
+					float left
+				.comment-content
+					margin 5px 0 0 0
+					width 648px
+					height 34px
+				textarea
+					margin 5px 0 0 0
+					width 630px
+					height 34px
+				button
+					margin 10px 0 0 0
+					float right
+		.activity-apply-info
+			margin 10px 0 0 0
+			color light-grey
+			float left
+		.library-upload-info
+			margin 10px 0 0 0
+			color light-grey
+			float left
+		#upload
+		#apply-activity
+			margin 3px 0 0 10px
+			float right
 
 .main-content
 	.user-club-list-box
@@ -258,6 +427,10 @@ ul, li
 			.activity-avatar
 			.user-avatar
 				border-color org
+	.user-edit-info-box
+	.club-edit-info-box
+		& button
+			margin-top 40px
 
 .main-content
 .main-content-full
@@ -308,6 +481,8 @@ ul, li
 			height 30px
 			line-height 30px
 			margin 20px 10px 0 0
+			color deep-grey
+			font-weight bold
 			float left
 		.info-tips
 			width 260px
@@ -341,42 +516,39 @@ ul, li
 		margin 20px 20px 0 0
 		padding 5px 8px 5px 8px
 		border 1px solid border-grey
-		font-size 12px
+		font-size small
 		float left
 		&[type="radio"]
 			width extra-small
 			margin: 25px 10px 0 0
 		&[type="checkbox"]
 			margin: 25px 10px 0 0
-		&[type="button"]
-			width 140px
-			height 34px
-			font-size medium
-			color #fff
-			transition .25s
-			line-height 20px
-			margin 40px 10px 0 0
-			padding 5px 8px 5px 8px
-			border 1px solid blu
-			border-radius 5px
-			background-color blu
-			float left
-			&:hover
-				border-color org
-				background-color org
-				cursor pointer
+	button
+		font-size medium
+		color #fff
+		transition .25s
+		line-height 20px
+		margin 10px 10px 0 0
+		padding 5px 8px 5px 8px
+		border 1px solid blu
+		border-radius 5px
+		background-color blu
+		float left
+		&:hover
+			border-color org
+			background-color org
+			cursor pointer
 	select
 		margin 26px 20px 0 0
 		float left
 	textarea
 		width 450px
 		height 120px
-		ling-height 20px
 		color grey
 		margin 20px 20px 0 0
 		padding 9px 8px 9px 8px
 		border 1px solid border-grey
-		font-size 12px
+		font-size small
 		float left
 	.short
 		width 80px
@@ -477,6 +649,132 @@ ul, li
 			margin-left 10px
 			float left
 
+#club-cover
+	position fixed
+	top 0
+	left 0
+	z-index -9999
+.cover-width
+	width 100%
+.cover-height
+	height 100%
+
+#club-cover-info
+	float left
+	.club-cover-title
+		padding 10px
+		background-color rgba(0,0,0,.4)
+		color #fff
+		text-shadow rgba(51,51,51,1) 0px 0px 6px
+		font-size large
+		font-weight bold
+		float left
+	.club-cover-description
+		max-width 276px
+		margin 4px 0 0 0
+		padding 10px
+		background-color rgba(0,0,0,.4)
+		color #fff
+		text-shadow rgba(51,51,51,1) 0px 0px 6px
+		font-size 12px
+// #club-cover-info
+// 	.club-cover-info-box
+// 		max-width 252px
+// 		padding 10px
+// 		color #fff
+// 		background-color rgba(0,0,0,.4)
+// 		float left
+// 		.club-cover-title
+// 			font-size large
+// 		.club-cover-description
+// 			margin-top 4px
+// 			font-size 12px
+#club-info
+	.club-info-box
+		position fixed
+		bottom 28px
+		&:hover
+			// #club-info-detail
+			// 	background-color rgba(0,0,0,.65)
+			// 	box-shadow 0 1px 3px 0 rgba(51,51,51,.25)
+		#club-avatar-square
+			width 160px
+			height 164px
+			overflow hidden
+			float left
+			& > img
+				width 164px
+				height 164px
+		#club-info-detail
+			width 664px
+			height 164px
+			float left
+			background-color rgba(0,0,0,.5)
+			box-shadow 0 1px 3px 0 rgba(51,51,51,.2)
+			margin 0 4px 0 4px
+			transition .25s
+			.club-name
+				color org
+				margin 10px 20px 0 20px
+				text-shadow rgba(0,0,0,.8) 0px 0px 8px
+				float left
+			#apply
+				margin 16px 20px 0 0
+				// background-color transparent
+				background-color rgba(0,0,0,.4)
+				border-color org
+				color org
+				text-shadow rgba(51,51,51,1) 0px 0px 4px
+				float right
+				&:hover
+					background-color org
+					color deep-grey
+					text-shadow rgba(51,51,51,0) 0px 0px 4px
+			.club-introduction
+				height 90px
+				margin 5px 20px 0 20px
+				overflow scroll
+				p
+					font-size 12px
+					color #fff
+					text-shadow rgba(51,51,51,1) 0px 0px 6px
+					transition .25s
+		#club-cover-album
+			width 248px
+			height 164px
+			float left
+			.club-cover-img1
+			.club-cover-img2
+			.club-cover-img3
+			.club-cover-img4
+			.club-cover-img5
+			.club-cover-img6
+				width 80px
+				height 80px
+				background-color #000
+				float left
+				overflow hidden
+				&.current
+					img
+						opacity 1
+			.club-cover-img2
+			.club-cover-img3
+			.club-cover-img5
+			.club-cover-img6
+				margin-left 4px
+			.club-cover-img4
+			.club-cover-img5
+			.club-cover-img6
+				margin-top 4px
+			img
+				width 80px
+				height 80px
+				opacity .5
+				transition .25s
+				&:hover
+					cursor pointer
+					opacity 1
+
 header
 	width 100%
 	height 80px
@@ -493,6 +791,14 @@ header
 	#top-bar
 		background-color rgba(255,255,255,.85)
 		box-shadow 0 1px 3px 0 rgba(51,51,51,.15)
+		&.top-bar-club
+			text-shadow rgba(51,51,51,1) 0px 0px 6px
+			background-color rgba(0,0,0,.4)
+			box-shadow 0 1px 3px 0 rgba(51,51,51,.3)
+			transition .25s
+			// &:hover
+			// 	background-color rgba(0,0,0,.6)
+			// 	box-shadow 0 1px 3px 0 rgba(51,51,51,.45)
 		#top-bar-content-container
 			width body-width
 			height 80px
@@ -514,12 +820,10 @@ header
 					font-size 20px
 					float left
 					color deep-grey
-					font-weight bold
 				#change-admin > a
 					margin-top 38px
 					float left
 					font-size 12px
-					font-weight bold
 					margin-left 6px
 			ul#top-nav
 				& > li
@@ -530,7 +834,12 @@ header
 					& > a
 						font-size 14px
 						line-height 80px
-						font-weight bold
+				&.top-nav-club a
+					color #fff
+					&:hover
+						color org
+					&.current
+						color org
 			#top-user-menu
 				width 80px
 				padding-top 5px
@@ -552,8 +861,11 @@ header
 							margin-right 20px
 						& > a
 							font-size small
-							font-weight bold
 							line-height 80px
+				&.top-user-menu-club a
+					color #fff
+					&:hover
+						color org
 
 footer
 	#foot-bar
@@ -584,15 +896,16 @@ footer
 						color rgba(255,255,255,.4)
 						&:hover
 							color #fff
-			.foot-bar-info-right
-				width 300px
-				float right
-				.foot-bar-title
-					font-size medium
-					color org
-				li.foot-bar-content
-					margin-top -5px
-					& > p
-						color rgba(255,255,255,.4)
-						& > a:hover
-							color #fff
+				&:last-child
+					width 300px
+					float right
+					.foot-bar-title
+						font-size medium
+						color org
+						font-weight bold
+					li.foot-bar-content
+						margin-top 10px
+						& > p
+							color rgba(255,255,255,.4)
+							& > a:hover
+								color #fff

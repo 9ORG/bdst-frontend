@@ -1,0 +1,70 @@
+doctype html
+//if lt IE 7
+	html.no-js.lt-ie9.lt-ie8.lt-ie7
+//if IE 7
+	html.no-js.lt-ie9.lt-ie8
+//if IE 8
+	html.no-js.lt-ie9
+//[if gt IE 8]><!
+html.no-js
+	//<![endif]
+
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+
+		title 社团管理平台 | 为学生和社团提供一站式服务
+
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width')
+
+		link(rel='stylesheet', href='../css/layout.css')
+		link(rel='stylesheet', href='../lib/animate.min.css')
+		script(src="../lib/jquery-1.10.2.min.js")
+		script(src='../script/layout.js')
+
+	body
+		//if lt IE 7
+			p.chromeframe.
+			You are using an outdated browser.
+			Please <a href="http://browsehappy.com/">upgrade your browser</a> or
+			<a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>
+			to improve your experience.
+
+		img#club-cover(src="../img/club-id001/club-id001-cover1.jpg")
+
+		include header-club
+
+		#body-container
+			.main-content-full
+				#main-content-club-info
+					#club-cover-info
+						.club-cover-info-box.animated.fadeInRight
+							.club-cover-title 照片名称
+							.clear
+							.club-cover-description 照片描述。总之就是做成类似幻灯片的啊啊啊样子，所以社团上传封面图集的那里我还得改改。这里放多少字好呢？
+					#club-info
+						.club-info-box.animated.fadeInUp
+							#club-avatar-square
+								img(src="../img/club-id001/club-id001-logo.jpg")
+							#club-info-detail
+								h1.club-name 计算机应用设计协会
+								button#apply 申请加入
+								.clear
+								.club-introduction
+									p 北京大学计算机应用设计协会成立于2008年，以信息科学技术学院的学术资源为依托，致力于为全校学生构建一个参与各类计算机应用设计活动的平台。
+									p 2011年暑假，协会成立了一支技术过硬的移动互联网产品开发团队，短短两年，就自主设计、开发了包括“颐和园路5号”、“好好学习十八大”、“燕园地图”等在内的9款移动应用，覆盖Android、iOS、Windows Phone三大主流移动平台，现有代码近10万行，累计编辑代码30万余行。
+									p 协会的五个技术学习小组每周活动一次，拥有协会专用服务器、开发者账号、正版软件、学习资料等开发资源，为对计算机应用设计感兴趣的同学提供了交流、学习、实践的平台，使得计算机应用设计在校园中得到普及，从而促进北京大学计算机应用设计文化的发展。
+							#club-cover-album
+								.club-cover-img1.current
+									img(src="../img/club-id001/club-id001-cover1-s.jpg")
+								.club-cover-img2
+									img(src="../img/club-id001/club-id001-cover2-s.jpg")
+								.club-cover-img3
+									img(src="../img/club-id001/club-id001-cover3-s.jpg")
+								.club-cover-img4
+									img(src="../img/club-id001/club-id001-cover4-s.jpg")
+								.club-cover-img5
+									img(src="../img/club-id001/club-id001-cover5-s.jpg")
+								.club-cover-img6
+									img(src="../img/club-id001/club-id001-cover6-s.jpg")
