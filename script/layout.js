@@ -1,5 +1,14 @@
 $(document).ready(function(){
 
+	/* 欢迎首页 - 图片墙 */
+	function photoWallCenter() {
+		var windowWidth = $(window).width();
+		$("#photo-wall").css("left",windowWidth/2 - 800);
+		$("#photo-wall").css("width",windowWidth - (windowWidth/2 - 800));
+	}
+	$(window).resize(photoWallCenter).trigger("resize");
+
+	/* Header - 用户名弹出菜单 */
 	var w = $("#username").width();
 	$("#username").mouseenter(function(){
 		$("#top-user-menu").css("width",220+w);
@@ -15,13 +24,7 @@ $(document).ready(function(){
 		});
 	});
 
-	$(".popup-check").focusout(function(){
-		var id = $(this).attr("id");
-		// $("#"+id+"-check").removeClass("animated fadeInLeft");
-		// $("#"+id+"-check").addClass("animated fadeInLeft");
-		$("#"+id+"-check").removeClass("hidden");
-	});
-
+	/* 编辑信息 - 信息提示 */
 	$(".popup-tips").focusin(function(){
 		var id = $(this).attr("id");
 		$("#"+id+"-tips").removeClass("animated fadeOutLeft");
@@ -36,6 +39,7 @@ $(document).ready(function(){
 		});
 	});
 
+	/* SideBar - 自定义分组菜单 */
 	$(".popup-custom-button").mouseenter(function(){
 		$("#popup-user-list-custom").removeClass("animated fadeOutLeft");
 		$("#popup-user-list-custom").addClass("animated fadeInLeft");

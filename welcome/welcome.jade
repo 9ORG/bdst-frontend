@@ -1,0 +1,93 @@
+doctype html
+//if lt IE 7
+	html.no-js.lt-ie9.lt-ie8.lt-ie7
+//if IE 7
+	html.no-js.lt-ie9.lt-ie8
+//if IE 8
+	html.no-js.lt-ie9
+//[if gt IE 8]><!
+html.no-js
+	//<![endif]
+
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+
+		title 社团管理平台 | 为学生和社团提供一站式服务
+
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width')
+
+		link(rel='stylesheet', href='../css/layout.css')
+		link(rel='stylesheet', href='../lib/animate.min.css')
+		script(src="../lib/jquery-1.10.2.min.js")
+		script(src='../script/layout.js')
+
+	body
+		//if lt IE 7
+			p.chromeframe.
+			You are using an outdated browser.
+			Please <a href="http://browsehappy.com/">upgrade your browser</a> or
+			<a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>
+			to improve your experience.
+ 
+		#welcome-page
+			#photo-wall
+				ul.photo-wall-list
+					li
+						img.photo-wall-pic(src="../img/club-id001/club-id001-cover1.jpg")
+					li
+						img.photo-wall-pic(src="../img/club-id001/club-id001-cover3.jpg")
+					li
+						img.photo-wall-pic(src="../img/club-id001/club-id001-cover4.jpg")
+					li
+						img.photo-wall-pic(src="../img/club-id001/club-id001-cover2.jpg")
+					li
+						img.photo-wall-pic(src="../img/club-id001/club-id001-cover5.jpg")
+				ul.photo-wall-list
+					li
+						img.photo-wall-pic(src="../img/club-id001/club-id001-cover6.jpg")
+					li
+						img.photo-wall-pic(src="../img/club-id001/club-id001-cover5.jpg")
+					li.logo-box
+						img.logo(src="../img/logo.png")
+						.logo-text 社团管理平台
+					li
+						img.photo-wall-pic(src="../img/club-id001/club-id001-cover1.jpg")
+					li
+						img.photo-wall-pic(src="../img/club-id001/club-id001-cover3.jpg")
+				ul.photo-wall-list
+					li
+						img.photo-wall-pic(src="../img/club-id001/club-id001-cover4.jpg")
+					li
+						img.photo-wall-pic(src="../img/club-id001/club-id001-cover2.jpg")
+					li
+						img.photo-wall-pic(src="../img/club-id001/club-id001-cover6.jpg")
+					li
+						img.photo-wall-pic(src="../img/club-id001/club-id001-cover4.jpg")
+					li
+						img.photo-wall-pic(src="../img/club-id001/club-id001-cover2.jpg")
+				.clear
+			.main-content-full
+				.slogan-box
+					h1 享受信息化的社团生活
+					h2
+						| 为学生和社团提供
+						span 一站式
+						| 服务
+				.login-box
+					input(type="text", placeholder="手机号码").normal
+					input(type="password", placeholder="密码").normal
+					#login
+						img(src="../img/arrow.png")
+					#forget-password
+						a(href="#") 忘记密码
+					.clear
+				.slogan-box(style="margin-top:20px")
+					h2 - OR -
+				.signup-box
+					button#signup 现在加入
+				.clear
+
+
+		include footer
