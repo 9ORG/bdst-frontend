@@ -32,7 +32,7 @@ html.no-js
 			to improve your experience.
  
 		#welcome-page
-			#photo-wall
+			#photo-wall.animated.fadeInDown
 				ul.photo-wall-list
 					li
 						img.photo-wall-pic(src="../img/club-id001/club-id001-cover1.jpg")
@@ -68,7 +68,7 @@ html.no-js
 					li
 						img.photo-wall-pic(src="../img/club-id001/club-id001-cover2.jpg")
 				.clear
-			.main-content-full
+			.main-content-full.animated.fadeInUp
 				.slogan-box
 					h1 享受信息化的社团生活
 					h2
@@ -79,7 +79,8 @@ html.no-js
 					input(type="text", placeholder="手机号码").normal
 					input(type="password", placeholder="密码").normal
 					#login
-						img(src="../img/arrow.png")
+						a(href="../userpage/index.html")
+							img(src="../img/arrow.png")
 					#forget-password
 						a(href="#") 忘记密码
 					.clear
