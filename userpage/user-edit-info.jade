@@ -64,13 +64,13 @@ html.no-js
 									li
 										.info-name 手机号码
 										input(type="text", disabled="disabled", name="phone-num" placeholder="18610096949")#phone-num.normal
-										a(href="#").plain-button 修改手机号码
-										a(href="#").plain-button 修改登录密码
+										#change-phone-num.plain-button 修改手机号码
+										#change-password.plain-button 修改登录密码
 										.clear
 									li
 										.info-name 邮箱
 										input(type="text", disabled="disabled", name="email" placeholder="summerz0501@126.com")#email.normal
-										a(href="#").plain-button 修改邮箱
+										#change-email.plain-button 修改邮箱
 										.clear
 								ul.box-content
 									p.description-card 填写真实的信息，你会遇见更多可能感兴趣的人。
@@ -130,7 +130,7 @@ html.no-js
 										.info-name(style="width:38px") 校外
 										input(type="text", name="non-school-info")#non-school-info.long
 										.clear
-								button 确认更改
+								button#submit 确认更改
 					#user-avatar.column-3-1
 						h2.inline 头像
 						.hr

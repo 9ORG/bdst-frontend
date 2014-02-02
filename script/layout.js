@@ -8,6 +8,23 @@ $(document).ready(function(){
 	}
 	$(window).resize(photoWallCenter).trigger("resize");
 
+	/* 欢迎首页 - 注册 */
+	$("#signup").click(function(){
+		$("#toggle-signup-box").fadeToggle(250);
+	});
+	$("#next-to-2").click(function(){
+		$("#signup-step1").hide();
+		$("#signup-step2").fadeIn(250);
+	});
+	$("#back-to-1").click(function(){
+		$("#signup-step1").fadeIn(250);
+		$("#signup-step2").hide();
+	});
+	$("#next-to-3").click(function(){
+		$("#signup-step2").hide();
+		$("#signup-step3").fadeIn(250);
+	});
+
 	/* Header - 用户菜单 */
 	var w = $("#username").width();
 	$("#top-user-menu").css("width",220+w);

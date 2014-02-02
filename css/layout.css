@@ -144,7 +144,7 @@ button:hover {
 }
 #sidebar ul#side-menu > li {
   font-size: 12px;
-  color: #bababa;
+  color: #aaa;
   margin-bottom: 20px;
   text-align: center;
   font-weight: bold;
@@ -475,7 +475,7 @@ button:hover {
 .main-content-full .box-content .comment-list .comment-detail .comment-time,
 .main-content-full .box-content #new-comment .comment-detail .comment-time {
   margin: 0 10px 0 0;
-  color: #bababa;
+  color: #aaa;
   float: left;
 }
 .main-content-full .box-content .comment-list .comment-detail .reply-button a,
@@ -503,12 +503,12 @@ button:hover {
 }
 .main-content-full .box-content .activity-apply-info {
   margin: 10px 0 0 0;
-  color: #bababa;
+  color: #aaa;
   float: left;
 }
 .main-content-full .box-content .library-upload-info {
   margin: 10px 0 0 0;
-  color: #bababa;
+  color: #aaa;
   float: left;
 }
 .main-content-full .box-content #upload,
@@ -552,7 +552,7 @@ button:hover {
 }
 .main-content .tiny-description-bar,
 .main-content-full .tiny-description-bar {
-  color: #bababa;
+  color: #aaa;
   margin-right: 10px;
   margin-top: 14px;
   margin-left: 5px;
@@ -560,7 +560,7 @@ button:hover {
 }
 .main-content .message-card,
 .main-content-full .message-card {
-  color: #bababa;
+  color: #aaa;
   margin-top: 10px;
 }
 .main-content .message-card:first-child,
@@ -569,7 +569,7 @@ button:hover {
 }
 .main-content .description-card,
 .main-content-full .description-card {
-  color: #bababa;
+  color: #aaa;
   margin-top: 10px;
   padding-top: 10px;
 }
@@ -652,6 +652,10 @@ button:hover {
   margin: 20px 10px 0 0;
   float: left;
 }
+.main-content .plain-button:hover,
+.main-content-full .plain-button:hover {
+  cursor: pointer;
+}
 .main-content input,
 .main-content-full input {
   height: 20px;
@@ -727,7 +731,7 @@ button:hover {
 }
 .main-content .normal,
 .main-content-full .normal {
-  width: 168px;
+  width: 162px;
 }
 .main-content .long,
 .main-content-full .long {
@@ -764,7 +768,7 @@ button:hover {
 }
 .main-content table tbody tr.font-color-grey,
 .main-content-full table tbody tr.font-color-grey {
-  color: #bababa;
+  color: #aaa;
 }
 .main-content table tbody tr td:last-child,
 .main-content-full table tbody tr td:last-child {
@@ -897,7 +901,7 @@ button:hover {
 }
 .main-content .page-bar > span,
 .main-content-full .page-bar > span {
-  color: #bababa;
+  color: #aaa;
   font-size: 12px;
   margin-left: 10px;
   float: left;
@@ -1240,6 +1244,7 @@ header #top-bar #top-bar-content-container #top-user-menu.top-user-menu-club a:h
   border-radius: 4px;
 }
 #welcome-page .main-content-full .login-box #login {
+  position: relative;
   margin: 21px 0 0 0px;
   float: left;
   opacity: 0.75;
@@ -1252,7 +1257,6 @@ header #top-bar #top-bar-content-container #top-user-menu.top-user-menu-club a:h
   transition: 0.25s;
 }
 #welcome-page .main-content-full .login-box #login:hover {
-  position: relative;
   left: 5px;
   opacity: 1;
   -ms-filter: none;
@@ -1265,7 +1269,7 @@ header #top-bar #top-bar-content-container #top-user-menu.top-user-menu-club a:h
 #welcome-page .main-content-full .login-box #forget-password a {
   text-decoration: underline;
   font-size: 12px;
-  color: #bababa;
+  color: #aaa;
   line-height: 32px;
 }
 #welcome-page .main-content-full .login-box #forget-password a:hover {
@@ -1281,6 +1285,79 @@ header #top-bar #top-bar-content-container #top-user-menu.top-user-menu-club a:h
   font-size: 20px;
   background-color: #fcb03c;
   border-color: #fcb03c;
+}
+#welcome-page .main-content-full #toggle-signup-box {
+  width: 561px;
+  margin: 30px auto 0 auto;
+  padding: 40px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #f4f4f4;
+}
+#welcome-page .main-content-full #toggle-signup-box .tri-pointer-grey {
+  position: relative;
+  top: -54px;
+  margin: 0 276px 0 276px;
+}
+#welcome-page .main-content-full #toggle-signup-box .toggle-box-content {
+  margin: -24px 0 0 0;
+}
+#welcome-page .main-content-full #toggle-signup-box .toggle-box-content h2 span {
+  position: relative;
+  top: -1px;
+  margin: 0 0 0 10px;
+  font-size: 16px;
+}
+#welcome-page .main-content-full #toggle-signup-box .toggle-box-content .box-content:first-child {
+  margin: 0;
+}
+#welcome-page .main-content-full #toggle-signup-box .toggle-box-content .box-content .info-name {
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  margin: 20px 10px 0 0;
+  color: #333;
+  font-weight: bold;
+  float: left;
+}
+#welcome-page .main-content-full #toggle-signup-box .toggle-box-content .box-content .info-check,
+#welcome-page .main-content-full #toggle-signup-box .toggle-box-content .box-content .info-tips {
+  width: 260px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  color: #ba8879;
+  margin: 20px 10px 0 0;
+  float: left;
+}
+#welcome-page .main-content-full #toggle-signup-box .toggle-box-content .box-content .info-check-red {
+  border-color: #e00;
+}
+#welcome-page .main-content-full #toggle-signup-box .toggle-box-content .box-content .info-check-green {
+  border-color: #0b0;
+}
+#welcome-page .main-content-full #toggle-signup-box .toggle-box-content .box-content .validator-short {
+  width: 62px;
+}
+#welcome-page .main-content-full #toggle-signup-box .toggle-box-content .box-content button#phone-validate {
+  margin: 20px 0 0 0;
+}
+#welcome-page .main-content-full #toggle-signup-box .toggle-box-content button#next-to-2,
+#welcome-page .main-content-full #toggle-signup-box .toggle-box-content button#submit {
+  width: 200px;
+  margin: 40px 0 0 180px;
+}
+#welcome-page .main-content-full #toggle-signup-box .toggle-box-content button#back-to-1 {
+  width: 200px;
+  margin: 40px 0 0 68px;
+  background-color: #aaa;
+  border-color: #aaa;
+  float: left;
+}
+#welcome-page .main-content-full #toggle-signup-box .toggle-box-content button#next-to-3 {
+  width: 200px;
+  margin: 40px 0 0 21px;
+  float: left;
 }
 footer #foot-bar {
   width: 100%;
