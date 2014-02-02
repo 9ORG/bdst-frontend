@@ -531,7 +531,7 @@ button:hover {
   border-color: #fcb03c;
 }
 .main-content .user-edit-info-box button,
-.main-content .club-edit-info-box button {
+.main-content .admin-edit-info-box button {
   margin-top: 40px;
 }
 .main-content .tiny-menu-bar,
@@ -986,7 +986,7 @@ button:hover {
   text-shadow: rgba(51,51,51,0) 0px 0px 4px;
 }
 #club-info .club-info-box #club-info-detail .club-introduction {
-  height: 84px;
+  height: 82px;
   margin: 5px 20px 0 20px;
   overflow: scroll;
 }
@@ -1176,7 +1176,20 @@ header #top-bar #top-bar-content-container #top-user-menu.top-user-menu-club a:h
 #welcome-page #photo-wall .photo-wall-list li.logo-box {
   background-color: #fff;
 }
-#welcome-page #photo-wall .photo-wall-list li img.photo-wall-pic {
+#welcome-page #photo-wall .photo-wall-list li img.photo-wall-pic1,
+#welcome-page #photo-wall .photo-wall-list li img.photo-wall-pic2,
+#welcome-page #photo-wall .photo-wall-list li img.photo-wall-pic3,
+#welcome-page #photo-wall .photo-wall-list li img.photo-wall-pic4,
+#welcome-page #photo-wall .photo-wall-list li img.photo-wall-pic5,
+#welcome-page #photo-wall .photo-wall-list li img.photo-wall-pic6,
+#welcome-page #photo-wall .photo-wall-list li img.photo-wall-pic7,
+#welcome-page #photo-wall .photo-wall-list li img.photo-wall-pic8,
+#welcome-page #photo-wall .photo-wall-list li img.photo-wall-pic9,
+#welcome-page #photo-wall .photo-wall-list li img.photo-wall-pic10,
+#welcome-page #photo-wall .photo-wall-list li img.photo-wall-pic11,
+#welcome-page #photo-wall .photo-wall-list li img.photo-wall-pic12,
+#welcome-page #photo-wall .photo-wall-list li img.photo-wall-pic13,
+#welcome-page #photo-wall .photo-wall-list li img.photo-wall-pic14 {
   width: 320px;
   height: 200px;
 }
@@ -1203,7 +1216,7 @@ header #top-bar #top-bar-content-container #top-user-menu.top-user-menu-club a:h
   color: #fcb03c;
 }
 #welcome-page .main-content-full {
-  margin: 80px auto 140px auto;
+  margin: 60px auto 120px auto;
   width: 1080px;
 }
 #welcome-page .main-content-full .slogan-box {

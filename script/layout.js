@@ -8,18 +8,18 @@ $(document).ready(function(){
 	}
 	$(window).resize(photoWallCenter).trigger("resize");
 
-	/* Header - 用户名弹出菜单 */
+	/* Header - 用户菜单 */
 	var w = $("#username").width();
 	$("#username").mouseenter(function(){
 		$("#top-user-menu").css("width",220+w);
 		$("#popup-user-menu").removeClass("animated fadeOutLeft");
 		$("#popup-user-menu").addClass("animated fadeInLeft");
-		$("#popup-user-menu").removeClass("hidden");
+		$("#popup-user-menu").fadeIn(1000);
 	});
 	$("#top-user-menu").mouseleave(function(){
 		$("#popup-user-menu").removeClass("animated fadeInLeft");
-		$("#popup-user-menu").addClass("animated fadeOutLeft",function(){
-			$("#popup-user-menu").addClass("hidden");
+		$("#popup-user-menu").addClass("animated fadeOutLeft");
+		$("#popup-user-menu").fadeOut(1000,function(){
 			$("#top-user-menu").css("width",w);
 		});
 	});
@@ -29,14 +29,13 @@ $(document).ready(function(){
 		var id = $(this).attr("id");
 		$("#"+id+"-tips").removeClass("animated fadeOutLeft");
 		$("#"+id+"-tips").addClass("animated fadeInLeft");
-		$("#"+id+"-tips").removeClass("hidden");
+		$("#"+id+"-tips").fadeIn(1000);
 	});
 	$(".popup-tips").focusout(function(){
 		var id = $(this).attr("id");
 		$("#"+id+"-tips").removeClass("animated fadeInLeft");
-		$("#"+id+"-tips").addClass("animated fadeOutLeft",function(){
-			$("#"+id+"-tips").addClass("hidden");
-		});
+		$("#"+id+"-tips").addClass("animated fadeOutLeft");
+		$("#"+id+"-tips").fadeOut(1000);
 	});
 
 	/* SideBar - 自定义分组菜单 */
@@ -44,14 +43,13 @@ $(document).ready(function(){
 		$("#popup-user-list-custom").removeClass("animated fadeOutLeft");
 		$("#popup-user-list-custom").addClass("animated fadeInLeft");
 		$(".popup-custom-button").addClass("current-button");
-		$("#popup-user-list-custom").removeClass("hidden");
+		$("#popup-user-list-custom").fadeIn(1000);
 	});
 	$(".popup-custom").mouseleave(function(){
 		$("#popup-user-list-custom").removeClass("animated fadeInLeft");
 		$(".popup-custom-button").removeClass("current-button");
-		$("#popup-user-list-custom").addClass("animated fadeOutLeft",function(){
-			$("#popup-user-list-custom").addClass("hidden");
-		});
+		$("#popup-user-list-custom").addClass("animated fadeOutLeft");
+		$("#popup-user-list-custom").fadeOut(1000);
 	});
 
 	/* 活动首页 - Tab切换 */
