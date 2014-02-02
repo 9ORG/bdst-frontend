@@ -10,8 +10,8 @@ $(document).ready(function(){
 
 	/* Header - 用户菜单 */
 	var w = $("#username").width();
+	$("#top-user-menu").css("width",220+w);
 	$("#username").mouseenter(function(){
-		$("#top-user-menu").css("width",220+w);
 		$("#popup-user-menu").removeClass("animated fadeOutLeft");
 		$("#popup-user-menu").addClass("animated fadeInLeft");
 		$("#popup-user-menu").fadeIn(1000);
@@ -19,9 +19,7 @@ $(document).ready(function(){
 	$("#top-user-menu").mouseleave(function(){
 		$("#popup-user-menu").removeClass("animated fadeInLeft");
 		$("#popup-user-menu").addClass("animated fadeOutLeft");
-		$("#popup-user-menu").fadeOut(1000,function(){
-			$("#top-user-menu").css("width",w);
-		});
+		$("#popup-user-menu").fadeOut(1000);
 	});
 
 	/* 编辑信息 - 信息提示 */
