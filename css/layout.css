@@ -1161,7 +1161,7 @@ header #top-bar #top-bar-content-container #top-user-menu.top-user-menu-club a:h
 #welcome-page #photo-wall {
   position: relative;
   top: 0px;
-  height: 500px;
+  height: 600px;
   overflow: hidden;
 }
 #welcome-page #photo-wall .photo-wall-list {
@@ -1186,6 +1186,8 @@ header #top-bar #top-bar-content-container #top-user-menu.top-user-menu-club a:h
   height: 120px;
 }
 #welcome-page #photo-wall .photo-wall-list li .logo-text {
+  position: relative;
+  left: 14px;
   width: 100%;
   margin: 10px 0 0 0;
   font-size: 20px;
@@ -1193,8 +1195,15 @@ header #top-bar #top-bar-content-container #top-user-menu.top-user-menu-club a:h
   font-weight: bold;
   text-align: center;
 }
+#welcome-page #photo-wall .photo-wall-list li .logo-text span {
+  position: relative;
+  top: -8px;
+  margin: 0 0 0 5px;
+  font-size: 10px;
+  color: #fcb03c;
+}
 #welcome-page .main-content-full {
-  margin: 60px auto 140px auto;
+  margin: 80px auto 140px auto;
   width: 1080px;
 }
 #welcome-page .main-content-full .slogan-box {
@@ -1257,6 +1266,8 @@ header #top-bar #top-bar-content-container #top-user-menu.top-user-menu-club a:h
   width: 200px;
   line-height: 30px;
   font-size: 20px;
+  background-color: #fcb03c;
+  border-color: #fcb03c;
 }
 footer #foot-bar {
   width: 100%;
