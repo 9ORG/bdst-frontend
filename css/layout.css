@@ -1165,7 +1165,7 @@ header #top-bar #top-bar-content-container #top-user-menu.top-user-menu-club a:h
 #welcome-page #photo-wall {
   position: relative;
   top: 0px;
-  height: 600px;
+  height: 500px;
   overflow: hidden;
 }
 #welcome-page #photo-wall .photo-wall-list {
@@ -1204,7 +1204,7 @@ header #top-bar #top-bar-content-container #top-user-menu.top-user-menu-club a:h
 }
 #welcome-page #photo-wall .photo-wall-list li .logo-text {
   position: relative;
-  left: 14px;
+  left: 12px;
   width: 100%;
   margin: 10px 0 0 0;
   font-size: 20px;
@@ -1214,7 +1214,7 @@ header #top-bar #top-bar-content-container #top-user-menu.top-user-menu-club a:h
 }
 #welcome-page #photo-wall .photo-wall-list li .logo-text span {
   position: relative;
-  top: -8px;
+  top: -12px;
   margin: 0 0 0 5px;
   font-size: 10px;
   color: #fcb03c;
@@ -1229,10 +1229,12 @@ header #top-bar #top-bar-content-container #top-user-menu.top-user-menu-club a:h
 #welcome-page .main-content-full .slogan-box h1 {
   font-size: 32px;
 }
-#welcome-page .main-content-full .slogan-box h2 {
+#welcome-page .main-content-full .slogan-box h2,
+#welcome-page .main-content-full .slogan-box h3 {
   color: #666;
 }
-#welcome-page .main-content-full .slogan-box h2 span {
+#welcome-page .main-content-full .slogan-box h2 span,
+#welcome-page .main-content-full .slogan-box h3 span {
   color: #fcb03c;
 }
 #welcome-page .main-content-full .login-box {
@@ -1280,6 +1282,7 @@ header #top-bar #top-bar-content-container #top-user-menu.top-user-menu-club a:h
   margin: 0px auto 0 auto;
 }
 #welcome-page .main-content-full .signup-box button#signup {
+  margin: 20px 0 0 0;
   width: 200px;
   line-height: 30px;
   font-size: 20px;
