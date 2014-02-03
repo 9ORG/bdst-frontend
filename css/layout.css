@@ -716,10 +716,10 @@ button:hover {
 }
 .main-content textarea,
 .main-content-full textarea {
-  width: 450px;
+  width: 490px;
   height: 120px;
   color: #666;
-  margin: 20px 20px 0 0;
+  margin: 20px 0 0 0;
   padding: 9px 8px 9px 8px;
   border: 1px solid #e4e4e4;
   font-size: 13px;
@@ -735,7 +735,8 @@ button:hover {
 }
 .main-content .long,
 .main-content-full .long {
-  width: 450px;
+  width: 490px;
+  margin-right: 0px;
 }
 .main-content table,
 .main-content-full table {
@@ -1220,7 +1221,7 @@ header #top-bar #top-bar-content-container #top-user-menu.top-user-menu-club a:h
   color: #fcb03c;
 }
 #welcome-page .main-content-full {
-  margin: 60px auto 120px auto;
+  margin: 80px auto 140px auto;
   width: 1080px;
 }
 #welcome-page .main-content-full .slogan-box {
@@ -1238,16 +1239,16 @@ header #top-bar #top-bar-content-container #top-user-menu.top-user-menu-club a:h
   color: #fcb03c;
 }
 #welcome-page .main-content-full .login-box {
-  width: 520px;
+  width: 592px;
   margin: 0 auto 0 auto;
 }
-#welcome-page .main-content-full .login-box input {
+#welcome-page .main-content-full .login-box .box-content li input {
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-#welcome-page .main-content-full .login-box #login {
+#welcome-page .main-content-full .login-box .box-content li #login {
   position: relative;
-  margin: 21px 0 0 0px;
+  margin: 21px 0 0 10px;
   float: left;
   opacity: 0.75;
   filter: alpha(opacity=75);
@@ -1258,24 +1259,26 @@ header #top-bar #top-bar-content-container #top-user-menu.top-user-menu-club a:h
   -ms-transition: 0.25s;
   transition: 0.25s;
 }
-#welcome-page .main-content-full .login-box #login:hover {
+#welcome-page .main-content-full .login-box .box-content li #login:hover {
   left: 5px;
   opacity: 1;
   -ms-filter: none;
   filter: none;
 }
-#welcome-page .main-content-full .login-box #forget-password {
+#welcome-page .main-content-full .login-box .box-content li #forget-password {
   margin: 20px 0 0 20px;
-  float: left;
-}
-#welcome-page .main-content-full .login-box #forget-password a {
   text-decoration: underline;
   font-size: 12px;
-  color: #aaa;
-  line-height: 32px;
-}
-#welcome-page .main-content-full .login-box #forget-password a:hover {
   color: #77bfdf;
+  line-height: 32px;
+  float: left;
+  opacity: 0.75;
+  filter: alpha(opacity=75);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+}
+#welcome-page .main-content-full .login-box .box-content li #forget-password:hover {
+  color: #77bfdf;
+  cursor: pointer;
 }
 #welcome-page .main-content-full .signup-box {
   width: 200px;
@@ -1290,7 +1293,7 @@ header #top-bar #top-bar-content-container #top-user-menu.top-user-menu-club a:h
   border-color: #fcb03c;
 }
 #welcome-page .main-content-full #toggle-signup-box {
-  width: 561px;
+  width: 592px;
   margin: 30px auto 0 auto;
   padding: 40px;
   -webkit-border-radius: 4px;
@@ -1300,21 +1303,42 @@ header #top-bar #top-bar-content-container #top-user-menu.top-user-menu-club a:h
 #welcome-page .main-content-full #toggle-signup-box .tri-pointer-grey {
   position: relative;
   top: -54px;
-  margin: 0 276px 0 276px;
+  margin: 0 292px 0 292px;
 }
-#welcome-page .main-content-full #toggle-signup-box .toggle-box-content {
-  margin: -24px 0 0 0;
+#welcome-page .main-content-full #toggle-forget-password-box {
+  width: 592px;
+  margin: 20px auto 0 auto;
+  padding: 40px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #f4f4f4;
 }
-#welcome-page .main-content-full #toggle-signup-box .toggle-box-content h2 span {
+#welcome-page .main-content-full #toggle-forget-password-box .tri-pointer-grey {
+  position: relative;
+  top: -54px;
+  margin: 0 0 0 560px;
+}
+#welcome-page .main-content-full #toggle-forget-password-box .description-card {
+  margin-top: 0px;
+}
+#welcome-page .main-content-full #toggle-forget-password-box button#find-password {
+  width: 200px;
+  margin: 40px 0 0 196px;
+  float: left;
+}
+#welcome-page .main-content-full .toggle-box-content {
+  margin: -34px 0 0 0;
+}
+#welcome-page .main-content-full .toggle-box-content h2 span {
   position: relative;
   top: -1px;
   margin: 0 0 0 10px;
   font-size: 16px;
 }
-#welcome-page .main-content-full #toggle-signup-box .toggle-box-content .box-content:first-child {
+#welcome-page .main-content-full .toggle-box-content .box-content:first-child {
   margin: 0;
 }
-#welcome-page .main-content-full #toggle-signup-box .toggle-box-content .box-content .info-name {
+#welcome-page .main-content-full .toggle-box-content .box-content .info-name {
   width: 60px;
   height: 30px;
   line-height: 30px;
@@ -1323,8 +1347,8 @@ header #top-bar #top-bar-content-container #top-user-menu.top-user-menu-club a:h
   font-weight: bold;
   float: left;
 }
-#welcome-page .main-content-full #toggle-signup-box .toggle-box-content .box-content .info-check,
-#welcome-page .main-content-full #toggle-signup-box .toggle-box-content .box-content .info-tips {
+#welcome-page .main-content-full .toggle-box-content .box-content .info-check,
+#welcome-page .main-content-full .toggle-box-content .box-content .info-tips {
   width: 260px;
   height: 30px;
   line-height: 30px;
@@ -1333,33 +1357,40 @@ header #top-bar #top-bar-content-container #top-user-menu.top-user-menu-club a:h
   margin: 20px 10px 0 0;
   float: left;
 }
-#welcome-page .main-content-full #toggle-signup-box .toggle-box-content .box-content .info-check-red {
+#welcome-page .main-content-full .toggle-box-content .box-content .info-check-red {
   border-color: #e00;
 }
-#welcome-page .main-content-full #toggle-signup-box .toggle-box-content .box-content .info-check-green {
+#welcome-page .main-content-full .toggle-box-content .box-content .info-check-green {
   border-color: #0b0;
 }
-#welcome-page .main-content-full #toggle-signup-box .toggle-box-content .box-content .validator-short {
+#welcome-page .main-content-full .toggle-box-content .box-content .validator-short {
   width: 62px;
 }
-#welcome-page .main-content-full #toggle-signup-box .toggle-box-content .box-content button#phone-validate {
+#welcome-page .main-content-full .toggle-box-content .box-content button#phone-validate {
   margin: 20px 0 0 0;
 }
-#welcome-page .main-content-full #toggle-signup-box .toggle-box-content button#next-to-2,
-#welcome-page .main-content-full #toggle-signup-box .toggle-box-content button#submit {
+#welcome-page .main-content-full .toggle-box-content button#next-to-2 {
   width: 200px;
-  margin: 40px 0 0 180px;
+  margin: 40px 0 0 196px;
 }
-#welcome-page .main-content-full #toggle-signup-box .toggle-box-content button#back-to-1 {
+#welcome-page .main-content-full .toggle-box-content button#back-to-2 {
   width: 200px;
-  margin: 40px 0 0 68px;
+  margin: 40px 0 0 84px;
   background-color: #aaa;
   border-color: #aaa;
   float: left;
 }
-#welcome-page .main-content-full #toggle-signup-box .toggle-box-content button#next-to-3 {
+#welcome-page .main-content-full .toggle-box-content button#back-to-1 {
   width: 200px;
-  margin: 40px 0 0 21px;
+  margin: 40px 0 0 84px;
+  background-color: #aaa;
+  border-color: #aaa;
+  float: left;
+}
+#welcome-page .main-content-full .toggle-box-content button#next-to-3,
+#welcome-page .main-content-full .toggle-box-content button#submit {
+  width: 200px;
+  margin: 40px 0 0 20px;
   float: left;
 }
 footer #foot-bar {

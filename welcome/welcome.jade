@@ -78,14 +78,35 @@ html.no-js
 						span 一站式
 						| 服务
 				.login-box
-					input(type="text", placeholder="手机号码").normal
-					input(type="password", placeholder="密码").normal
-					#login
-						a(href="../userpage/index.html")
-							img(src="../img/arrow.png")
-					#forget-password
-						a(href="#") 忘记密码
-					.clear
+					ul.box-content
+						li
+							input(type="text", placeholder="手机号码").normal
+						li
+							input(type="password", placeholder="密码").normal
+						li
+							input(type="checkbox", name="rememeber")
+							.info-name(style="width:48px") 记住我
+						li
+							#login
+								a(href="../userpage/index.html")
+									img(src="../img/arrow.png")
+						li
+							#forget-password 忘记密码
+						.clear
+				#toggle-forget-password-box.hidden
+					.tri-pointer-grey
+						img(src="../img/tri-pointer-grey.png")
+					.toggle-box-content
+						p.description-card 告诉我们你的手机号码，密码会以短信形式发到你的手机上。
+						.forget-password-box
+							ul.box-content
+								li
+									.info-name 手机号码
+									input(type="text", placeholder="手机号码").normal
+									#password-phone-num-check-no.info-check 还没有注册过呢
+									.clear
+							button#find-password 重置密码
+						.clear
 				.slogan-box(style="margin-top:20px")
 					h3 或者
 				.signup-box
@@ -194,9 +215,9 @@ html.no-js
 										#email-check-yes.info-check 可以使用：）
 										#email-check-no.info-check.hidden 使用过了，换一个吧！
 										.clear
+								button#back-to-2 上一步
 								button#submit 验证邮箱
 								.clear
 				.clear
-
 
 		include footer

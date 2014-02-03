@@ -61,11 +61,43 @@
           <h2>为学生和社团提供<span>一站式</span>服务</h2>
         </div>
         <div class="login-box">
-          <input type="text" placeholder="手机号码" class="normal">
-          <input type="password" placeholder="密码" class="normal">
-          <div id="login"><a href="../userpage/index.html"><img src="../img/arrow.png"></a></div>
-          <div id="forget-password"><a href="#">忘记密码</a></div>
-          <div class="clear"></div>
+          <ul class="box-content">
+            <li>
+              <input type="text" placeholder="手机号码" class="normal">
+            </li>
+            <li>
+              <input type="password" placeholder="密码" class="normal">
+            </li>
+            <li>
+              <input type="checkbox" name="rememeber">
+              <div style="width:48px" class="info-name">记住我</div>
+            </li>
+            <li>
+              <div id="login"><a href="../userpage/index.html"><img src="../img/arrow.png"></a></div>
+            </li>
+            <li>
+              <div id="forget-password">忘记密码</div>
+            </li>
+            <div class="clear"></div>
+          </ul>
+        </div>
+        <div id="toggle-forget-password-box" class="hidden">
+          <div class="tri-pointer-grey"><img src="../img/tri-pointer-grey.png"></div>
+          <div class="toggle-box-content">
+            <p class="description-card">告诉我们你的手机号码，密码会以短信形式发到你的手机上。</p>
+            <div class="forget-password-box">
+              <ul class="box-content">
+                <li>
+                  <div class="info-name">手机号码</div>
+                  <input type="text" placeholder="手机号码" class="normal">
+                  <div id="password-phone-num-check-no" class="info-check">还没有注册过呢</div>
+                  <div class="clear"></div>
+                </li>
+              </ul>
+              <button id="find-password">重置密码</button>
+            </div>
+            <div class="clear"></div>
+          </div>
         </div>
         <div style="margin-top:20px" class="slogan-box">
           <h3>或者</h3>
@@ -194,6 +226,7 @@
                     <div class="clear"></div>
                   </li>
                 </ul>
+                <button id="back-to-2">上一步</button>
                 <button id="submit">验证邮箱</button>
                 <div class="clear"></div>
               </div>
