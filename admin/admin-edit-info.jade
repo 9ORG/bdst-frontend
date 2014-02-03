@@ -121,23 +121,37 @@ html.no-js
 										textarea(type="text", name="club-question", placeholder="每一行为一个问题。句尾可添标点，句首无需序号。")#club-question
 										.clear
 								button#submit 确认更改
+								button#cancel 取消
 					#club-avatar.column-3-1
-						h2.inline LOGO
-						.hr
 						.avatar-box
-							.box-content
-								#club-avatar-large.inline
-									img
-								#change-avatar(style="margin:180px 10px 0 0").plain-button 重新上传
-								.clear
-						h2.inline(style="margin-top:30px") 封面相册
-						.hr
-						.avatar-box
-							.box-content
-								#club-avatar-large.inline
-									img
-								#change-cover(style="margin:180px 10px 0 0").plain-button 重新上传
-								.clear
+							h2.inline LOGO
+							.hr
+							#club-avatar-large
+								img(src="../img/club-avatar-default.png")
+							.club-avatar-box.box-content
+								.upload-info 拖拽至图片或使用普通方式
+								#club-change-avatar 浏览上传
+							.clear
+						.cover-box
+							h2.inline(style="margin-top:20px") 封面图集
+							.hr
+							ul.club-cover-list
+								li
+									img.club-cover-img1(src="../img/club-avatar-default.png")
+								li
+									img.club-cover-img2(src="../img/club-avatar-default.png")
+								li
+									img.club-cover-img3(src="../img/club-avatar-default.png")
+								li
+									img.club-cover-img4(src="../img/club-avatar-default.png")
+								li
+									img.club-cover-img5(src="../img/club-avatar-default.png")
+								li
+									img.club-cover-img6(src="../img/club-avatar-default.png")
+							.club-cover-box.box-content
+								.upload-info 拖拽至图片或使用普通方式
+								#club-change-cover 浏览上传
+							.clear
 					.clear
 			.clear
 

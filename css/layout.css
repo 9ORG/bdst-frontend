@@ -3,6 +3,9 @@
   margin: 0;
   padding: 0;
 }
+*:focus {
+  outline: none;
+}
 body,
 p {
   font-family: "微软雅黑", "Microsoft Yahei", "黑体", "Arial", "Hei", sans-serif;
@@ -279,25 +282,6 @@ button:hover {
 .main-content-full .activity-detail-box .detail-list {
   float: left;
 }
-.main-content-full .activity-avatar-poster {
-  width: 288px;
-  border: 1px solid #e4e4e4;
-  margin: 5px 0 0 0;
-  padding-bottom: -3px;
-  -webkit-transition: 0.25s;
-  -moz-transition: 0.25s;
-  -o-transition: 0.25s;
-  -ms-transition: 0.25s;
-  transition: 0.25s;
-  overflow: hidden;
-}
-.main-content-full .activity-avatar-poster > img {
-  width: 288px;
-}
-.main-content-full .activity-avatar-poster:hover {
-  border-color: #fcb03c;
-  cursor: pointer;
-}
 .main-content-full .tiny-tab-bar {
   margin-left: 10px;
   float: right;
@@ -501,21 +485,6 @@ button:hover {
   margin: 10px 0 0 0;
   float: right;
 }
-.main-content-full .box-content .activity-apply-info {
-  margin: 10px 0 0 0;
-  color: #aaa;
-  float: left;
-}
-.main-content-full .box-content .library-upload-info {
-  margin: 10px 0 0 0;
-  color: #aaa;
-  float: left;
-}
-.main-content-full .box-content #upload,
-.main-content-full .box-content #apply-activity {
-  margin: 3px 0 0 10px;
-  float: right;
-}
 .main-content .user-club-list-box li:hover .club-avatar,
 .main-content .user-activity-list-box li:hover .club-avatar,
 .main-content .admin-user-list-box li:hover .club-avatar,
@@ -530,9 +499,29 @@ button:hover {
 .main-content .admin-activity-list-box li:hover .user-avatar {
   border-color: #fcb03c;
 }
-.main-content .user-edit-info-box button,
-.main-content .admin-edit-info-box button {
-  margin-top: 40px;
+.main-content .user-edit-info-box button#submit,
+.main-content .admin-edit-info-box button#submit,
+.main-content .admin-create-activity-box button#submit,
+.main-content .activity-submit-box button#submit {
+  width: 180px;
+  margin: 40px 0 0 0px;
+}
+.main-content .user-edit-info-box button#cancel,
+.main-content .admin-edit-info-box button#cancel,
+.main-content .admin-create-activity-box button#cancel,
+.main-content .activity-submit-box button#cancel {
+  width: 60px;
+  margin: 40px 0 0 10px;
+  background-color: #aaa;
+  border-color: #aaa;
+}
+.main-content h2 span,
+.main-content-full h2 span {
+  position: relative;
+  top: -1px;
+  margin: 0 0 0 10px;
+  font-size: 16px;
+  line-height: 16px;
 }
 .main-content .tiny-menu-bar,
 .main-content-full .tiny-menu-bar {
@@ -572,6 +561,180 @@ button:hover {
   color: #aaa;
   margin-top: 10px;
   padding-top: 10px;
+}
+.main-content #user-avatar-large,
+.main-content-full #user-avatar-large,
+.main-content #club-avatar-large,
+.main-content-full #club-avatar-large {
+  height: 288px;
+}
+.main-content #activity-avatar-poster,
+.main-content-full #activity-avatar-poster,
+.main-content #user-avatar-large,
+.main-content-full #user-avatar-large,
+.main-content #club-avatar-large,
+.main-content-full #club-avatar-large {
+  width: 288px;
+  border: 1px solid #e4e4e4;
+  margin: 5px 0 0 0;
+  padding-bottom: -3px;
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  -ms-transition: 0.25s;
+  transition: 0.25s;
+  overflow: hidden;
+}
+.main-content #activity-avatar-poster > img,
+.main-content-full #activity-avatar-poster > img,
+.main-content #user-avatar-large > img,
+.main-content-full #user-avatar-large > img,
+.main-content #club-avatar-large > img,
+.main-content-full #club-avatar-large > img {
+  width: 288px;
+}
+.main-content #activity-avatar-poster:hover,
+.main-content-full #activity-avatar-poster:hover,
+.main-content #user-avatar-large:hover,
+.main-content-full #user-avatar-large:hover,
+.main-content #club-avatar-large:hover,
+.main-content-full #club-avatar-large:hover {
+  border-color: #fcb03c;
+  cursor: pointer;
+}
+.main-content ul.club-cover-list li,
+.main-content-full ul.club-cover-list li {
+  width: 288px;
+  height: 48px;
+  border: 1px solid #e4e4e4;
+  margin: 5px 0 0 0;
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  -ms-transition: 0.25s;
+  transition: 0.25s;
+  overflow: hidden;
+}
+.main-content ul.club-cover-list li > img.club-cover-img1,
+.main-content-full ul.club-cover-list li > img.club-cover-img1,
+.main-content ul.club-cover-list li > img.club-cover-img2,
+.main-content-full ul.club-cover-list li > img.club-cover-img2,
+.main-content ul.club-cover-list li > img.club-cover-img3,
+.main-content-full ul.club-cover-list li > img.club-cover-img3,
+.main-content ul.club-cover-list li > img.club-cover-img4,
+.main-content-full ul.club-cover-list li > img.club-cover-img4,
+.main-content ul.club-cover-list li > img.club-cover-img5,
+.main-content-full ul.club-cover-list li > img.club-cover-img5,
+.main-content ul.club-cover-list li > img.club-cover-img6,
+.main-content-full ul.club-cover-list li > img.club-cover-img6 {
+  width: 288px;
+}
+.main-content ul.club-cover-list li:hover,
+.main-content-full ul.club-cover-list li:hover {
+  border-color: #fcb03c;
+  cursor: pointer;
+}
+.main-content ul.activity-qr-list li,
+.main-content-full ul.activity-qr-list li {
+  width: 88px;
+  height: 88px;
+  border: 1px solid #e4e4e4;
+  margin: 5px 0 0 10px;
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  -ms-transition: 0.25s;
+  transition: 0.25s;
+  overflow: hidden;
+  float: left;
+}
+.main-content ul.activity-qr-list li:first-child,
+.main-content-full ul.activity-qr-list li:first-child {
+  margin: 5px 0 0 0;
+}
+.main-content ul.activity-qr-list li > img.activity-qr-ad,
+.main-content-full ul.activity-qr-list li > img.activity-qr-ad,
+.main-content ul.activity-qr-list li > img.activity-qr-apply,
+.main-content-full ul.activity-qr-list li > img.activity-qr-apply,
+.main-content ul.activity-qr-list li > img.activity-qr-checkin,
+.main-content-full ul.activity-qr-list li > img.activity-qr-checkin {
+  width: 88px;
+}
+.main-content ul.activity-qr-list li:hover,
+.main-content-full ul.activity-qr-list li:hover {
+  border-color: #fcb03c;
+  cursor: pointer;
+}
+.main-content .upload-info,
+.main-content-full .upload-info,
+.main-content .activity-change-avatar-info,
+.main-content-full .activity-change-avatar-info {
+  margin: -5px 0 0 0;
+  color: #aaa;
+  float: left;
+}
+.main-content #library-upload,
+.main-content-full #library-upload,
+.main-content #club-change-avatar,
+.main-content-full #club-change-avatar,
+.main-content #club-change-cover,
+.main-content-full #club-change-cover,
+.main-content #activity-change-avatar,
+.main-content-full #activity-change-avatar,
+.main-content #get-qr-ad,
+.main-content-full #get-qr-ad,
+.main-content #get-qr-apply,
+.main-content-full #get-qr-apply,
+.main-content #get-qr-checkin,
+.main-content-full #get-qr-checkin {
+  margin: -5px 0 0 10px;
+  color: #77bfdf;
+  font-weight: bold;
+  float: left;
+}
+.main-content #library-upload:hover,
+.main-content-full #library-upload:hover,
+.main-content #club-change-avatar:hover,
+.main-content-full #club-change-avatar:hover,
+.main-content #club-change-cover:hover,
+.main-content-full #club-change-cover:hover,
+.main-content #activity-change-avatar:hover,
+.main-content-full #activity-change-avatar:hover,
+.main-content #get-qr-ad:hover,
+.main-content-full #get-qr-ad:hover,
+.main-content #get-qr-apply:hover,
+.main-content-full #get-qr-apply:hover,
+.main-content #get-qr-checkin:hover,
+.main-content-full #get-qr-checkin:hover {
+  cursor: pointer;
+}
+.main-content #get-qr-ad,
+.main-content-full #get-qr-ad,
+.main-content #get-qr-apply,
+.main-content-full #get-qr-apply,
+.main-content #get-qr-checkin,
+.main-content-full #get-qr-checkin {
+  margin: 10px 0 0 10px;
+  width: 90px;
+}
+.main-content #get-qr-ad:first-child,
+.main-content-full #get-qr-ad:first-child,
+.main-content #get-qr-apply:first-child,
+.main-content-full #get-qr-apply:first-child,
+.main-content #get-qr-checkin:first-child,
+.main-content-full #get-qr-checkin:first-child {
+  margin: 10px 0 0 0;
+}
+.main-content .activity-apply-info,
+.main-content-full .activity-apply-info {
+  margin: 10px 0 0 0;
+  color: #aaa;
+  float: left;
+}
+.main-content button#apply-activity,
+.main-content-full button#apply-activity {
+  margin: 3px 0 0 10px;
+  float: right;
 }
 .main-content .box-content,
 .main-content-full .box-content {
@@ -616,6 +779,16 @@ button:hover {
   font-weight: bold;
   float: left;
 }
+.main-content .box-content .radio-name,
+.main-content-full .box-content .radio-name {
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  margin: 20px 10px 0 0;
+  color: #666;
+  font-weight: bold;
+  float: left;
+}
 .main-content .box-content .info-tips,
 .main-content-full .box-content .info-tips {
   width: 260px;
@@ -633,15 +806,6 @@ button:hover {
 .main-content .box-content .info-check-green,
 .main-content-full .box-content .info-check-green {
   border-color: #0b0;
-}
-.main-content .box-content #user-avatar-large,
-.main-content-full .box-content #user-avatar-large,
-.main-content .box-content #club-avatar-large,
-.main-content-full .box-content #club-avatar-large {
-  width: 200px;
-  height: 200px;
-  border: 1px solid #e4e4e4;
-  margin: 10px 20px 0 0px;
 }
 .main-content .plain-button,
 .main-content-full .plain-button {
@@ -674,7 +838,7 @@ button:hover {
 }
 .main-content input:focus,
 .main-content-full input:focus {
-  border-color: #666;
+  border-color: #aaa;
 }
 .main-content input[type="radio"],
 .main-content-full input[type="radio"] {
@@ -725,6 +889,10 @@ button:hover {
   font-size: 13px;
   float: left;
 }
+.main-content textarea:focus,
+.main-content-full textarea:focus {
+  border-color: #aaa;
+}
 .main-content .short,
 .main-content-full .short {
   width: 80px;
@@ -769,6 +937,10 @@ button:hover {
 }
 .main-content table tbody tr.font-color-grey,
 .main-content-full table tbody tr.font-color-grey {
+  color: #aaa;
+}
+.main-content table tbody tr.font-color-grey td > a,
+.main-content-full table tbody tr.font-color-grey td > a {
   color: #aaa;
 }
 .main-content table tbody tr td:last-child,
@@ -1334,6 +1506,7 @@ header #top-bar #top-bar-content-container #top-user-menu.top-user-menu-club a:h
   top: -1px;
   margin: 0 0 0 10px;
   font-size: 16px;
+  line-height: 16px;
 }
 #welcome-page .main-content-full .toggle-box-content .box-content:first-child {
   margin: 0;

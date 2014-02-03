@@ -1,0 +1,185 @@
+doctype html
+//if lt IE 7
+	html.no-js.lt-ie9.lt-ie8.lt-ie7
+//if IE 7
+	html.no-js.lt-ie9.lt-ie8
+//if IE 8
+	html.no-js.lt-ie9
+//[if gt IE 8]><!
+html.no-js
+	//<![endif]
+
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+
+		title 社团管理平台 | 为学生和社团提供一站式服务
+
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width')
+
+		link(rel='stylesheet', href='../css/layout.css')
+		link(rel='stylesheet', href='../lib/animate.min.css')
+		script(src="../lib/jquery-1.10.2.min.js")
+		script(src='../script/layout.js')
+
+	body
+		//if lt IE 7
+			p.chromeframe.
+			You are using an outdated browser.
+			Please <a href="http://browsehappy.com/">upgrade your browser</a> or
+			<a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>
+			to improve your experience.
+
+		include header
+
+		#body-container
+			#sidebar
+				ul#side-menu
+					li 社团信息
+						ul.side-menu-button
+							li
+								a(href="admin-edit-info.html") 编辑信息
+					li 成员管理
+						ul.side-menu-button
+							li
+								a(href="admin-user-list-apply.html") 入会审核
+							li
+								a(href="admin-user-list-all.html") 全部成员
+							li
+								a(href="admin-user-list-admin.html") 管理员
+							li
+								a(href="admin-user-list-excel.html") Excel导入
+							li.popup-custom
+								a.popup-custom-button(href="admin-user-list-custom.html") 自定义分组
+								#popup-user-list-custom.hidden
+									.tri-pointer
+										img(src="../img/tri-pointer.png")
+									ul
+										li
+											a(href="admin-user-list-custom-group01.html") 分组一
+										li
+											a(href="#") 分组二
+										li
+											a(href="#") 分组三
+										li
+											a(href="#") 分组四
+					li 活动管理
+						ul.side-menu-button
+							li
+								a.current(href="admin-create-activity.html") 发起活动
+							li
+								a(href="admin-activity-list.html") 已有活动
+					li 发起讨论
+						ul.side-menu-button
+							li
+								a(href="user-create-message.html") 群发讨论
+							li
+								a(href="admin-message-list.html") 历史记录
+			.main-content
+				#main-content-admin-create-activity
+					.create-activity-box.column-1-1
+						h2.inline 发起活动
+						.tiny-description-bar 资料要填全哦！							
+						.hr
+						#activity-info.column-3-2.column-span(style="margin-top:10px")
+							h2.inline
+								| Step 1/3
+								span 基本信息
+							.hr
+							.admin-create-activity-box
+								form
+									ul.box-content(style="margin-top:-10px")
+										li
+											.info-name 活动名称
+											input(type="text", name="activity-name")#activity-name.normal
+											.clear
+										li
+											.info-name 主办方
+											input(type="text", name="activity-host")#activity-host.normal
+											.clear
+										li
+											.info-name 短信代码
+											input(type="text", name="activity-shortcut")#activity-shortcut.normal.popup-tips
+											#activity-shortcut-tips.info-tips.hidden 4-6字符，仅限小写英文字母，提交后不可变更
+											.clear
+										li
+											.info-name 是否公开
+											input(type="radio", name="public", value="public", checked)#public-public.short
+											.radio-name 公开
+											input(type="radio", name="public", value="private")#public-private.short
+											.radio-name 私密
+											.clear
+										li
+											.info-name 类型
+											select#category(style="width:180px").normal
+												option 讲座 / 沙龙
+												option 演出
+												option 比赛
+												option 其它
+											.clear
+										li
+											.info-name 开始时间
+											input(type="text", name="time-start", placeholder="yyyy-mm-dd hh:mm")#time-start.normal.popup-check
+											.clear
+										li
+											.info-name 结束时间
+											input(type="text", name="time-end", placeholder="yyyy-mm-dd hh:mm")#time-end.normal.popup-check
+											.clear
+										li
+											.info-name 地点
+											input(type="text", name="activity-location")#activity-location.long
+											.clear
+										li
+											.info-name 人数限制
+											input(type="text", name="user-limit")#user-limit.normal.popup-tips
+											#user-limit-tips.info-tips.hidden 留空为不限制
+											.clear
+										li
+											.info-name 审核报名
+											input(type="radio", name="apply-check", value="public", checked)#apply-check-no.short
+											.radio-name 审核
+											input(type="radio", name="apply-check", value="private")#apply-check-yes.short
+											.radio-name 不审核
+											.clear
+										li
+											.info-name 简介
+											textarea(type="text", name="activity-introdction")#activity-introdction.long
+											.clear
+									//- button#submit 发起活动
+						#activity-poster.column-3-1(style="margin-top:10px")
+							h2.inline
+								| Step 2/3
+								span 上传海报
+							.hr
+							.activity-avatar-box
+								#activity-avatar-poster
+									img(src="../img/club-id001/club-id001-cover1.jpg")
+								.change-avatar-box.box-content
+									.upload-info 拖拽至图片或使用普通方式
+									#activity-change-avatar 浏览上传
+									.clear
+							h2.inline(style="margin-top:20px")
+								| Step 3/3
+								span 获取二维码
+							.hr
+							.activity-qr-box
+								ul.activity-qr-list.box-content
+									li
+										img.activity-qr-ad(src="../img/club-avatar-default.png")
+									li
+										img.activity-qr-apply(src="../img/club-avatar-default.png")
+									li
+										img.activity-qr-checkin(src="../img/club-avatar-default.png")
+								.activity-qr-get
+									#get-qr-ad 宣传二维码
+									#get-qr-apply 报名二维码
+									#get-qr-checkin 签到二维码
+									.clear
+						.clear
+						.activity-submit-box
+							button#submit 发起活动
+							button#cancel 取消
+			.clear
+
+		include footer

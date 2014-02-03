@@ -23,6 +23,8 @@ large = 16px
 	margin 0
 	padding 0
 	// transition .25s
+	&:focus
+		outline none
 
 body, p
 	font-family "微软雅黑", "Microsoft Yahei", "黑体", "Arial", "Hei", sans-serif
@@ -244,18 +246,6 @@ button
 				margin-bottom 0
 		& .detail-list
 			float left
-	.activity-avatar-poster
-		width 288px
-		border 1px solid border-grey
-		margin 5px 0 0 0
-		padding-bottom -3px
-		transition .25s
-		overflow hidden
-		& > img
-			width 288px
-		&:hover
-			border-color org
-			cursor pointer
 	.tiny-tab-bar
 		margin-left 10px
 		float right
@@ -401,18 +391,6 @@ button
 				button
 					margin 10px 0 0 0
 					float right
-		.activity-apply-info
-			margin 10px 0 0 0
-			color light-grey
-			float left
-		.library-upload-info
-			margin 10px 0 0 0
-			color light-grey
-			float left
-		#upload
-		#apply-activity
-			margin 3px 0 0 10px
-			float right
 
 .main-content
 	.user-club-list-box
@@ -426,11 +404,26 @@ button
 				border-color org
 	.user-edit-info-box
 	.admin-edit-info-box
-		& button
-			margin-top 40px
+	.admin-create-activity-box
+	.activity-submit-box
+		& button#submit
+			width 180px
+			margin 40px 0 0 0px
+		& button#cancel
+			width 60px
+			margin 40px 0 0 10px
+			background-color light-grey
+			border-color light-grey
 
 .main-content
 .main-content-full
+	h2
+		span
+			position relative
+			top -1px
+			margin 0 0 0 10px
+			font-size large
+			line-height large
 	.tiny-menu-bar
 		float right
 		& > a
@@ -456,6 +449,93 @@ button
 		color light-grey
 		margin-top 10px
 		padding-top 10px
+	#user-avatar-large
+	#club-avatar-large
+		height 288px
+	#activity-avatar-poster
+	#user-avatar-large
+	#club-avatar-large
+		width 288px
+		border 1px solid border-grey
+		margin 5px 0 0 0
+		padding-bottom -3px
+		transition .25s
+		overflow hidden
+		& > img
+			width 288px
+		&:hover
+			border-color org
+			cursor pointer
+	ul.club-cover-list li
+		width 288px
+		height 48px
+		border 1px solid border-grey
+		margin 5px 0 0 0
+		transition .25s
+		overflow hidden
+		& > img
+			&.club-cover-img1
+			&.club-cover-img2
+			&.club-cover-img3
+			&.club-cover-img4
+			&.club-cover-img5
+			&.club-cover-img6
+				width 288px
+		&:hover
+			border-color org
+			cursor pointer
+	ul.activity-qr-list li
+		width 88px
+		height 88px
+		border 1px solid border-grey
+		margin 5px 0 0 10px
+		transition .25s
+		overflow hidden
+		float left
+		&:first-child
+			margin 5px 0 0 0
+		& > img
+			&.activity-qr-ad
+			&.activity-qr-apply
+			&.activity-qr-checkin
+				width 88px
+		&:hover
+			border-color org
+			cursor pointer
+	.upload-info
+	.activity-change-avatar-info
+		margin -5px 0 0 0
+		color light-grey
+		float left
+	#library-upload
+	#club-change-avatar
+	#club-change-cover
+	#activity-change-avatar
+	#get-qr-ad
+	#get-qr-apply
+	#get-qr-checkin
+		margin -5px 0 0 10px
+		color blu
+		font-weight bold
+		float left
+		&:hover
+			cursor pointer
+	#get-qr-ad
+	#get-qr-apply
+	#get-qr-checkin
+		margin 10px 0 0 10px
+		width 90px
+		// font-size extra-small
+		// text-align center
+		&:first-child
+			margin 10px 0 0 0
+	.activity-apply-info
+		margin 10px 0 0 0
+		color light-grey
+		float left
+	button#apply-activity
+		margin 3px 0 0 10px
+		float right
 	.box-content
 		margin 20px 0 10px 0
 		.club-avatar,
@@ -480,6 +560,14 @@ button
 			color deep-grey
 			font-weight bold
 			float left
+		.radio-name
+			width 60px
+			height 30px
+			line-height 30px
+			margin 20px 10px 0 0
+			color grey
+			font-weight bold
+			float left
 		.info-tips
 			width 260px
 			height 30px
@@ -492,12 +580,6 @@ button
 			border-color #ee0000
 		.info-check-green
 			border-color #00bb00
-		#user-avatar-large
-		#club-avatar-large
-			width 200px
-			height 200px
-			border 1px solid border-grey
-			margin 10px 20px 0 0px
 	.plain-button
 		height 30px
 		font-size extra-small
@@ -518,7 +600,7 @@ button
 		float left
 		transition .25s
 		&:focus
-			border-color grey
+			border-color light-grey
 		&[type="radio"]
 			width extra-small
 			margin: 25px 10px 0 0
@@ -551,6 +633,8 @@ button
 		border 1px solid border-grey
 		font-size small
 		float left
+		&:focus
+			border-color light-grey
 	.short
 		width 80px
 	.normal
@@ -578,6 +662,8 @@ button
 					background-color #f9f9f9
 				&.font-color-grey
 					color light-grey
+					td > a
+						color light-grey
 				td:last-child
 					border-right-width 1px
 			tr:last-child
@@ -985,6 +1071,7 @@ header
 					top -1px
 					margin 0 0 0 10px
 					font-size large
+					line-height large
 			.box-content
 				&:first-child
 					margin 0

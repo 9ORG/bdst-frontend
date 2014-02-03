@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<!--if lt IE 7html.no-js.lt-ie9.lt-ie8.lt-ie7
+-->
+<!--if IE 7html.no-js.lt-ie9.lt-ie8
+-->
+<!--if IE 8html.no-js.lt-ie9
+-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>社团管理平台 | 为学生和社团提供一站式服务</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../lib/animate.min.css">
+    <script src="../lib/jquery-1.10.2.min.js"></script>
+    <script src="../script/layout.js"></script>
+  </head>
+  <body>
+    <!--if lt IE 7
+    p.chromeframe.
+    You are using an outdated browser.
+    Please <a href="http://browsehappy.com/">upgrade your browser</a> or
+    <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>
+    to improve your experience.
+    
+    -->
+    <header>
+      <div id="top-bar">
+        <div id="top-bar-content-container">
+          <div id="top-logo"><img src="../img/top-logo.png">
+          </div>
+          <div id="top-logo-text">社团管理平台</div>
+          <div id="top-admin-name"><a href="index.html">计算机应用设计协会</a>
+            <div id="change-admin"><a href="#">(切换)</a></div>
+          </div>
+          <div id="top-user-menu">
+            <div id="username">kyzamizzzzzzzz</div>
+            <ul id="popup-user-menu" class="hidden">
+              <li><a href="../welcome/welcome.html" class="menu-logout">登出</a></li>
+              <li><a href="../userpage/index.html" class="menu-background">返回个人</a></li>
+              <li><a href="../userpage/user-edit-info.html" class="menu-setting">设置</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="top-line"></div>
+    </header>
+    <div id="body-container">
+      <div id="sidebar">
+        <ul id="side-menu">
+          <li>社团信息
+            <ul class="side-menu-button">
+              <li><a href="admin-edit-info.html">编辑信息</a></li>
+            </ul>
+          </li>
+          <li>成员管理
+            <ul class="side-menu-button">
+              <li><a href="admin-user-list-apply.html">入会审核</a></li>
+              <li><a href="admin-user-list-all.html">全部成员</a></li>
+              <li><a href="admin-user-list-admin.html">管理员</a></li>
+              <li><a href="admin-user-list-excel.html">Excel导入</a></li>
+              <li class="popup-custom"><a href="admin-user-list-custom.html" class="popup-custom-button">自定义分组</a>
+                <div id="popup-user-list-custom" class="hidden">
+                  <div class="tri-pointer"><img src="../img/tri-pointer.png"></div>
+                  <ul>
+                    <li><a href="admin-user-list-custom-group01.html">分组一</a></li>
+                    <li><a href="#">分组二</a></li>
+                    <li><a href="#">分组三</a></li>
+                    <li><a href="#">分组四</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li>活动管理
+            <ul class="side-menu-button">
+              <li><a href="admin-create-activity.html" class="current">发起活动</a></li>
+              <li><a href="admin-activity-list.html">已有活动</a></li>
+            </ul>
+          </li>
+          <li>发起讨论
+            <ul class="side-menu-button">
+              <li><a href="user-create-message.html">群发讨论</a></li>
+              <li><a href="admin-message-list.html">历史记录</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="main-content">
+        <div id="main-content-admin-create-activity">
+          <div class="create-activity-box column-1-1">
+            <h2 class="inline">发起活动</h2>
+            <div class="tiny-description-bar">资料要填全哦！							</div>
+            <div class="hr"></div>
+            <div id="activity-info" style="margin-top:10px" class="column-3-2 column-span">
+              <h2 class="inline">Step 1/3<span>基本信息</span></h2>
+              <div class="hr"></div>
+              <div class="admin-create-activity-box">
+                <form>
+                  <ul style="margin-top:-10px" class="box-content">
+                    <li>
+                      <div class="info-name">活动名称</div>
+                      <input type="text" name="activity-name" id="activity-name" class="normal">
+                      <div class="clear"></div>
+                    </li>
+                    <li>
+                      <div class="info-name">主办方</div>
+                      <input type="text" name="activity-host" id="activity-host" class="normal">
+                      <div class="clear"></div>
+                    </li>
+                    <li>
+                      <div class="info-name">短信代码</div>
+                      <input type="text" name="activity-shortcut" id="activity-shortcut" class="normal popup-tips">
+                      <div id="activity-shortcut-tips" class="info-tips hidden">4-6字符，仅限小写英文字母，提交后不可变更</div>
+                      <div class="clear"></div>
+                    </li>
+                    <li>
+                      <div class="info-name">是否公开</div>
+                      <input type="radio" name="public" value="public" checked id="public-public" class="short">
+                      <div class="radio-name">公开</div>
+                      <input type="radio" name="public" value="private" id="public-private" class="short">
+                      <div class="radio-name">私密</div>
+                      <div class="clear"></div>
+                    </li>
+                    <li>
+                      <div class="info-name">类型</div>
+                      <select id="category" style="width:180px" class="normal">
+                        <option>讲座 / 沙龙</option>
+                        <option>演出</option>
+                        <option>比赛</option>
+                        <option>其它</option>
+                      </select>
+                      <div class="clear"></div>
+                    </li>
+                    <li>
+                      <div class="info-name">开始时间</div>
+                      <input type="text" name="time-start" placeholder="yyyy-mm-dd hh:mm" id="time-start" class="normal popup-check">
+                      <div class="clear"></div>
+                    </li>
+                    <li>
+                      <div class="info-name">结束时间</div>
+                      <input type="text" name="time-end" placeholder="yyyy-mm-dd hh:mm" id="time-end" class="normal popup-check">
+                      <div class="clear"></div>
+                    </li>
+                    <li>
+                      <div class="info-name">地点</div>
+                      <input type="text" name="activity-location" id="activity-location" class="long">
+                      <div class="clear"></div>
+                    </li>
+                    <li>
+                      <div class="info-name">人数限制</div>
+                      <input type="text" name="user-limit" id="user-limit" class="normal popup-tips">
+                      <div id="user-limit-tips" class="info-tips hidden">留空为不限制</div>
+                      <div class="clear"></div>
+                    </li>
+                    <li>
+                      <div class="info-name">审核报名</div>
+                      <input type="radio" name="apply-check" value="public" checked id="apply-check-no" class="short">
+                      <div class="radio-name">审核</div>
+                      <input type="radio" name="apply-check" value="private" id="apply-check-yes" class="short">
+                      <div class="radio-name">不审核</div>
+                      <div class="clear"></div>
+                    </li>
+                    <li>
+                      <div class="info-name">简介</div>
+                      <textarea type="text" name="activity-introdction" id="activity-introdction" class="long"></textarea>
+                      <div class="clear"></div>
+                    </li>
+                  </ul>
+                </form>
+              </div>
+            </div>
+            <div id="activity-poster" style="margin-top:10px" class="column-3-1">
+              <h2 class="inline">Step 2/3<span>上传海报</span></h2>
+              <div class="hr"></div>
+              <div class="activity-avatar-box">
+                <div id="activity-avatar-poster"><img src="../img/club-id001/club-id001-cover1.jpg"></div>
+                <div class="change-avatar-box box-content">
+                  <div class="upload-info">拖拽至图片或使用普通方式</div>
+                  <div id="activity-change-avatar">浏览上传</div>
+                  <div class="clear"></div>
+                </div>
+              </div>
+              <h2 style="margin-top:20px" class="inline">Step 3/3<span>获取二维码</span></h2>
+              <div class="hr"></div>
+              <div class="activity-qr-box">
+                <ul class="activity-qr-list box-content">
+                  <li><img src="../img/club-avatar-default.png" class="activity-qr-ad"></li>
+                  <li><img src="../img/club-avatar-default.png" class="activity-qr-apply"></li>
+                  <li><img src="../img/club-avatar-default.png" class="activity-qr-checkin"></li>
+                </ul>
+                <div class="activity-qr-get">
+                  <div id="get-qr-ad">宣传二维码</div>
+                  <div id="get-qr-apply">报名二维码</div>
+                  <div id="get-qr-checkin">签到二维码</div>
+                  <div class="clear"></div>
+                </div>
+              </div>
+            </div>
+            <div class="clear"></div>
+            <div class="activity-submit-box">
+              <button id="submit">发起活动</button>
+              <button id="cancel">取消</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <footer>
+      <div id="foot-bar">
+        <div id="foot-bar-content-container">
+          <div class="footer-decro"><img src="../img/footer-decro.png"></div>
+          <div class="clear"></div>
+          <div class="foot-bar-info">
+            <div class="foot-bar-title">关于</div>
+            <ul>
+              <li class="foot-bar-content"><a href="../about-us.html">关于我们</a></li>
+              <li class="foot-bar-content"><a href="../recruit.html">招纳贤才
+                  <div class="foot-bar-info"></div></a></li>
+            </ul>
+          </div>
+          <div class="foot-bar-info">
+            <div class="foot-bar-title">社团</div>
+            <ul>
+              <li class="foot-bar-content"><a href="../club/club-list.html">已有社团
+                  <div class="foot-bar-info"></div></a></li>
+            </ul>
+          </div>
+          <div class="foot-bar-info">
+            <div class="foot-bar-title">活动</div>
+            <ul>
+              <li class="foot-bar-content"><a href="../activity/activity-list.html">已有活动
+                  <div class="foot-bar-info"></div></a></li>
+            </ul>
+          </div>
+          <div class="foot-bar-info">
+            <div class="foot-bar-title">合作</div>
+            <ul>
+              <li class="foot-bar-content"><a href="../contact.html">联系我们</a></li>
+            </ul>
+          </div>
+          <div class="foot-bar-info">
+            <div class="foot-bar-title">版权信息</div>
+            <ul>
+              <li class="foot-bar-content">
+                <p>本网站会员及进驻社团所发布展示的所有内容版权均归原作者所有。任何商业用途均需联系原作者。</p>
+                <p>Copyright (c) 2012-2014 社团管理平台.<br/>All rights reserved.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
