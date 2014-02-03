@@ -78,133 +78,148 @@
           </li>
           <li>活动管理
             <ul class="side-menu-button">
-              <li><a href="admin-create-activity.html" class="current">发起活动</a></li>
+              <li><a href="admin-create-activity.html">发起活动</a></li>
               <li><a href="admin-activity-list.html">已有活动</a></li>
             </ul>
           </li>
           <li>发起讨论
             <ul class="side-menu-button">
-              <li><a href="admin-create-message.html">群发讨论</a></li>
+              <li><a href="admin-create-message.html" class="current">群发讨论</a></li>
               <li><a href="admin-message-list.html">历史记录</a></li>
             </ul>
           </li>
         </ul>
       </div>
       <div class="main-content">
-        <div id="main-content-admin-create-activity">
-          <div class="create-activity-box column-1-1">
-            <h2 class="inline">发起活动</h2>
-            <div class="tiny-description-bar">资料要填全哦！							</div>
-            <div class="hr"></div>
-            <div id="activity-info" style="margin-top:10px" class="column-3-2 column-span">
-              <h2 class="inline">Step 1/3<span>基本信息</span></h2>
+        <div id="main-content-admin-create-message">
+          <div class="create-message-box column-1-1">
+            <div id="message-info" class="column-3-2 column-span">
+              <h2 class="inline">群发讨论</h2>
               <div class="hr"></div>
-              <div class="admin-create-activity-box">
+              <div class="admin-create-message-box">
                 <form>
                   <ul style="margin-top:-10px" class="box-content">
                     <li>
-                      <div class="info-name">活动名称</div>
-                      <input type="text" name="activity-name" id="activity-name" class="normal">
+                      <div class="info-name">收信人</div>
+                      <textarea type="text" name="message-receiver" placeholder="在右侧选取 或 直接输入（以半角逗号相隔）" id="message-receiver" class="long"></textarea>
                       <div class="clear"></div>
                     </li>
                     <li>
-                      <div class="info-name">主办方</div>
-                      <input type="text" name="activity-host" id="activity-host" class="normal">
-                      <div class="clear"></div>
-                    </li>
-                    <li>
-                      <div class="info-name">短信代码</div>
-                      <input type="text" name="activity-shortcut" id="activity-shortcut" class="normal popup-tips">
-                      <div id="activity-shortcut-tips" class="info-tips hidden">4-6字符，仅限小写英文字母，提交后不可变更</div>
-                      <div class="clear"></div>
-                    </li>
-                    <li>
-                      <div class="info-name">是否公开</div>
-                      <input type="radio" name="public" value="public" checked id="public-public" class="short">
-                      <div class="radio-name">公开</div>
-                      <input type="radio" name="public" value="private" id="public-private" class="short">
-                      <div class="radio-name">私密</div>
+                      <div class="info-name">标题</div>
+                      <input type="text" name="message-title" id="message-title" class="long">
                       <div class="clear"></div>
                     </li>
                     <li>
                       <div class="info-name">类型</div>
-                      <select id="category" style="width:180px" class="normal">
-                        <option>讲座 / 沙龙</option>
-                        <option>演出</option>
-                        <option>比赛</option>
-                        <option>其它</option>
-                      </select>
+                      <input type="radio" name="message-type" value="text" checked id="type-text" class="short">
+                      <div class="radio-name">文字短信</div>
+                      <input type="radio" name="message-type" value="picture" id="type-picture" class="short">
+                      <div class="radio-name">图片短信</div>
+                      <input type="radio" name="message-type" value="mixed" id="type-mixed" class="short">
+                      <div class="radio-name">图文短信</div>
                       <div class="clear"></div>
                     </li>
                     <li>
-                      <div class="info-name">开始时间</div>
-                      <input type="text" name="time-start" placeholder="yyyy-mm-dd hh:mm" id="time-start" class="normal popup-check">
+                      <div class="info-name">内容</div>
+                      <textarea type="text" name="message-content" id="message-content" class="long"></textarea>
                       <div class="clear"></div>
                     </li>
+                    <p style="margin-left:70px" class="description-card"><span id="character-left">70</span>字剩余 / <span id="message-count">1</span>条短信</p>
+                    <p style="margin:-5px 0 0 70px" class="description-card">每条短信为70个字符，超出则分拆为多条短信发送，请尽量在一条短信内拟定通知。</p>
                     <li>
-                      <div class="info-name">结束时间</div>
-                      <input type="text" name="time-end" placeholder="yyyy-mm-dd hh:mm" id="time-end" class="normal popup-check">
-                      <div class="clear"></div>
-                    </li>
-                    <li>
-                      <div class="info-name">地点</div>
-                      <input type="text" name="activity-location" id="activity-location" class="long">
-                      <div class="clear"></div>
-                    </li>
-                    <li>
-                      <div class="info-name">人数限制</div>
-                      <input type="text" name="user-limit" id="user-limit" class="normal popup-tips">
-                      <div id="user-limit-tips" class="info-tips hidden">留空为不限制</div>
-                      <div class="clear"></div>
-                    </li>
-                    <li>
-                      <div class="info-name">审核报名</div>
-                      <input type="radio" name="apply-check" value="public" checked id="apply-check-no" class="short">
-                      <div class="radio-name">审核</div>
-                      <input type="radio" name="apply-check" value="private" id="apply-check-yes" class="short">
-                      <div class="radio-name">不审核</div>
-                      <div class="clear"></div>
-                    </li>
-                    <li>
-                      <div class="info-name">简介</div>
-                      <textarea type="text" name="activity-introdction" id="activity-introdction" class="long"></textarea>
+                      <div class="info-name">图片</div>
+                      <input type="text" name="message-picture" id="message-picture" class="normal">
+                      <div id="upload-picture" class="plain-button">浏览上传</div>
                       <div class="clear"></div>
                     </li>
                   </ul>
                 </form>
               </div>
             </div>
-            <div id="activity-poster" style="margin-top:10px" class="column-3-1">
-              <h2 class="inline">Step 2/3<span>上传海报</span></h2>
+            <div id="message-receiver-selector" class="column-3-1">
+              <h2 class="inline">收信人选取</h2>
               <div class="hr"></div>
-              <div class="activity-avatar-box">
-                <div id="activity-avatar-poster"><img src="../img/club-id001/club-id001-cover1.jpg"></div>
-                <div class="change-avatar-box box-content">
-                  <div class="upload-info">拖拽至图片 或 使用普通方式</div>
-                  <div id="activity-change-avatar">浏览上传</div>
-                  <div class="clear"></div>
+              <div class="message-receiver-selector-box">
+                <div class="user-selector-box">
+                  <ul id="user-group-selector">
+                    <li class="current">
+                      <input type="checkbox"><span>全体成员</span>
+                    </li>
+                    <li>
+                      <input type="checkbox"><span>管理员</span>
+                    </li>
+                    <li>
+                      <input type="checkbox"><span>Excel导入</span>
+                    </li>
+                    <li>
+                      <input type="checkbox"><span>分组一</span>
+                    </li>
+                    <li>
+                      <input type="checkbox"><span>分组二</span>
+                    </li>
+                    <li>
+                      <input type="checkbox"><span>分组三</span>
+                    </li>
+                    <li>
+                      <input type="checkbox"><span>分组四</span>
+                    </li>
+                  </ul>
                 </div>
-              </div>
-              <h2 style="margin-top:20px" class="inline">Step 3/3<span>获取二维码</span></h2>
-              <div class="hr"></div>
-              <div class="activity-qr-box">
-                <ul class="activity-qr-list box-content">
-                  <li><img src="../img/club-avatar-default.png" class="activity-qr-ad"></li>
-                  <li><img src="../img/club-avatar-default.png" class="activity-qr-apply"></li>
-                  <li><img src="../img/club-avatar-default.png" class="activity-qr-checkin"></li>
-                </ul>
-                <div class="activity-qr-get">
-                  <div id="get-qr-ad">宣传二维码</div>
-                  <div id="get-qr-apply">报名二维码</div>
-                  <div id="get-qr-checkin">签到二维码</div>
-                  <div class="clear"></div>
+                <div class="user-selector-box">
+                  <ul id="user-list-selector">
+                    <li>
+                      <input type="checkbox"><span>张楠 (18610096949)</span>
+                    </li>
+                    <li>
+                      <input type="checkbox"><span>王仲禹 (15210624793)</span>
+                    </li>
+                    <li>
+                      <input type="checkbox"><span>向毅明 (13391599795)</span>
+                    </li>
+                    <li>
+                      <input type="checkbox"><span>吴春华 (18812345678)</span>
+                    </li>
+                    <li>
+                      <input type="checkbox"><span>张天然啊 (18812345678)</span>
+                    </li>
+                    <li>
+                      <input type="checkbox"><span>张楠 (18610096949)</span>
+                    </li>
+                    <li>
+                      <input type="checkbox"><span>王仲禹 (15210624793)</span>
+                    </li>
+                    <li>
+                      <input type="checkbox"><span>向毅明 (13391599795)</span>
+                    </li>
+                    <li>
+                      <input type="checkbox"><span>吴春华 (18812345678)</span>
+                    </li>
+                    <li>
+                      <input type="checkbox"><span>张天然啊 (18812345678)</span>
+                    </li>
+                    <li>
+                      <input type="checkbox"><span>张楠 (18610096949)</span>
+                    </li>
+                    <li>
+                      <input type="checkbox"><span>王仲禹 (15210624793)</span>
+                    </li>
+                    <li>
+                      <input type="checkbox"><span>向毅明 (13391599795)</span>
+                    </li>
+                    <li>
+                      <input type="checkbox"><span>吴春华 (18812345678)</span>
+                    </li>
+                    <li>
+                      <input type="checkbox"><span>张天然啊 (18812345678)</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
             <div class="clear"></div>
             <div class="activity-submit-box">
-              <button id="submit">发起活动</button>
-              <button id="cancel">取消</button>
+              <button id="submit">确定无误，发送！</button>
+              <button id="preview">预览</button>
             </div>
           </div>
         </div>

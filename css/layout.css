@@ -509,7 +509,11 @@ button:hover {
 .main-content .user-edit-info-box button#cancel,
 .main-content .admin-edit-info-box button#cancel,
 .main-content .admin-create-activity-box button#cancel,
-.main-content .activity-submit-box button#cancel {
+.main-content .activity-submit-box button#cancel,
+.main-content .user-edit-info-box button#preview,
+.main-content .admin-edit-info-box button#preview,
+.main-content .admin-create-activity-box button#preview,
+.main-content .activity-submit-box button#preview {
   width: 60px;
   margin: 40px 0 0 10px;
   background-color: #aaa;
@@ -828,6 +832,8 @@ button:hover {
   margin: 20px 20px 0 0;
   padding: 5px 8px 5px 8px;
   border: 1px solid #e4e4e4;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
   font-size: 13px;
   float: left;
   -webkit-transition: 0.25s;
@@ -886,6 +892,8 @@ button:hover {
   margin: 20px 0 0 0;
   padding: 9px 8px 9px 8px;
   border: 1px solid #e4e4e4;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
   font-size: 13px;
   float: left;
 }
@@ -933,7 +941,7 @@ button:hover {
 }
 .main-content table tbody tr:hover,
 .main-content-full table tbody tr:hover {
-  background-color: #f9f9f9;
+  background-color: #f4f4f4;
 }
 .main-content table tbody tr.font-color-grey,
 .main-content-full table tbody tr.font-color-grey {
@@ -1078,6 +1086,59 @@ button:hover {
   font-size: 12px;
   margin-left: 10px;
   float: left;
+}
+.user-selector-box {
+  margin: 10px 0 0 0;
+  height: 400px;
+  border-style: solid;
+  border-color: #e4e4e4;
+  float: left;
+  overflow: scroll;
+}
+.user-selector-box:first-child {
+  width: 103px;
+  border-width: 1px 0 1px 1px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.user-selector-box:last-child {
+  width: 183px;
+  border-width: 1px 1px 1px 1px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.user-selector-box ul#user-group-selector > li {
+  width: 83px;
+}
+.user-selector-box ul#user-list-selector > li {
+  width: 163px;
+}
+.user-selector-box ul#user-group-selector > li,
+.user-selector-box ul#user-list-selector > li {
+  border-style: solid;
+  border-color: #e4e4e4;
+  border-width: 0 0 1px 0;
+  font-size: 12px;
+  line-height: 20px;
+  padding: 10px;
+}
+.user-selector-box ul#user-group-selector > li:hover,
+.user-selector-box ul#user-list-selector > li:hover {
+  cursor: pointer;
+  background-color: #f4f4f4;
+}
+.user-selector-box ul#user-group-selector > li.current,
+.user-selector-box ul#user-list-selector > li.current {
+  background-color: #f4f4f4;
+}
+.user-selector-box ul#user-group-selector > li > input[type="checkbox"],
+.user-selector-box ul#user-list-selector > li > input[type="checkbox"] {
+  width: 13px;
+  margin: 0;
+}
+.user-selector-box ul#user-group-selector > li > span,
+.user-selector-box ul#user-list-selector > li > span {
+  margin: 0 0 0 5px;
 }
 #club-cover {
   position: fixed;

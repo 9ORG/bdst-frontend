@@ -46,6 +46,20 @@ $(document).ready(function(){
 		$("#popup-user-menu").fadeOut(1000);
 	});
 
+	/* SideBar - 自定义分组菜单 */
+	$(".popup-custom-button").mouseenter(function(){
+		$("#popup-user-list-custom").removeClass("animated fadeOutLeft");
+		$("#popup-user-list-custom").addClass("animated fadeInLeft");
+		$(".popup-custom-button").addClass("current-button");
+		$("#popup-user-list-custom").fadeIn(1000);
+	});
+	$(".popup-custom").mouseleave(function(){
+		$("#popup-user-list-custom").removeClass("animated fadeInLeft");
+		$(".popup-custom-button").removeClass("current-button");
+		$("#popup-user-list-custom").addClass("animated fadeOutLeft");
+		$("#popup-user-list-custom").fadeOut(1000);
+	});
+
 	/* 编辑信息 - 信息提示 */
 	$(".popup-tips").focusin(function(){
 		var id = $(this).attr("id");
@@ -60,19 +74,7 @@ $(document).ready(function(){
 		$("#"+id+"-tips").fadeOut(1000);
 	});
 
-	/* SideBar - 自定义分组菜单 */
-	$(".popup-custom-button").mouseenter(function(){
-		$("#popup-user-list-custom").removeClass("animated fadeOutLeft");
-		$("#popup-user-list-custom").addClass("animated fadeInLeft");
-		$(".popup-custom-button").addClass("current-button");
-		$("#popup-user-list-custom").fadeIn(1000);
-	});
-	$(".popup-custom").mouseleave(function(){
-		$("#popup-user-list-custom").removeClass("animated fadeInLeft");
-		$(".popup-custom-button").removeClass("current-button");
-		$("#popup-user-list-custom").addClass("animated fadeOutLeft");
-		$("#popup-user-list-custom").fadeOut(1000);
-	});
+	/* 群发讨论 - 字数统计 */
 
 	/* 活动首页 - Tab切换 */
 	$("#activity-detail-tab-button").click(function(){
