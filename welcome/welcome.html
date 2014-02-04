@@ -83,20 +83,22 @@
         </div>
         <div id="toggle-forget-password-box" class="hidden">
           <div class="tri-pointer-grey"><img src="../img/tri-pointer-grey.png"></div>
-          <div class="toggle-box-content">
-            <p class="description-card">告诉我们你的手机号码，密码会以短信形式发到你的手机上。</p>
-            <div class="forget-password-box">
-              <ul class="box-content">
-                <li>
-                  <div class="info-name">手机号码</div>
-                  <input type="text" placeholder="手机号码" class="normal">
-                  <div id="password-phone-num-check-no" class="info-check">还没有注册过呢</div>
-                  <div class="clear"></div>
-                </li>
-              </ul>
-              <button id="find-password">重置密码</button>
+          <div id="toggle-forget-password-box-content">
+            <div class="toggle-box-content">
+              <p class="description-card">告诉我们你的手机号码，密码会以短信形式发到你的手机上。</p>
+              <div class="forget-password-box">
+                <ul class="box-content">
+                  <li>
+                    <div class="info-name">手机号码</div>
+                    <input type="text" class="normal">
+                    <div id="password-phone-num-check-no" class="info-check">还没有注册过呢</div>
+                    <div class="clear"></div>
+                  </li>
+                </ul>
+                <button id="find-password">重置密码</button>
+              </div>
+              <div class="clear"></div>
             </div>
-            <div class="clear"></div>
           </div>
         </div>
         <div style="margin-top:20px" class="slogan-box">
@@ -108,127 +110,129 @@
         </div>
         <div id="toggle-signup-box" class="hidden">
           <div class="tri-pointer-grey"><img src="../img/tri-pointer-grey.png"></div>
-          <div class="toggle-box-content">
-            <div id="signup-step1">
-              <h2>Step 1/3<span>查询手机号码</span></h2>
-              <div class="phone-check-box">
-                <ul class="box-content">
-                  <p class="description-card">若你的手机号码曾参与过由我们提供服务的某个活动（如接收短信讨论或签到等），那么使用这个号码注册，能够保留你已有的活动和社团信息。</p>
-                  <li>
-                    <div class="info-name">手机号码</div>
-                    <input type="text" name="phone-num" class="normal">
-                    <div id="phone-num-check-yes" class="info-check">有社团和活动参与信息哦，快注册吧</div>
-                    <div id="phone-num-check-no" class="info-check hidden">尚未参加任何活动和社团哦</div>
-                    <div class="clear"></div>
-                  </li>
-                  <li>
-                    <div class="info-name">验证码</div>
-                    <input type="text" name="phone-validate-num" class="validator-short"><a id="phone-validate" class="plain-button">获取验证码</a>
-                    <div class="clear"></div>
-                  </li>
-                </ul>
-                <button id="next-to-2">下一步</button>
-                <div class="clear"></div>
+          <div id="toggle-signup-box-content">
+            <div class="toggle-box-content">
+              <div id="signup-step1">
+                <h2>Step 1/3<span>查询手机号码</span></h2>
+                <div class="phone-check-box">
+                  <ul class="box-content">
+                    <p class="description-card">若你的手机号码曾参与过由我们提供服务的某个活动（如接收短信讨论或签到等），那么使用这个号码注册，能够保留你已有的活动和社团信息。</p>
+                    <li>
+                      <div class="info-name">手机号码</div>
+                      <input type="text" name="phone-num" class="normal">
+                      <div id="phone-num-check-yes" class="info-check">有社团和活动参与信息哦，快注册吧</div>
+                      <div id="phone-num-check-no" class="info-check hidden">尚未参加任何活动和社团哦</div>
+                      <div class="clear"></div>
+                    </li>
+                    <li>
+                      <div class="info-name">验证码</div>
+                      <input type="text" name="phone-validate-num" class="validator-short"><a id="phone-validate" class="plain-button">获取验证码</a>
+                      <div class="clear"></div>
+                    </li>
+                  </ul>
+                  <button id="next-to-2">下一步</button>
+                  <div class="clear"></div>
+                </div>
               </div>
-            </div>
-            <div id="signup-step2" class="hidden">
-              <h2>Step 2/3<span>填写信息</span></h2>
-              <div class="info-box">
-                <ul class="box-content">
-                  <p class="description-card">填写真实的信息，你会遇见更多可能感兴趣的人。</p>
-                  <li>
-                    <div class="info-name">真实姓名</div>
-                    <input type="text" id="real-name" class="normal popup-tips">
-                    <div id="real-name-tips" class="info-tips hidden">只有与你同社团的人才会看到</div>
-                    <div class="clear"></div>
-                  </li>
-                  <li>
-                    <div class="info-name">性别</div>
-                    <input type="radio" name="sex" value="male" checked id="sex-male" class="short">
-                    <div class="radio-name">男</div>
-                    <input type="radio" name="sex" value="female" id="sex-female" class="short">
-                    <div class="radio-name">女</div>
-                    <div class="clear"></div>
-                  </li>
-                  <li>
-                    <div class="info-name">昵称</div>
-                    <input type="text" name="nick-name" id="nick-name" class="normal popup-tips popup-check">
-                    <div id="nick-name-tips" class="info-tips hidden">2-14字符，字母、汉字、数字及下划线可用</div>
-                    <div class="clear"></div>
-                  </li>
-                  <li>
-                    <div class="info-name">生日</div>
-                    <input type="text" name="birthday" placeholder="yyyy-mm-dd" id="birthday" class="normal popup-check">
-                    <div class="clear"></div>
-                  </li>
-                  <li>
-                    <div class="info-name">城市</div>
-                    <select id="location-province" class="short">
-                      <option>北京市</option>
-                    </select>
-                    <select id="location-city" class="short">
-                      <option>北京市</option>
-                    </select>
-                    <div class="clear"></div>
-                  </li>
-                </ul>
-                <ul class="box-content">
-                  <p class="description-card">还要填院系信息哦。啥？想填GPA？……(╯‵□′)╯︵┻━┻</p>
-                  <li>
-                    <div class="info-name">年级</div>
-                    <select id="admission-year" class="short">
-                      <option>2009</option>
-                      <option>2010</option>
-                    </select>
-                    <select id="education" class="short">
-                      <option>本科</option>
-                      <option>硕士</option>
-                      <option>博士</option>
-                    </select>
-                    <div class="clear"></div>
-                  </li>
-                  <li>
-                    <div class="info-name">院系</div>
-                    <select style="width:180px" id="department" class="normal">
-                      <option>数学科学学院</option>
-                      <option>新闻与传播学院</option>
-                    </select>
-                    <div class="clear"></div>
-                  </li>
-                  <li>
-                    <div class="info-name">学号</div>
-                    <input type="text" name="school-id" id="school-id" class="normal popup-tips">
-                    <div id="school-id-tips" class="info-tips hidden">只有你所参加社团的管理员才会看到</div>
-                    <div class="clear"></div>
-                  </li>
-                  <li>
-                    <input type="checkbox" name="non-school" id="non-school">
-                    <div style="width:38px" class="info-name">校外</div>
-                    <input type="text" name="non-school-info" id="non-school-info" class="long">
-                    <div class="clear"></div>
-                  </li>
-                </ul>
-                <button id="back-to-1">上一步</button>
-                <button id="next-to-3">下一步</button>
-                <div class="clear"></div>
+              <div id="signup-step2" class="hidden">
+                <h2>Step 2/3<span>填写信息</span></h2>
+                <div class="info-box">
+                  <ul class="box-content">
+                    <p class="description-card">填写真实的信息，你会遇见更多可能感兴趣的人。</p>
+                    <li>
+                      <div class="info-name">真实姓名</div>
+                      <input type="text" id="real-name" class="normal popup-tips">
+                      <div id="real-name-tips" class="info-tips hidden">只有与你同社团的人才会看到</div>
+                      <div class="clear"></div>
+                    </li>
+                    <li>
+                      <div class="info-name">性别</div>
+                      <input type="radio" name="sex" value="male" checked id="sex-male" class="short">
+                      <div class="radio-name">男</div>
+                      <input type="radio" name="sex" value="female" id="sex-female" class="short">
+                      <div class="radio-name">女</div>
+                      <div class="clear"></div>
+                    </li>
+                    <li>
+                      <div class="info-name">昵称</div>
+                      <input type="text" name="nick-name" id="nick-name" class="normal popup-tips popup-check">
+                      <div id="nick-name-tips" class="info-tips hidden">2-14字符，字母、汉字、数字及下划线可用</div>
+                      <div class="clear"></div>
+                    </li>
+                    <li>
+                      <div class="info-name">生日</div>
+                      <input type="text" name="birthday" placeholder="yyyy-mm-dd" id="birthday" class="normal popup-check">
+                      <div class="clear"></div>
+                    </li>
+                    <li>
+                      <div class="info-name">城市</div>
+                      <select id="location-province" class="short">
+                        <option>北京市</option>
+                      </select>
+                      <select id="location-city" class="short">
+                        <option>北京市</option>
+                      </select>
+                      <div class="clear"></div>
+                    </li>
+                  </ul>
+                  <ul class="box-content">
+                    <p class="description-card">还要填院系信息哦。啥？想填GPA？……(╯‵□′)╯︵┻━┻</p>
+                    <li>
+                      <div class="info-name">年级</div>
+                      <select id="admission-year" class="short">
+                        <option>2009</option>
+                        <option>2010</option>
+                      </select>
+                      <select id="education" class="short">
+                        <option>本科</option>
+                        <option>硕士</option>
+                        <option>博士</option>
+                      </select>
+                      <div class="clear"></div>
+                    </li>
+                    <li>
+                      <div class="info-name">院系</div>
+                      <select style="width:180px" id="department" class="normal">
+                        <option>数学科学学院</option>
+                        <option>新闻与传播学院</option>
+                      </select>
+                      <div class="clear"></div>
+                    </li>
+                    <li>
+                      <div class="info-name">学号</div>
+                      <input type="text" name="school-id" id="school-id" class="normal popup-tips">
+                      <div id="school-id-tips" class="info-tips hidden">只有你所参加社团的管理员才会看到</div>
+                      <div class="clear"></div>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="non-school" id="non-school">
+                      <div style="width:38px" class="info-name">校外</div>
+                      <input type="text" name="non-school-info" id="non-school-info" class="long">
+                      <div class="clear"></div>
+                    </li>
+                  </ul>
+                  <button id="back-to-1">上一步</button>
+                  <button id="next-to-3">下一步</button>
+                  <div class="clear"></div>
+                </div>
               </div>
-            </div>
-            <div id="signup-step3" class="hidden">
-              <h2>Step 3/3<span>验证邮箱</span></h2>
-              <div class="email-check-box">
-                <ul class="box-content">
-                  <p class="description-card">验证你的邮箱，以使用找回密码、邮件订阅消息等功能。</p>
-                  <li>
-                    <div class="info-name">邮箱</div>
-                    <input type="text" name="email" class="normal">
-                    <div id="email-check-yes" class="info-check">可以使用：）</div>
-                    <div id="email-check-no" class="info-check hidden">使用过了，换一个吧！</div>
-                    <div class="clear"></div>
-                  </li>
-                </ul>
-                <button id="back-to-2">上一步</button>
-                <button id="submit">验证邮箱</button>
-                <div class="clear"></div>
+              <div id="signup-step3" class="hidden">
+                <h2>Step 3/3<span>验证邮箱</span></h2>
+                <div class="email-check-box">
+                  <ul class="box-content">
+                    <p class="description-card">验证你的邮箱，以使用找回密码、邮件订阅消息等功能。</p>
+                    <li>
+                      <div class="info-name">邮箱</div>
+                      <input type="text" name="email" class="normal">
+                      <div id="email-check-yes" class="info-check">可以使用：）</div>
+                      <div id="email-check-no" class="info-check hidden">使用过了，换一个吧！</div>
+                      <div class="clear"></div>
+                    </li>
+                  </ul>
+                  <button id="back-to-2">上一步</button>
+                  <button id="submit">验证邮箱</button>
+                  <div class="clear"></div>
+                </div>
               </div>
             </div>
           </div>

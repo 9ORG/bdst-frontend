@@ -1526,45 +1526,47 @@ header #top-bar #top-bar-content-container #top-user-menu.top-user-menu-club a:h
   border-color: #fcb03c;
 }
 #welcome-page .main-content-full #toggle-signup-box {
-  width: 592px;
-  margin: 30px auto 0 auto;
-  padding: 40px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  background-color: #f4f4f4;
+  width: 672px;
+  margin: 20px auto 0 auto;
 }
 #welcome-page .main-content-full #toggle-signup-box .tri-pointer-grey {
-  position: relative;
-  top: -54px;
-  margin: 0 292px 0 292px;
+  margin: 0 332px 0 332px;
+  height: 14px;
 }
-#welcome-page .main-content-full #toggle-forget-password-box {
+#welcome-page .main-content-full #toggle-signup-box #toggle-signup-box-content {
   width: 592px;
-  margin: 20px auto 0 auto;
   padding: 40px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
   background-color: #f4f4f4;
 }
-#welcome-page .main-content-full #toggle-forget-password-box .tri-pointer-grey {
-  position: relative;
-  top: -54px;
-  margin: 0 0 0 560px;
+#welcome-page .main-content-full #toggle-forget-password-box {
+  width: 672px;
+  margin: 10px auto 0 auto;
 }
-#welcome-page .main-content-full #toggle-forget-password-box .description-card {
+#welcome-page .main-content-full #toggle-forget-password-box .tri-pointer-grey {
+  margin: 0 0 0 600px;
+  height: 14px;
+}
+#welcome-page .main-content-full #toggle-forget-password-box #toggle-forget-password-box-content {
+  width: 592px;
+  padding: 40px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #f4f4f4;
+}
+#welcome-page .main-content-full #toggle-forget-password-box #toggle-forget-password-box-content .description-card {
   margin-top: 0px;
 }
-#welcome-page .main-content-full #toggle-forget-password-box button#find-password {
+#welcome-page .main-content-full #toggle-forget-password-box #toggle-forget-password-box-content button#find-password {
   width: 200px;
   margin: 40px 0 0 196px;
   float: left;
 }
-#welcome-page .main-content-full .toggle-box-content {
-  margin: -34px 0 0 0;
+#welcome-page .main-content-full .toggle-box-content h2 {
+  margin: -5px 0 0 0;
 }
 #welcome-page .main-content-full .toggle-box-content h2 span {
-  position: relative;
-  top: -1px;
   margin: 0 0 0 10px;
   font-size: 16px;
   line-height: 16px;
