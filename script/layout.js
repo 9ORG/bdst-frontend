@@ -9,7 +9,12 @@ $(document).ready(function(){
 	$(window).resize(photoWallCenter).trigger("resize");
 	/* 欢迎首页 - 注册 */
 	$("#signup").click(function(){
-		$("#toggle-signup-box").fadeToggle(250);
+		// $("#toggle-signup-box").fadeToggle(250);
+		if ($("#toggle-signup-box").css("display") == "none") {
+			$("#toggle-signup-box").fadeIn(250);
+		} else {
+			$("#toggle-signup-box").fadeOut(250);
+		}
 	});
 	$("#next-to-2").click(function(){
 		$("#signup-step1").hide();
@@ -29,7 +34,12 @@ $(document).ready(function(){
 	});
 	/* 欢迎首页 - 忘记密码 */
 	$("#forget-password").click(function(){
-		$("#toggle-forget-password-box").fadeToggle(250);
+		// $("#toggle-forget-password-box").fadeToggle(250);
+		if ($("#toggle-forget-password-box").css("display") == "none") {
+			$("#toggle-forget-password-box").fadeIn(250);
+		} else {
+			$("#toggle-forget-password-box").fadeOut(250);
+		}
 	});
 
 	/* Header - 用户菜单 */

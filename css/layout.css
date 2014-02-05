@@ -111,6 +111,9 @@ button:hover {
 .hidden {
   display: none;
 }
+.show {
+  display: auto;
+}
 .button {
   width: 140px;
   height: 34px;
