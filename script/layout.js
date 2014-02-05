@@ -47,17 +47,27 @@ $(document).ready(function(){
 	});
 
 	/* SideBar - 自定义分组菜单 */
-	$(".popup-custom-button").mouseenter(function(){
-		$("#popup-user-list-custom").removeClass("animated fadeOutLeft");
-		$("#popup-user-list-custom").addClass("animated fadeInLeft");
+	// $(".popup-custom-button").mouseenter(function(){
+	// 	$("#popup-user-list-custom").removeClass("animated fadeOutLeft");
+	// 	$("#popup-user-list-custom").addClass("animated fadeInLeft");
+	// 	$(".popup-custom-button").addClass("current-button");
+	// 	$("#popup-user-list-custom").fadeIn(1000);
+	// });
+	// $(".popup-custom").mouseleave(function(){
+	// 	$("#popup-user-list-custom").removeClass("animated fadeInLeft");
+	// 	$(".popup-custom-button").removeClass("current-button");
+	// 	$("#popup-user-list-custom").addClass("animated fadeOutLeft");
+	// 	$("#popup-user-list-custom").fadeOut(1000);
+	// });
+	$(".popup-custom").mouseenter(function(){
 		$(".popup-custom-button").addClass("current-button");
-		$("#popup-user-list-custom").fadeIn(1000);
+		// $("#popup-user-list-custom").fadeIn(250);
+		$("#popup-user-list-custom").slideDown(250);
 	});
 	$(".popup-custom").mouseleave(function(){
-		$("#popup-user-list-custom").removeClass("animated fadeInLeft");
 		$(".popup-custom-button").removeClass("current-button");
-		$("#popup-user-list-custom").addClass("animated fadeOutLeft");
-		$("#popup-user-list-custom").fadeOut(1000);
+		// $("#popup-user-list-custom").fadeOut(250);
+		$("#popup-user-list-custom").slideUp(250);
 	});
 
 	/* 编辑信息 - 信息提示 */

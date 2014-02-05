@@ -146,39 +146,42 @@ button
 					margin-top 5px
 					& > a
 						font-size small
-	#popup-user-list-custom
-		position fixed
-		top 325px
-		margin-left 100px
-		.tri-pointer
-			width 4px
-			height 7px
-			float left
-			margin-left -4px
-			margin-top 6px
-		& li
-			width 70px
-			border-style solid
-			border-color #000
-			border-width 0
-			padding 8px 8px 0 8px
-			text-align center
-			background-color deep-grey
-			&:first-child
-				border-top-left-radius 4px
-				border-top-right-radius 4px
-				padding-top 8px
-			&:last-child
-				border-bottom-left-radius 4px
-				border-bottom-right-radius 4px
-				padding-bottom 11px
-			& > a
-				color #fff
-				font-size 12px
-				&.current
-					color org
-				&:hover
-					color org
+					& > ul#popup-user-list-custom
+						& > li
+							margin-top 5px
+	// #popup-user-list-custom
+	// 	position fixed
+	// 	top 325px
+	// 	margin-left 100px
+	// 	.tri-pointer
+	// 		width 4px
+	// 		height 7px
+	// 		float left
+	// 		margin-left -4px
+	// 		margin-top 6px
+	// 	& li
+	// 		width 70px
+	// 		border-style solid
+	// 		border-color #000
+	// 		border-width 0
+	// 		padding 8px 8px 0 8px
+	// 		text-align center
+	// 		background-color deep-grey
+	// 		&:first-child
+	// 			border-top-left-radius 4px
+	// 			border-top-right-radius 4px
+	// 			padding-top 8px
+	// 		&:last-child
+	// 			border-bottom-left-radius 4px
+	// 			border-bottom-right-radius 4px
+	// 			padding-bottom 11px
+	// 		& > a
+	// 			color #fff
+	// 			font-size 12px
+	// 			&.current
+	// 				color org
+	// 			&:hover
+	// 				color org
 
 .main-content-full
 	width body-width
@@ -509,6 +512,7 @@ button
 		color light-grey
 		float left
 	#library-upload
+	#user-change-avatar
 	#club-change-avatar
 	#club-change-cover
 	#activity-change-avatar
@@ -605,9 +609,10 @@ button
 			border-color light-grey
 		&[type="radio"]
 			width extra-small
-			margin: 25px 10px 0 0
+			margin 25px 10px 0 0
 		&[type="checkbox"]
-			margin: 25px 10px 0 0
+			width small
+			margin 25px 10px 0 0
 	button
 		font-size medium
 		color #fff
@@ -681,7 +686,6 @@ button
 			&.align-left
 				text-align left
 		th
-			// color org
 			background-color #f9f9f9
 			font-weight bold
 		th, td
@@ -709,6 +713,7 @@ button
 			&.m200
 				min-width 220px
 			input[type="checkbox"]
+				width small
 				margin 0 8px 0 8px
 			a
 				color blu
@@ -777,7 +782,7 @@ button
 			background-color toggle-grey
 		& > input[type="checkbox"]
 			width small
-			margin 0
+			margin 1px 0 0 0
 		& > span
 			margin 0 0 0 5px
 

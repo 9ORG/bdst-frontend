@@ -60,17 +60,17 @@ html.no-js
 						.user-edit-info-box
 							form
 								ul.box-content
-									p.description-card 更改手机号码和邮箱，会变更你的登陆账号。
+									p.description-card 更改手机号码或邮箱，需要重新验证。
 									li
 										.info-name 手机号码
 										input(type="text", disabled="disabled", name="phone-num" placeholder="18610096949")#phone-num.normal
-										#change-phone-num.plain-button 修改手机号码
-										#change-password.plain-button 修改登录密码
+										#change-phone-num.plain-button 更改手机号码
+										#change-password.plain-button 更改登录密码
 										.clear
 									li
 										.info-name 邮箱
 										input(type="text", disabled="disabled", name="email" placeholder="summerz0501@126.com")#email.normal
-										#change-email.plain-button 修改邮箱
+										#change-email.plain-button 更改邮箱
 										.clear
 								ul.box-content
 									p.description-card 填写真实的信息，你会遇见更多可能感兴趣的人。
@@ -135,12 +135,11 @@ html.no-js
 					#user-avatar.column-3-1
 						h2.inline 头像
 						.hr
-						.avatar-box
-							.box-content
-								#user-avatar-large.inline
-									img
-								a(href="#", style="margin:180px 10px 0 0").plain-button 修改头像
-								.clear
+						#user-avatar-large
+							img
+						.user-avatar-box.box-content
+								.upload-info 拖拽至图片 或 使用普通方式
+								#user-change-avatar 浏览上传
 					.clear
 			.clear
 

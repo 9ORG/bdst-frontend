@@ -52,7 +52,7 @@ html.no-js
 								a(href="admin-user-list-excel.html") Excel导入
 							li.popup-custom
 								a.popup-custom-button(href="admin-user-list-custom.html") 自定义分组
-								#popup-user-list-custom.hidden
+								//- #popup-user-list-custom.hidden
 									.tri-pointer
 										img(src="../img/tri-pointer.png")
 									ul
@@ -64,6 +64,15 @@ html.no-js
 											a(href="#") 分组三
 										li
 											a(href="#") 分组四
+								ul#popup-user-list-custom.hidden
+									li
+										a(href="admin-user-list-custom-group01.html") 分组一
+									li
+										a(href="#") 分组二
+									li
+										a(href="#") 分组三
+									li
+										a(href="#") 分组四
 					li 活动管理
 						ul.side-menu-button
 							li
@@ -106,18 +115,17 @@ html.no-js
 											.info-name 内容
 											textarea(type="text", name="message-content")#message-content.long
 											.clear
-										p.description-card(style="margin-left:70px")
+										p.description-card(style="margin-left:70px;color:#666")
 											span#character-left 70
 											| 字剩余 / 
 											span#message-count 1
 											| 条短信
-										p.description-card(style="margin:-5px 0 0 70px") 每条短信为70个字符，超出则分拆为多条短信发送，请尽量在一条短信内拟定通知。
+										p.description-card(style="margin:-5px 0 0 70px") 每条短信为70字，超出则分拆为多条短信发送，请尽量在一条短信内拟定通知。
 										li
 											.info-name 图片
 											input(type="text", name="message-picture")#message-picture.normal
 											#upload-picture.plain-button 浏览上传
 											.clear
-									//- button#submit 发起活动
 						#message-receiver-selector.column-3-1
 							h2.inline 收信人选取
 							.hr

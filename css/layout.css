@@ -158,46 +158,8 @@ button:hover {
 #sidebar ul#side-menu > li ul.side-menu-button > li > a {
   font-size: 13px;
 }
-#sidebar #popup-user-list-custom {
-  position: fixed;
-  top: 325px;
-  margin-left: 100px;
-}
-#sidebar #popup-user-list-custom .tri-pointer {
-  width: 4px;
-  height: 7px;
-  float: left;
-  margin-left: -4px;
-  margin-top: 6px;
-}
-#sidebar #popup-user-list-custom li {
-  width: 70px;
-  border-style: solid;
-  border-color: #000;
-  border-width: 0;
-  padding: 8px 8px 0 8px;
-  text-align: center;
-  background-color: #333;
-}
-#sidebar #popup-user-list-custom li:first-child {
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  padding-top: 8px;
-}
-#sidebar #popup-user-list-custom li:last-child {
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  padding-bottom: 11px;
-}
-#sidebar #popup-user-list-custom li > a {
-  color: #fff;
-  font-size: 12px;
-}
-#sidebar #popup-user-list-custom li > a.current {
-  color: #fcb03c;
-}
-#sidebar #popup-user-list-custom li > a:hover {
-  color: #fcb03c;
+#sidebar ul#side-menu > li ul.side-menu-button > li > ul#popup-user-list-custom > li {
+  margin-top: 5px;
 }
 .main-content-full {
   width: 1080px;
@@ -679,6 +641,8 @@ button:hover {
 }
 .main-content #library-upload,
 .main-content-full #library-upload,
+.main-content #user-change-avatar,
+.main-content-full #user-change-avatar,
 .main-content #club-change-avatar,
 .main-content-full #club-change-avatar,
 .main-content #club-change-cover,
@@ -698,6 +662,8 @@ button:hover {
 }
 .main-content #library-upload:hover,
 .main-content-full #library-upload:hover,
+.main-content #user-change-avatar:hover,
+.main-content-full #user-change-avatar:hover,
 .main-content #club-change-avatar:hover,
 .main-content-full #club-change-avatar:hover,
 .main-content #club-change-cover:hover,
@@ -853,6 +819,7 @@ button:hover {
 }
 .main-content input[type="checkbox"],
 .main-content-full input[type="checkbox"] {
+  width: 13px;
   margin: 25px 10px 0 0;
 }
 .main-content button,
@@ -1036,6 +1003,7 @@ button:hover {
 .main-content-full table th input[type="checkbox"],
 .main-content table td input[type="checkbox"],
 .main-content-full table td input[type="checkbox"] {
+  width: 13px;
   margin: 0 8px 0 8px;
 }
 .main-content table th a,
@@ -1134,7 +1102,7 @@ button:hover {
 .user-selector-box ul#user-group-selector > li > input[type="checkbox"],
 .user-selector-box ul#user-list-selector > li > input[type="checkbox"] {
   width: 13px;
-  margin: 0;
+  margin: 1px 0 0 0;
 }
 .user-selector-box ul#user-group-selector > li > span,
 .user-selector-box ul#user-list-selector > li > span {
