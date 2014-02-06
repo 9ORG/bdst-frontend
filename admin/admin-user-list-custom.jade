@@ -91,7 +91,7 @@ html.no-js
 						h2.inline 自定义分组
 						.tiny-description-bar 共4个分组
 						.tiny-menu-bar
-							a(href="#") 增加分组
+							a#add-custom-group(href="#") 增加分组
 						.hr
 						.admin-user-list-custom-box
 							.box-content.overflow-scroll
@@ -115,6 +115,7 @@ html.no-js
 											td
 												a(href="#") 详细成员
 												a(href="#") 发起讨论
+												a(href="#") 更改名称
 												a(href="#") 转移分组
 												a(href="#") 删除分组
 										tr
@@ -128,6 +129,7 @@ html.no-js
 											td
 												a(href="#") 详细成员
 												a(href="#") 发起讨论
+												a(href="#") 更改名称
 												a(href="#") 转移分组
 												a(href="#") 删除分组
 										tr
@@ -141,6 +143,7 @@ html.no-js
 											td
 												a(href="#") 详细成员
 												a(href="#") 发起讨论
+												a(href="#") 更改名称
 												a(href="#") 转移分组
 												a(href="#") 删除分组
 										tr
@@ -154,6 +157,7 @@ html.no-js
 											td
 												a(href="#") 详细成员
 												a(href="#") 发起讨论
+												a(href="#") 更改名称
 												a(href="#") 转移分组
 												a(href="#") 删除分组
 							.batch-menu-bar
@@ -172,5 +176,14 @@ html.no-js
 							.clear
 					.clear
 			.clear
+
+		#popup-stage-add-custom-group.popup-stage.hidden
+			#add-custom-group.popup-stage-box.small
+				.box-content
+					.info-name 分组名称
+					input(type="text", name="user-id")
+					button#submit 增加分组
+					button#cancel-stage 取消
+					.clear
 
 		include footer

@@ -41,7 +41,7 @@
           <li><img src="../img/club-id001/club-id001-cover6.jpg" class="photo-wall-pic6"></li>
           <li><img src="../img/club-id001/club-id001-cover5.jpg" class="photo-wall-pic7"></li>
           <li class="logo-box"><img src="../img/logo.png" class="logo">
-            <div class="logo-text">社团管理平台<span>@PKU</span></div>
+            <div id="logo-text-black"><img src="../img/logo-text-black.png"><span>@PKU</span></div>
           </li>
           <li><img src="../img/club-id001/club-id001-cover1.jpg" class="photo-wall-pic8"></li>
           <li><img src="../img/club-id001/club-id001-cover3.jpg" class="photo-wall-pic9"></li>
@@ -135,8 +135,22 @@
                 </div>
               </div>
               <div id="signup-step2" class="hidden">
-                <h2>Step 2/3<span>填写信息</span></h2>
+                <h2>Step 2/3<span>设定密码及填写信息</span></h2>
                 <div class="info-box">
+                  <ul class="box-content">
+                    <p class="description-card">用123456会被警察叔叔抓起来的哦。如果忘记密码了，可以使用邮箱找回。</p>
+                    <li>
+                      <div class="info-name">密码</div>
+                      <input type="password" name="password" id="password" class="normal popup-tips popup-check">
+                      <div id="password-tips" class="info-tips hidden">6-12字符，字母、数字可用</div>
+                      <div class="clear"></div>
+                    </li>
+                    <li>
+                      <div class="info-name">确认密码</div>
+                      <input type="password" name="password" class="normal">
+                      <div class="clear"></div>
+                    </li>
+                  </ul>
                   <ul class="box-content">
                     <p class="description-card">填写真实的信息，你会遇见更多可能感兴趣的人。</p>
                     <li>
@@ -156,7 +170,7 @@
                     <li>
                       <div class="info-name">昵称</div>
                       <input type="text" name="nick-name" id="nick-name" class="normal popup-tips popup-check">
-                      <div id="nick-name-tips" class="info-tips hidden">2-14字符，字母、汉字、数字及下划线可用</div>
+                      <div id="nick-name-tips" class="info-tips-long hidden">2-14字符，字母、汉字、数字、下划线可用</div>
                       <div class="clear"></div>
                     </li>
                     <li>
@@ -243,7 +257,7 @@
     <footer>
       <div id="foot-bar" class="animated fadeInUp">
         <div id="foot-bar-content-container">
-          <div class="footer-decro"><img src="../img/footer-decro.png"></div>
+          <div class="footer-decro-welcome"><img src="../img/footer-decro.png"></div>
           <div class="clear"></div>
           <div class="foot-bar-info">
             <div class="foot-bar-title">关于</div>

@@ -91,7 +91,7 @@ html.no-js
 						h2.inline 管理员
 						.tiny-description-bar 共3名成员
 						.tiny-menu-bar
-							a(href="#") 增加管理员
+							a#add-admin(href="#") 增加管理员
 							a(href="#") 增减显示信息
 							a(href="#") 搜索
 						.hr
@@ -167,5 +167,14 @@ html.no-js
 							.clear
 					.clear
 			.clear
+
+		#popup-stage-add-admin.popup-stage.hidden
+			#add-admin-box.popup-stage-box.small
+				.box-content
+					.info-name 用户编号
+					input(type="text", name="user-id")
+					button#submit 增加管理员
+					button#cancel-stage 取消
+					.clear
 
 		include footer

@@ -328,7 +328,7 @@ button
 				height 195px
 				width 266px
 				float left
-				z-index -1000
+				z-index -100
 		.activity-list-name
 			width 246px
 			height 40px
@@ -341,7 +341,7 @@ button
 			background-color rgba(255,255,255,.8)
 			transition .25s
 			float left
-			z-index 1000
+			z-index 100
 		.detail-list-name
 			width 60px
 			height 30px
@@ -527,6 +527,27 @@ button
 		float left
 		&:hover
 			cursor pointer
+	// .club-change-cover-box
+	// 	margin -5px 0 0 10px
+	// 	color blu
+	// 	font-weight bold
+	// 	float left
+	// 	&:hover
+	// 		cursor pointer
+	// 	& > div
+	// 		margin 0 0 5px 0
+	// 		& > div
+	// 			line-height 20px
+	// 			font-size extra-small
+	#toggle-club-change-cover-box
+		margin 5px 0 0 0
+		color blu
+		font-size extra-small
+		& > div
+			margin 0 5px 0 0
+			float left
+			&:hover
+				cursor pointer
 	#get-qr-ad
 	#get-qr-apply
 	#get-qr-checkin
@@ -788,11 +809,101 @@ button
 		& > span
 			margin 0 0 0 5px
 
+/* 弹窗 - 增加管理员 */
+.popup-stage
+	position absolute
+	top 0
+	left 0
+	width 100%
+	height 100%
+	background-color rgba(0,0,0,.5)
+	z-index 9999
+	.popup-stage-box
+		width 592px
+		background-color #fff
+		border-radius 4px
+		padding 40px
+		box-shadow 0 1px 8px 0 rgba(51,51,51,.5)
+		&.small
+			margin 220px auto 0 auto
+			height 34px
+		&.large
+			margin 100px auto 0 auto
+			height 480px
+			& button
+				margin-top 20px
+			& .button-box
+				float right
+		h2
+			margin -5px 0 0 0
+			span
+				margin 0 0 0 10px
+				font-size large
+				line-height large
+		.info-name
+			width 60px
+			height 30px
+			line-height 30px
+			margin 0 10px 0 0
+			color deep-grey
+			font-weight bold
+			float left
+		input
+			width 290px
+			height 20px
+			line-height 20px
+			color grey
+			margin 0 20px 0 0
+			padding 5px 8px 5px 8px
+			border 1px solid border-grey
+			border-radius 4px
+			font-size small
+			float left
+			transition .25s
+			&:focus
+				border-color light-grey
+		textarea
+			width 574px
+			color grey
+			margin 10px 0 0 0
+			padding 9px 8px 9px 8px
+			border 1px solid border-grey
+			border-radius 4px
+			font-size small
+			display block
+			overflow scroll
+			&:focus
+				border-color light-grey
+		#apply-step1
+		#apply-step2
+			& textarea
+				height 360px
+		#apply-step3
+			& textarea
+				height 60px
+				margin 0 0 20px 0
+		button#cancel-stage
+		button.cancel-stage
+			width 60px
+			margin-left 10px
+			background-color light-grey
+			border-color light-grey
+		p.question-card
+			margin 10px 0 10px 0
+			color deep-grey
+			span
+				margin-left 10px
+		#club-custom-question
+			margin 10px 0 0 0
+			height 380px
+			overflow scroll
+
+/* 社团首页 - 封面 */
 #club-cover
 	position fixed
 	top 0
 	left 0
-	z-index -9999
+	z-index -1000
 .cover-width
 	width 100%
 .cover-height
@@ -907,14 +1018,14 @@ button
 	background-color deep-grey
 	position fixed
 	top 0
-	z-index 10001
+	z-index 1001
 header
 	width 100%
 	height 80px
 	overflow visible
 	position fixed
 	top 0
-	z-index 10000
+	z-index 1000
 	#top-bar
 		background-color rgba(255,255,255,.85)
 		box-shadow 0 1px 3px 0 rgba(51,51,51,.15)
@@ -938,14 +1049,14 @@ header
 				color org
 			#top-admin-name
 				& > a
-					margin 10px 0px 10px 20px
-					padding-top 2px
+					margin 10px 0px 10px 30px
+					padding-top 1px
 					line-height 60px
 					font-size 20px
 					float left
 					color deep-grey
 				#change-admin > a
-					margin-top 38px
+					margin-top 36px
 					float left
 					font-size extra-small
 					margin-left 6px
@@ -955,9 +1066,21 @@ header
 					padding-top 5px
 					display inline-block
 					float left
+					&:first-child
+						margin-left 30px
 					& > a
 						font-size 14px
 						line-height 80px
+						& > span
+							position relative
+							top -10px
+							margin 0 0 0 2px
+							padding 1px 1px 1px 2px
+							font-size 6px
+							line-height 8px
+							text-align center
+							color #fff
+							background-color org
 				&.top-nav-club a
 					color #fff
 					&:hover
@@ -976,6 +1099,16 @@ header
 					color org
 					font-weight bold
 					cursor pointer
+				#new-message
+					position relative
+					top -10px
+					margin 0 0 0 2px
+					padding 1px 1px 1px 2px
+					font-size 6px
+					line-height 8px
+					text-align center
+					color #fff
+					background-color #ff0000
 				ul#popup-user-menu
 					& > li
 						margin-right 10px
@@ -1023,7 +1156,7 @@ header
 					width 320px
 					height 200px
 				img.logo
-					margin 20px 100px 0 100px
+					margin 22px 100px 0 100px
 					width 120px
 					height 120px
 				.logo-text
@@ -1041,8 +1174,16 @@ header
 						margin 0 0 0 5px
 						font-size 10px
 						color org
+				#logo-text-black
+					margin 10px 0 0 90px
+					span
+						position relative
+						top -12px
+						margin 0 0 0 5px
+						font-size 10px
+						color org
 	.main-content-full
-		margin 80px auto 140px auto
+		margin 80px auto 160px auto
 		width body-width
 		.slogan-box
 			text-align center
@@ -1088,89 +1229,142 @@ header
 				font-size 20px
 				background-color org
 				border-color org
-		#toggle-signup-box
-			width 672px
-			margin 20px auto 0 auto
-			.tri-pointer-grey
-				margin 0 332px 0 332px
-				height 14px
-			#toggle-signup-box-content
-				width 592px
-				padding 40px
-				border-radius 4px
-				background-color toggle-grey
-		#toggle-forget-password-box
-			width 672px
-			margin 10px auto 0 auto
-			.tri-pointer-grey
-				margin 0 0 0 600px
-				height 14px
-			#toggle-forget-password-box-content
-				width 592px
-				padding 40px
-				border-radius 4px
-				background-color toggle-grey
-				.description-card
-					margin-top 0px
-				button#find-password
-					width 200px
-					margin 40px 0 0 196px
-					float left
-		.toggle-box-content
-			h2
-				margin -5px 0 0 0
-				span
-					margin 0 0 0 10px
-					font-size large
-					line-height large
-			.box-content
-				&:first-child
-					margin 0
-				.info-name
-					width 60px
-					height 30px
-					line-height 30px
-					margin 20px 10px 0 0
-					color deep-grey
-					font-weight bold
-					float left
-				.info-check
-				.info-tips
-					width 260px
-					height 30px
-					line-height 30px
-					font-size extra-small
-					color bro
-					margin 20px 10px 0 0
-					float left
-				.info-check-red
-					border-color #ee0000
-				.info-check-green
-					border-color #00bb00
-				.validator-short
-					width 62px
-				button#phone-validate
-					margin 20px 0 0 0
-			button#next-to-2
-				width 200px
-				margin 40px 0 0 196px
-			button#back-to-2
-				width 200px
-				margin 40px 0 0 84px
-				background-color light-grey
-				border-color light-grey
-				float left
-			button#back-to-1
-				width 200px
-				margin 40px 0 0 84px
-				background-color light-grey
-				border-color light-grey
-				float left
-			button#next-to-3
-			button#submit
-				width 200px
-				margin 40px 0 0 20px
-				float left
+
+#toggle-signup-box
+	width 672px
+	margin 20px auto 0 auto
+	.tri-pointer-grey
+		margin 0 332px 0 332px
+		height 14px
+	#toggle-signup-box-content
+		width 592px
+		padding 40px
+		border-radius 4px
+		background-color toggle-grey
+#toggle-forget-password-box
+	width 672px
+	margin 10px auto 0 auto
+	.tri-pointer-grey
+		margin 0 0 0 600px
+		height 14px
+	#toggle-forget-password-box-content
+		width 592px
+		padding 40px
+		border-radius 4px
+		background-color toggle-grey
+		.description-card
+			margin 0
+			padding 0
+		button#find-password
+			width 200px
+			margin 40px 0 0 196px
+			float left
+#toggle-change-phone-num-box
+	width 580px
+	margin 5px auto 0 auto
+	.tri-pointer-grey
+		margin 0 0 0 301px
+		height 14px
+	#toggle-change-phone-num-box-content
+		width 500px
+		padding 40px
+		border-radius 4px
+		background-color toggle-grey
+		.description-card
+			margin-top 0
+			padding 0
+#toggle-change-password-box
+	width 580px
+	margin 5px auto 0 auto
+	.tri-pointer-grey
+		margin 0 0 0 384px
+		height 14px
+	#toggle-change-password-box-content
+		width 500px
+		padding 40px
+		border-radius 4px
+		background-color toggle-grey
+		.description-card
+			margin-top 0
+			padding 0
+#toggle-change-email-box
+	width 580px
+	margin 5px auto 0 auto
+	.tri-pointer-grey
+		margin 0 0 0 289px
+		height 14px
+	#toggle-change-email-box-content
+		width 500px
+		padding 40px
+		border-radius 4px
+		background-color toggle-grey
+		.description-card
+			margin-top 0
+			padding 0
+button#change-phone-num-submit
+button#change-password-submit
+	width 200px
+	margin 40px 0 0 150px
+.toggle-box-content
+	h2
+		margin -5px 0 0 0
+		span
+			margin 0 0 0 10px
+			font-size large
+			line-height large
+	.box-content
+		&:first-child
+			margin 0
+		.info-name
+			width 60px
+			height 30px
+			line-height 30px
+			margin 20px 10px 0 0
+			color deep-grey
+			font-weight bold
+			float left
+		.info-check
+		.info-tips
+			width 220px
+		.info-tips-long
+			width 260px
+		.info-check
+		.info-tips
+		.info-tips-long
+			height 30px
+			line-height 30px
+			font-size extra-small
+			color bro
+			margin 20px 10px 0 0
+			float left
+		.info-check-red
+			border-color #ee0000
+		.info-check-green
+			border-color #00bb00
+		.validator-short
+			width 62px
+		button#phone-validate
+			margin 20px 0 0 0
+	button#next-to-2
+		width 200px
+		margin 40px 0 0 196px
+	button#back-to-2
+		width 200px
+		margin 40px 0 0 84px
+		background-color light-grey
+		border-color light-grey
+		float left
+	button#back-to-1
+		width 200px
+		margin 40px 0 0 84px
+		background-color light-grey
+		border-color light-grey
+		float left
+	button#next-to-3
+	button#submit
+		width 200px
+		margin 40px 0 0 20px
+		float left
 
 footer
 	#foot-bar
@@ -1183,7 +1377,12 @@ footer
 			margin-left auto
 			margin-right auto
 			.footer-decro
-				float right
+				float left
+				& > img
+					position relative
+					top -40px
+			.footer-decro-welcome
+				margin 0 505px 0 495px
 				& > img
 					position relative
 					top -40px
@@ -1203,6 +1402,7 @@ footer
 							color #fff
 				&:last-child
 					width 300px
+					margin-right 0px
 					float right
 					.foot-bar-title
 						font-size medium
@@ -1214,3 +1414,7 @@ footer
 							color rgba(255,255,255,.4)
 							& > a:hover
 								color #fff
+
+#activity-comment-anchor
+	position relative
+	top -140px

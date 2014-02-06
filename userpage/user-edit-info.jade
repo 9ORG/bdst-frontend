@@ -67,11 +67,67 @@ html.no-js
 										#change-phone-num.plain-button 更改手机号码
 										#change-password.plain-button 更改登录密码
 										.clear
+										#toggle-change-phone-num-box.hidden
+											.tri-pointer-grey
+												img(src="../img/tri-pointer-grey.png")
+											#toggle-change-phone-num-box-content
+												.toggle-box-content
+													p.description-card 输入新的手机号码，并通过短信验证。
+													.change-phone-num-box
+														ul.box-content
+															li
+																.info-name 手机号码
+																input(type="text", name="phone-num").normal
+																#phone-num-check-yes.info-check 有社团和活动参与信息哦，快注册吧
+																#phone-num-check-no.info-check.hidden 尚未参加任何活动和社团哦
+																.clear
+															li
+																.info-name 验证码
+																input(type="text", name="phone-validate-num").validator-short
+																a#phone-validate.plain-button 获取验证码
+																.clear
+														button#change-phone-num-submit 确认更改
+													.clear
+										#toggle-change-password-box.hidden
+											.tri-pointer-grey
+												img(src="../img/tri-pointer-grey.png")
+											#toggle-change-password-box-content
+												.toggle-box-content
+													p.description-card 用123456会被警察叔叔抓起来的哦。如果忘记密码了，可以使用邮箱找回。
+													.change-phone-num-box
+														ul.box-content
+															li
+																.info-name 密码
+																input(type="password", name="password")#password.normal.popup-tips.popup-check
+																#password-tips.info-tips.hidden 6-12字符，字母、数字可用
+																.clear
+															li
+																.info-name 确认密码
+																input(type="password", name="password").normal
+																.clear
+														button#change-password-submit 确认更改
+													.clear
 									li
 										.info-name 邮箱
 										input(type="text", disabled="disabled", name="email" placeholder="summerz0501@126.com")#email.normal
 										#change-email.plain-button 更改邮箱
 										.clear
+										#toggle-change-email-box.hidden
+											.tri-pointer-grey
+												img(src="../img/tri-pointer-grey.png")
+											#toggle-change-email-box-content
+												.toggle-box-content
+													p.description-card 输入新的邮箱，并通过邮件验证。
+													.change-email-box
+														ul.box-content
+															li
+																.info-name 邮箱
+																input(type="text", name="email").normal
+																#email-check-yes.info-check 可以使用：）
+																#email-check-no.info-check.hidden 使用过了，换一个吧！
+																.clear
+														button#change-phone-num-submit 发送验证邮件
+													.clear
 								ul.box-content
 									p.description-card 填写真实的信息，你会遇见更多可能感兴趣的人。
 									li
@@ -89,7 +145,7 @@ html.no-js
 									li
 										.info-name 昵称
 										input(type="text", name="nick-name")#nick-name.normal.popup-tips.popup-check
-										#nick-name-tips.info-tips.hidden 2-14字符，字母、汉字、数字及下划线可用
+										#nick-name-tips.info-tips-long.hidden 2-14字符，字母、汉字、数字、下划线可用
 										.clear
 									li
 										.info-name 生日

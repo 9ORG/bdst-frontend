@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	/* 欢迎首页 - 图片墙 */
+	/* 欢迎首页 - 照片墙 */
 	function photoWallCenter() {
 		var windowWidth = $(window).width();
 		$("#photo-wall").css("left",windowWidth/2 - 800);
@@ -56,7 +56,53 @@ $(document).ready(function(){
 		$("#popup-user-menu").fadeOut(1000);
 	});
 
-	/* SideBar - 自定义分组菜单 */
+	/* 编辑信息 - 信息提示 */
+	$(".popup-tips").focusin(function(){
+		var id = $(this).attr("id");
+		$("#"+id+"-tips").removeClass("animated fadeOutLeft");
+		$("#"+id+"-tips").addClass("animated fadeInLeft");
+		$("#"+id+"-tips").fadeIn(1000);
+	});
+	$(".popup-tips").focusout(function(){
+		var id = $(this).attr("id");
+		$("#"+id+"-tips").removeClass("animated fadeInLeft");
+		$("#"+id+"-tips").addClass("animated fadeOutLeft");
+		$("#"+id+"-tips").fadeOut(1000);
+	});
+
+	/* 用户 - 编辑信息 - 更改手机号码 更改密码 更改邮箱 */
+	$("#change-phone-num").click(function(){
+		// $("#toggle-change-phone-num-box").fadeToggle(250);
+		if ($("#toggle-change-phone-num-box").css("display") == "none") {
+			$("#toggle-change-phone-num-box").fadeIn(250);
+			$("#toggle-change-password-box").hide();
+			$("#toggle-change-email-box").hide();
+		} else {
+			$("#toggle-change-phone-num-box").fadeOut(250);
+		}
+	});
+	$("#change-password").click(function(){
+		// $("#toggle-change-password-box").fadeToggle(250);
+		if ($("#toggle-change-password-box").css("display") == "none") {
+			$("#toggle-change-password-box").fadeIn(250);
+			$("#toggle-change-phone-num-box").hide();
+			$("#toggle-change-email-box").hide();
+		} else {
+			$("#toggle-change-password-box").fadeOut(250);
+		}
+	});
+	$("#change-email").click(function(){
+		// $("#toggle-email-box").fadeToggle(250);
+		if ($("#toggle-change-email-box").css("display") == "none") {
+			$("#toggle-change-email-box").fadeIn(250);
+			$("#toggle-change-phone-num-box").hide();
+			$("#toggle-change-password-box").hide();
+		} else {
+			$("#toggle-change-email-box").fadeOut(250);
+		}
+	});
+
+	/* 社团后台 - SideBar - 自定义分组菜单 */
 	// $(".popup-custom-button").mouseenter(function(){
 	// 	$("#popup-user-list-custom").removeClass("animated fadeOutLeft");
 	// 	$("#popup-user-list-custom").addClass("animated fadeInLeft");
@@ -79,22 +125,24 @@ $(document).ready(function(){
 		// $("#popup-user-list-custom").fadeOut(250);
 		$("#popup-user-list-custom").slideUp(250);
 	});
-
-	/* 编辑信息 - 信息提示 */
-	$(".popup-tips").focusin(function(){
-		var id = $(this).attr("id");
-		$("#"+id+"-tips").removeClass("animated fadeOutLeft");
-		$("#"+id+"-tips").addClass("animated fadeInLeft");
-		$("#"+id+"-tips").fadeIn(1000);
+	/* 社团后台 - 增加管理员 增加分组 */
+	$("#cancel-stage").click(function(){
+		$(".popup-stage").hide();
 	});
-	$(".popup-tips").focusout(function(){
-		var id = $(this).attr("id");
-		$("#"+id+"-tips").removeClass("animated fadeInLeft");
-		$("#"+id+"-tips").addClass("animated fadeOutLeft");
-		$("#"+id+"-tips").fadeOut(1000);
+	$("#add-admin").click(function(){
+		if ($("#popup-stage-add-admin").css("display") == "none") {
+			$("#popup-stage-add-admin").show();
+		} else {
+			$("#popup-stage-add-admin").hide();
+		}
 	});
-
-	/* 群发讨论 - 字数统计 */
+	$("#add-custom-group").click(function(){
+		if ($("#popup-stage-add-custom-group").css("display") == "none") {
+			$("#popup-stage-add-custom-group").show();
+		} else {
+			$("#popup-stage-add-custom-group").hide();
+		}
+	});
 
 	/* 活动首页 - Tab切换 */
 	$("#activity-detail-tab-button").click(function(){
@@ -109,7 +157,34 @@ $(document).ready(function(){
 		$("#activity-library-tab").removeClass("hidden");
 		$("#activity-detail-tab").addClass("hidden");
 	});
+	/* 社团 - 编辑信息 - 上传封面 */
+	$("#club-change-cover").click(function(){
+		// $("#toggle-club-change-cover-box").fadeToggle(250);
+		if ($("#toggle-club-change-cover-box").css("display") == "none") {
+			$("#toggle-club-change-cover-box").fadeIn(250);
+		} else {
+			$("#toggle-club-change-cover-box").fadeOut(250);
+		}
+	});
 
+	/* 社团首页 - 申请入会 */
+	$("#apply").click(function(){
+		$("#popup-stage-apply-for-club").show();
+	});
+	$("#submit-regulation").click(function(){
+		$("#apply-step1").hide();
+		$("#apply-step2").fadeIn(250);
+	});
+	$("#submit-group").click(function(){
+		$("#apply-step2").hide();
+		$("#apply-step3").fadeIn(250);
+	});
+	$(".cancel-stage").click(function(){
+		$(".popup-stage").hide();
+		$("#apply-step1").show();
+		$("#apply-step2").hide();
+		$("#apply-step3").hide();
+	});
 	/* 社团首页 - 全屏背景 */
 	var theWindow = $(window),
 		$cover = $("#club-cover"),

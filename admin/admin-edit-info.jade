@@ -97,7 +97,7 @@ html.no-js
 									li
 										.info-name 社团名称
 										input(type="text", disabled="disabled", name="club-name" placeholder="计算机应用设计协会")#club-name.normal
-										a(href="#").plain-button 申请变更社团名称
+										//- a(href="#").plain-button 申请变更社团名称
 										.clear
 									li
 										.info-name 所属学校
@@ -159,7 +159,17 @@ html.no-js
 									img.club-cover-img6(src="../img/club-avatar-default.png")
 							.club-cover-box.box-content
 								.upload-info 拖拽至图片 或 使用普通方式
+								//- .club-change-cover-box
 								#club-change-cover 浏览上传
+								.clear
+								#toggle-club-change-cover-box.hidden
+									#club-change-cover-1 封面①
+									#club-change-cover-2 封面②
+									#club-change-cover-3 封面③
+									#club-change-cover-4 封面④
+									#club-change-cover-5 封面⑤
+									#club-change-cover-6 封面⑥
+								.clear
 							.clear
 					.clear
 			.clear

@@ -33,12 +33,13 @@
         <div id="top-bar-content-container">
           <div id="top-logo"><img src="../img/top-logo.png">
           </div>
-          <div id="top-logo-text">社团管理平台</div>
+          <div id="top-logo-text"><img src="../img/logo-text.png">
+          </div>
           <div id="top-admin-name"><a href="index.html">计算机应用设计协会</a>
             <div id="change-admin"><a href="#">(切换)</a></div>
           </div>
           <div id="top-user-menu">
-            <div id="username">kyzamizzzzzzzz</div>
+            <div id="username">kyzamizzzzzzzz<span id="new-message">N2</span></div>
             <ul id="popup-user-menu" class="hidden">
               <li><a href="../welcome/welcome.html" class="menu-logout">登出</a></li>
               <li><a href="../userpage/index.html" class="menu-background">返回个人</a></li>
@@ -92,7 +93,7 @@
           <div id="admin-user-list-admin" class="column-1-1">
             <h2 class="inline">管理员</h2>
             <div class="tiny-description-bar">共3名成员</div>
-            <div class="tiny-menu-bar"><a href="#">增加管理员</a><a href="#">增减显示信息</a><a href="#">搜索</a></div>
+            <div class="tiny-menu-bar"><a id="add-admin" href="#">增加管理员</a><a href="#">增减显示信息</a><a href="#">搜索</a></div>
             <div class="hr"></div>
             <div class="admin-user-list-admin-box">
               <div class="box-content overflow-scroll">
@@ -158,6 +159,17 @@
         </div>
       </div>
       <div class="clear"></div>
+    </div>
+    <div id="popup-stage-add-admin" class="popup-stage hidden">
+      <div id="add-admin-box" class="popup-stage-box small">
+        <div class="box-content">
+          <div class="info-name">用户编号</div>
+          <input type="text" name="user-id">
+          <button id="submit">增加管理员</button>
+          <button id="cancel-stage">取消</button>
+          <div class="clear"></div>
+        </div>
+      </div>
     </div>
     <footer>
       <div id="foot-bar">

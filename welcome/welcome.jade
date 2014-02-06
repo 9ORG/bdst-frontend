@@ -51,8 +51,11 @@ html.no-js
 						img.photo-wall-pic7(src="../img/club-id001/club-id001-cover5.jpg")
 					li.logo-box
 						img.logo(src="../img/logo.png")
-						.logo-text
+						//- .logo-text
 							| 社团管理平台
+							span @PKU
+						#logo-text-black
+							img(src="../img/logo-text-black.png")
 							span @PKU
 					li
 						img.photo-wall-pic8(src="../img/club-id001/club-id001-cover1.jpg")
@@ -141,8 +144,19 @@ html.no-js
 							#signup-step2.hidden
 								h2
 									| Step 2/3
-									span 填写信息
+									span 设定密码及填写信息
 								.info-box
+									ul.box-content
+										p.description-card 用123456会被警察叔叔抓起来的哦。如果忘记密码了，可以使用邮箱找回。
+										li
+											.info-name 密码
+											input(type="password", name="password")#password.normal.popup-tips.popup-check
+											#password-tips.info-tips.hidden 6-12字符，字母、数字可用
+											.clear
+										li
+											.info-name 确认密码
+											input(type="password", name="password").normal
+											.clear
 									ul.box-content
 										p.description-card 填写真实的信息，你会遇见更多可能感兴趣的人。
 										li
@@ -160,7 +174,7 @@ html.no-js
 										li
 											.info-name 昵称
 											input(type="text", name="nick-name")#nick-name.normal.popup-tips.popup-check
-											#nick-name-tips.info-tips.hidden 2-14字符，字母、汉字、数字及下划线可用
+											#nick-name-tips.info-tips-long.hidden 2-14字符，字母、汉字、数字、下划线可用
 											.clear
 										li
 											.info-name 生日

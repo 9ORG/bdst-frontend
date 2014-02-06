@@ -32,7 +32,8 @@
       <div id="top-bar">
         <div id="top-bar-content-container">
           <div id="top-logo"><img src="../img/top-logo.png"></div>
-          <div id="top-logo-text">社团管理平台</div>
+          <div id="top-logo-text"><img src="../img/logo-text.png">
+          </div>
           <ul id="top-nav">
             <li><a id="club" href="../club/club-list.html">社团</a></li>
             <li><a id="activity" href="../activity/activity-list.html">活动</a></li>
@@ -40,7 +41,7 @@
             <li><a href="#" target="_blank">在线借教室</a></li>
           </ul>
           <div id="top-user-menu">
-            <div id="username">kyzamizzzzzzzz</div>
+            <div id="username">kyzamizzzzzzzz<span id="new-message">N2</span></div>
             <ul id="popup-user-menu" class="hidden">
               <li><a href="../welcome/welcome.html" class="menu-logout">登出</a></li>
               <li><a href="../admin/index.html" class="menu-background">管理后台</a></li>
@@ -91,12 +92,84 @@
                     <div id="change-phone-num" class="plain-button">更改手机号码</div>
                     <div id="change-password" class="plain-button">更改登录密码</div>
                     <div class="clear"></div>
+                    <div id="toggle-change-phone-num-box" class="hidden">
+                      <div class="tri-pointer-grey"><img src="../img/tri-pointer-grey.png"></div>
+                      <div id="toggle-change-phone-num-box-content">
+                        <div class="toggle-box-content">
+                          <p class="description-card">输入新的手机号码，并通过短信验证。</p>
+                          <div class="change-phone-num-box">
+                            <ul class="box-content">
+                              <li>
+                                <div class="info-name">手机号码</div>
+                                <input type="text" name="phone-num" class="normal">
+                                <div id="phone-num-check-yes" class="info-check">有社团和活动参与信息哦，快注册吧</div>
+                                <div id="phone-num-check-no" class="info-check hidden">尚未参加任何活动和社团哦</div>
+                                <div class="clear"></div>
+                              </li>
+                              <li>
+                                <div class="info-name">验证码</div>
+                                <input type="text" name="phone-validate-num" class="validator-short"><a id="phone-validate" class="plain-button">获取验证码</a>
+                                <div class="clear"></div>
+                              </li>
+                            </ul>
+                            <button id="change-phone-num-submit">确认更改</button>
+                          </div>
+                          <div class="clear"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="toggle-change-password-box" class="hidden">
+                      <div class="tri-pointer-grey"><img src="../img/tri-pointer-grey.png"></div>
+                      <div id="toggle-change-password-box-content">
+                        <div class="toggle-box-content">
+                          <p class="description-card">用123456会被警察叔叔抓起来的哦。如果忘记密码了，可以使用邮箱找回。</p>
+                          <div class="change-phone-num-box">
+                            <ul class="box-content">
+                              <li>
+                                <div class="info-name">密码</div>
+                                <input type="password" name="password" id="password" class="normal popup-tips popup-check">
+                                <div id="password-tips" class="info-tips hidden">6-12字符，字母、数字可用</div>
+                                <div class="clear"></div>
+                              </li>
+                              <li>
+                                <div class="info-name">确认密码</div>
+                                <input type="password" name="password" class="normal">
+                                <div class="clear"></div>
+                              </li>
+                            </ul>
+                            <button id="change-password-submit">确认更改</button>
+                          </div>
+                          <div class="clear"></div>
+                        </div>
+                      </div>
+                    </div>
                   </li>
                   <li>
                     <div class="info-name">邮箱</div>
                     <input type="text" disabled="disabled" name="email" placeholder="summerz0501@126.com" id="email" class="normal">
                     <div id="change-email" class="plain-button">更改邮箱</div>
                     <div class="clear"></div>
+                    <div id="toggle-change-email-box" class="hidden">
+                      <div class="tri-pointer-grey"><img src="../img/tri-pointer-grey.png"></div>
+                      <div id="toggle-change-email-box-content">
+                        <div class="toggle-box-content">
+                          <p class="description-card">输入新的邮箱，并通过邮件验证。</p>
+                          <div class="change-email-box">
+                            <ul class="box-content">
+                              <li>
+                                <div class="info-name">邮箱</div>
+                                <input type="text" name="email" class="normal">
+                                <div id="email-check-yes" class="info-check">可以使用：）</div>
+                                <div id="email-check-no" class="info-check hidden">使用过了，换一个吧！</div>
+                                <div class="clear"></div>
+                              </li>
+                            </ul>
+                            <button id="change-phone-num-submit">发送验证邮件</button>
+                          </div>
+                          <div class="clear"></div>
+                        </div>
+                      </div>
+                    </div>
                   </li>
                 </ul>
                 <ul class="box-content">
@@ -118,7 +191,7 @@
                   <li>
                     <div class="info-name">昵称</div>
                     <input type="text" name="nick-name" id="nick-name" class="normal popup-tips popup-check">
-                    <div id="nick-name-tips" class="info-tips hidden">2-14字符，字母、汉字、数字及下划线可用</div>
+                    <div id="nick-name-tips" class="info-tips-long hidden">2-14字符，字母、汉字、数字、下划线可用</div>
                     <div class="clear"></div>
                   </li>
                   <li>

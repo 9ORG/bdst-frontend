@@ -356,7 +356,7 @@ button:hover {
   height: 195px;
   width: 266px;
   float: left;
-  z-index: -1000;
+  z-index: -100;
 }
 .main-content-full .box-content .activity-list-name {
   width: 246px;
@@ -374,7 +374,7 @@ button:hover {
   -ms-transition: 0.25s;
   transition: 0.25s;
   float: left;
-  z-index: 1000;
+  z-index: 100;
 }
 .main-content-full .box-content .detail-list-name {
   width: 60px;
@@ -679,6 +679,21 @@ button:hover {
 .main-content-full #get-qr-apply:hover,
 .main-content #get-qr-checkin:hover,
 .main-content-full #get-qr-checkin:hover {
+  cursor: pointer;
+}
+.main-content #toggle-club-change-cover-box,
+.main-content-full #toggle-club-change-cover-box {
+  margin: 5px 0 0 0;
+  color: #77bfdf;
+  font-size: 12px;
+}
+.main-content #toggle-club-change-cover-box > div,
+.main-content-full #toggle-club-change-cover-box > div {
+  margin: 0 5px 0 0;
+  float: left;
+}
+.main-content #toggle-club-change-cover-box > div:hover,
+.main-content-full #toggle-club-change-cover-box > div:hover {
   cursor: pointer;
 }
 .main-content #get-qr-ad,
@@ -1111,11 +1126,125 @@ button:hover {
 .user-selector-box ul#user-list-selector > li > span {
   margin: 0 0 0 5px;
 }
+/* 弹窗 - 增加管理员 */
+.popup-stage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 9999;
+}
+.popup-stage .popup-stage-box {
+  width: 592px;
+  background-color: #fff;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  padding: 40px;
+  -webkit-box-shadow: 0 1px 8px 0 rgba(51,51,51,0.5);
+  box-shadow: 0 1px 8px 0 rgba(51,51,51,0.5);
+  button: #cacaca ncel-stage;
+}
+.popup-stage .popup-stage-box.small {
+  margin: 220px auto 0 auto;
+  height: 34px;
+}
+.popup-stage .popup-stage-box.large {
+  margin: 100px auto 0 auto;
+  height: 480px;
+}
+.popup-stage .popup-stage-box.large button {
+  margin-top: 20px;
+}
+.popup-stage .popup-stage-box.large .button-box {
+  float: right;
+}
+.popup-stage .popup-stage-box h2 {
+  margin: -5px 0 0 0;
+}
+.popup-stage .popup-stage-box h2 span {
+  margin: 0 0 0 10px;
+  font-size: 16px;
+  line-height: 16px;
+}
+.popup-stage .popup-stage-box .info-name {
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  margin: 0 10px 0 0;
+  color: #333;
+  font-weight: bold;
+  float: left;
+}
+.popup-stage .popup-stage-box input {
+  width: 290px;
+  height: 20px;
+  line-height: 20px;
+  color: #666;
+  margin: 0 20px 0 0;
+  padding: 5px 8px 5px 8px;
+  border: 1px solid #e4e4e4;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  font-size: 13px;
+  float: left;
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  -ms-transition: 0.25s;
+  transition: 0.25s;
+}
+.popup-stage .popup-stage-box input:focus {
+  border-color: #aaa;
+}
+.popup-stage .popup-stage-box textarea {
+  width: 574px;
+  color: #666;
+  margin: 10px 0 0 0;
+  padding: 9px 8px 9px 8px;
+  border: 1px solid #e4e4e4;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  font-size: 13px;
+  display: block;
+  overflow: scroll;
+}
+.popup-stage .popup-stage-box textarea:focus {
+  border-color: #aaa;
+}
+.popup-stage .popup-stage-box #apply-step1 textarea,
+.popup-stage .popup-stage-box #apply-step2 textarea {
+  height: 360px;
+}
+.popup-stage .popup-stage-box #apply-step3 textarea {
+  height: 60px;
+  margin: 0 0 20px 0;
+}
+.popup-stage .popup-stage-box button.cancel-stage {
+  width: 60px;
+  margin-left: 10px;
+  background-color: #aaa;
+  border-color: #aaa;
+}
+.popup-stage .popup-stage-box p.question-card {
+  margin: 10px 0 10px 0;
+  color: #333;
+}
+.popup-stage .popup-stage-box p.question-card span {
+  margin-left: 10px;
+}
+.popup-stage .popup-stage-box #club-custom-question {
+  margin: 10px 0 0 0;
+  height: 380px;
+  overflow: scroll;
+}
+/* 社团首页 - 封面 */
 #club-cover {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -9999;
+  z-index: -1000;
 }
 .cover-width {
   width: 100%;
@@ -1260,7 +1389,7 @@ button:hover {
   background-color: #333;
   position: fixed;
   top: 0;
-  z-index: 10001;
+  z-index: 1001;
 }
 header {
   width: 100%;
@@ -1268,7 +1397,7 @@ header {
   overflow: visible;
   position: fixed;
   top: 0;
-  z-index: 10000;
+  z-index: 1000;
 }
 header #top-bar {
   background-color: rgba(255,255,255,0.85);
@@ -1303,15 +1432,15 @@ header #top-bar #top-bar-content-container #top-logo-text {
   color: #fcb03c;
 }
 header #top-bar #top-bar-content-container #top-admin-name > a {
-  margin: 10px 0px 10px 20px;
-  padding-top: 2px;
+  margin: 10px 0px 10px 30px;
+  padding-top: 1px;
   line-height: 60px;
   font-size: 20px;
   float: left;
   color: #333;
 }
 header #top-bar #top-bar-content-container #top-admin-name #change-admin > a {
-  margin-top: 38px;
+  margin-top: 36px;
   float: left;
   font-size: 12px;
   margin-left: 6px;
@@ -1322,9 +1451,23 @@ header #top-bar #top-bar-content-container ul#top-nav > li {
   display: inline-block;
   float: left;
 }
+header #top-bar #top-bar-content-container ul#top-nav > li:first-child {
+  margin-left: 30px;
+}
 header #top-bar #top-bar-content-container ul#top-nav > li > a {
   font-size: 14px;
   line-height: 80px;
+}
+header #top-bar #top-bar-content-container ul#top-nav > li > a > span {
+  position: relative;
+  top: -10px;
+  margin: 0 0 0 2px;
+  padding: 1px 1px 1px 2px;
+  font-size: 6px;
+  line-height: 8px;
+  text-align: center;
+  color: #fff;
+  background-color: #fcb03c;
 }
 header #top-bar #top-bar-content-container ul#top-nav.top-nav-club a {
   color: #fff;
@@ -1348,6 +1491,17 @@ header #top-bar #top-bar-content-container #top-user-menu #username {
   color: #fcb03c;
   font-weight: bold;
   cursor: pointer;
+}
+header #top-bar #top-bar-content-container #top-user-menu #new-message {
+  position: relative;
+  top: -10px;
+  margin: 0 0 0 2px;
+  padding: 1px 1px 1px 2px;
+  font-size: 6px;
+  line-height: 8px;
+  text-align: center;
+  color: #fff;
+  background-color: #f00;
 }
 header #top-bar #top-bar-content-container #top-user-menu ul#popup-user-menu > li {
   margin-right: 10px;
@@ -1403,7 +1557,7 @@ header #top-bar #top-bar-content-container #top-user-menu.top-user-menu-club a:h
   height: 200px;
 }
 #welcome-page #photo-wall .photo-wall-list li img.logo {
-  margin: 20px 100px 0 100px;
+  margin: 22px 100px 0 100px;
   width: 120px;
   height: 120px;
 }
@@ -1424,8 +1578,18 @@ header #top-bar #top-bar-content-container #top-user-menu.top-user-menu-club a:h
   font-size: 10px;
   color: #fcb03c;
 }
+#welcome-page #photo-wall .photo-wall-list li #logo-text-black {
+  margin: 10px 0 0 90px;
+}
+#welcome-page #photo-wall .photo-wall-list li #logo-text-black span {
+  position: relative;
+  top: -12px;
+  margin: 0 0 0 5px;
+  font-size: 10px;
+  color: #fcb03c;
+}
 #welcome-page .main-content-full {
-  margin: 80px auto 140px auto;
+  margin: 80px auto 160px auto;
   width: 1080px;
 }
 #welcome-page .main-content-full .slogan-box {
@@ -1496,56 +1660,119 @@ header #top-bar #top-bar-content-container #top-user-menu.top-user-menu-club a:h
   background-color: #fcb03c;
   border-color: #fcb03c;
 }
-#welcome-page .main-content-full #toggle-signup-box {
+#toggle-signup-box {
   width: 672px;
   margin: 20px auto 0 auto;
 }
-#welcome-page .main-content-full #toggle-signup-box .tri-pointer-grey {
+#toggle-signup-box .tri-pointer-grey {
   margin: 0 332px 0 332px;
   height: 14px;
 }
-#welcome-page .main-content-full #toggle-signup-box #toggle-signup-box-content {
+#toggle-signup-box #toggle-signup-box-content {
   width: 592px;
   padding: 40px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
   background-color: #f4f4f4;
 }
-#welcome-page .main-content-full #toggle-forget-password-box {
+#toggle-forget-password-box {
   width: 672px;
   margin: 10px auto 0 auto;
 }
-#welcome-page .main-content-full #toggle-forget-password-box .tri-pointer-grey {
+#toggle-forget-password-box .tri-pointer-grey {
   margin: 0 0 0 600px;
   height: 14px;
 }
-#welcome-page .main-content-full #toggle-forget-password-box #toggle-forget-password-box-content {
+#toggle-forget-password-box #toggle-forget-password-box-content {
   width: 592px;
   padding: 40px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
   background-color: #f4f4f4;
 }
-#welcome-page .main-content-full #toggle-forget-password-box #toggle-forget-password-box-content .description-card {
-  margin-top: 0px;
+#toggle-forget-password-box #toggle-forget-password-box-content .description-card {
+  margin: 0;
+  padding: 0;
 }
-#welcome-page .main-content-full #toggle-forget-password-box #toggle-forget-password-box-content button#find-password {
+#toggle-forget-password-box #toggle-forget-password-box-content button#find-password {
   width: 200px;
   margin: 40px 0 0 196px;
   float: left;
 }
-#welcome-page .main-content-full .toggle-box-content h2 {
+#toggle-change-phone-num-box {
+  width: 580px;
+  margin: 5px auto 0 auto;
+}
+#toggle-change-phone-num-box .tri-pointer-grey {
+  margin: 0 0 0 301px;
+  height: 14px;
+}
+#toggle-change-phone-num-box #toggle-change-phone-num-box-content {
+  width: 500px;
+  padding: 40px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #f4f4f4;
+}
+#toggle-change-phone-num-box #toggle-change-phone-num-box-content .description-card {
+  margin-top: 0;
+  padding: 0;
+}
+#toggle-change-password-box {
+  width: 580px;
+  margin: 5px auto 0 auto;
+}
+#toggle-change-password-box .tri-pointer-grey {
+  margin: 0 0 0 384px;
+  height: 14px;
+}
+#toggle-change-password-box #toggle-change-password-box-content {
+  width: 500px;
+  padding: 40px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #f4f4f4;
+}
+#toggle-change-password-box #toggle-change-password-box-content .description-card {
+  margin-top: 0;
+  padding: 0;
+}
+#toggle-change-email-box {
+  width: 580px;
+  margin: 5px auto 0 auto;
+}
+#toggle-change-email-box .tri-pointer-grey {
+  margin: 0 0 0 289px;
+  height: 14px;
+}
+#toggle-change-email-box #toggle-change-email-box-content {
+  width: 500px;
+  padding: 40px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #f4f4f4;
+}
+#toggle-change-email-box #toggle-change-email-box-content .description-card {
+  margin-top: 0;
+  padding: 0;
+}
+button#change-phone-num-submit,
+button#change-password-submit {
+  width: 200px;
+  margin: 40px 0 0 150px;
+}
+.toggle-box-content h2 {
   margin: -5px 0 0 0;
 }
-#welcome-page .main-content-full .toggle-box-content h2 span {
+.toggle-box-content h2 span {
   margin: 0 0 0 10px;
   font-size: 16px;
   line-height: 16px;
 }
-#welcome-page .main-content-full .toggle-box-content .box-content:first-child {
+.toggle-box-content .box-content:first-child {
   margin: 0;
 }
-#welcome-page .main-content-full .toggle-box-content .box-content .info-name {
+.toggle-box-content .box-content .info-name {
   width: 60px;
   height: 30px;
   line-height: 30px;
@@ -1554,9 +1781,16 @@ header #top-bar #top-bar-content-container #top-user-menu.top-user-menu-club a:h
   font-weight: bold;
   float: left;
 }
-#welcome-page .main-content-full .toggle-box-content .box-content .info-check,
-#welcome-page .main-content-full .toggle-box-content .box-content .info-tips {
+.toggle-box-content .box-content .info-check,
+.toggle-box-content .box-content .info-tips {
+  width: 220px;
+}
+.toggle-box-content .box-content .info-tips-long {
   width: 260px;
+}
+.toggle-box-content .box-content .info-check,
+.toggle-box-content .box-content .info-tips,
+.toggle-box-content .box-content .info-tips-long {
   height: 30px;
   line-height: 30px;
   font-size: 12px;
@@ -1564,38 +1798,38 @@ header #top-bar #top-bar-content-container #top-user-menu.top-user-menu-club a:h
   margin: 20px 10px 0 0;
   float: left;
 }
-#welcome-page .main-content-full .toggle-box-content .box-content .info-check-red {
+.toggle-box-content .box-content .info-check-red {
   border-color: #e00;
 }
-#welcome-page .main-content-full .toggle-box-content .box-content .info-check-green {
+.toggle-box-content .box-content .info-check-green {
   border-color: #0b0;
 }
-#welcome-page .main-content-full .toggle-box-content .box-content .validator-short {
+.toggle-box-content .box-content .validator-short {
   width: 62px;
 }
-#welcome-page .main-content-full .toggle-box-content .box-content button#phone-validate {
+.toggle-box-content .box-content button#phone-validate {
   margin: 20px 0 0 0;
 }
-#welcome-page .main-content-full .toggle-box-content button#next-to-2 {
+.toggle-box-content button#next-to-2 {
   width: 200px;
   margin: 40px 0 0 196px;
 }
-#welcome-page .main-content-full .toggle-box-content button#back-to-2 {
+.toggle-box-content button#back-to-2 {
   width: 200px;
   margin: 40px 0 0 84px;
   background-color: #aaa;
   border-color: #aaa;
   float: left;
 }
-#welcome-page .main-content-full .toggle-box-content button#back-to-1 {
+.toggle-box-content button#back-to-1 {
   width: 200px;
   margin: 40px 0 0 84px;
   background-color: #aaa;
   border-color: #aaa;
   float: left;
 }
-#welcome-page .main-content-full .toggle-box-content button#next-to-3,
-#welcome-page .main-content-full .toggle-box-content button#submit {
+.toggle-box-content button#next-to-3,
+.toggle-box-content button#submit {
   width: 200px;
   margin: 40px 0 0 20px;
   float: left;
@@ -1612,9 +1846,16 @@ footer #foot-bar #foot-bar-content-container {
   margin-right: auto;
 }
 footer #foot-bar #foot-bar-content-container .footer-decro {
-  float: right;
+  float: left;
 }
 footer #foot-bar #foot-bar-content-container .footer-decro > img {
+  position: relative;
+  top: -40px;
+}
+footer #foot-bar #foot-bar-content-container .footer-decro-welcome {
+  margin: 0 505px 0 495px;
+}
+footer #foot-bar #foot-bar-content-container .footer-decro-welcome > img {
   position: relative;
   top: -40px;
 }
@@ -1639,6 +1880,7 @@ footer #foot-bar #foot-bar-content-container .foot-bar-info li.foot-bar-content 
 }
 footer #foot-bar #foot-bar-content-container .foot-bar-info:last-child {
   width: 300px;
+  margin-right: 0px;
   float: right;
 }
 footer #foot-bar #foot-bar-content-container .foot-bar-info:last-child .foot-bar-title {
@@ -1654,4 +1896,8 @@ footer #foot-bar #foot-bar-content-container .foot-bar-info:last-child li.foot-b
 }
 footer #foot-bar #foot-bar-content-container .foot-bar-info:last-child li.foot-bar-content > p > a:hover {
   color: #fff;
+}
+#activity-comment-anchor {
+  position: relative;
+  top: -140px;
 }
