@@ -1,12 +1,12 @@
 header
 	#top-bar
 		#top-bar-content-container
-			#top-logo
-				//- img(src="../img/logo.png", width="60px", height="60px")
-				img(src="../img/top-logo.png")
-			#top-logo-text
-				//- | 社团管理平台
-				img(src="../img/logo-text.png")
+			a#top-logo-box(href="../welcome/welcome.html")
+				#top-logo
+					img(src="../img/top-logo.png")
+				#top-logo-text
+					//- | 社团管理平台
+					img(src="../img/logo-text.png")
 			ul#top-nav
 				li
 					a#club(href="../club/club-list.html") 社团
@@ -15,7 +15,7 @@ header
 				li
 					a#user(href="../userpage/index.html") 我的参与
 				li
-					a(href="#",target="_blank")
+					a(href="http://bdst.pku.edu.cn/",target="_blank")
 						| 在线借教室
 						//- span NEW
 			#top-user-menu
