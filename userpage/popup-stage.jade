@@ -1,0 +1,229 @@
+#popup-stage-add-admin.popup-stage.hidden
+	#add-admin-box.popup-stage-box.small
+		.box-content
+			.info-name 用户编号
+			input(type="text", name="user-id", placeholder="用户编号可在成员详细信息页找到")
+			button#submit-add-admin 增加管理员
+			button.cancel-stage 取消
+			.clear
+
+#popup-stage-import-excel.popup-stage.hidden
+	#import-excel-box.popup-stage-box.xmedium
+		.box-content
+			#import-excel-guide
+				h3 使用方法
+				p.description-card 在Excel文件中，第一列输入成员姓名，第二列输入手机号码，第三列输入邮箱，每一行为一名成员（如下图所示）。点击下方按钮浏览上传文件即可。
+				img(src="../img/import-excel-screenshot.png")
+			.button-box
+				button#submit-import-excel 开始上传
+				button.cancel-stage 取消
+			.clear
+
+#popup-stage-add-custom-group.popup-stage.hidden
+	#add-custom-group-box.popup-stage-box.small
+		.box-content
+			.info-name 分组名称
+			input(type="text", name="group-name", placeholder="最多10个字哦")
+			button#submit 增加分组
+			button.cancel-stage 取消
+			.clear
+
+#popup-stage-change-club-group-name.popup-stage.hidden
+	#change-club-group-name-box.popup-stage-box.small
+		.box-content
+			.info-name 新的名称
+			input(type="text", name="group-name", placeholder="最多10个字哦")
+			button#submit-change-group-name 更改名称
+			button.cancel-stage 取消
+			.clear
+
+#popup-stage-search.popup-stage.hidden
+	#search-box.popup-stage-box.small
+		.box-content
+			.info-name 关键词
+			input(type="text", name="keyword")
+			button#submit-search 搜索
+			button.cancel-stage 取消
+			.clear
+
+#popup-stage-info-display.popup-stage.hidden
+	#info-display-box.popup-stage-box.medium
+		.box-content
+			ul#info-display-selector
+				li
+					input(type="checkbox", name="real-name", checked)
+					.info-name 真实姓名
+					.clear
+				li
+					input(type="checkbox", name="sex", checked)
+					.info-name 性别
+					.clear
+				li
+					input(type="checkbox", name="nick-name")
+					.info-name 昵称
+					.clear
+				li
+					input(type="checkbox", name="birthday")
+					.info-name 生日
+					.clear
+				li
+					input(type="checkbox", name="location")
+					.info-name 城市
+					.clear
+				li
+					input(type="checkbox", name="admission-year", checked)
+					.info-name 年级
+					.clear
+				li
+					input(type="checkbox", name="department", checked)
+					.info-name 院系
+					.clear
+				li
+					input(type="checkbox", name="school-id")
+					.info-name 学号
+					.clear
+				li
+					input(type="checkbox", name="non-school-info")
+					.info-name 校外
+					.clear
+				li
+					input(type="checkbox", name="club-question")
+					.info-name 入会问题
+					.clear
+			.button-box
+				button#submit-info-display 更新信息
+				button.cancel-stage 取消
+			.clear
+
+#popup-stage-user-detail.popup-stage.hidden
+	#user-detail-box.popup-stage-box.large
+		.box-content
+			h2
+				| #0001
+				span 张楠
+			ul#user-detail-info
+				li
+					.info-name 真实姓名
+					#real-name.info-content 张楠
+					.clear
+				li
+					.info-name 性别
+					#sex.info-content 女
+					.clear
+				li
+					.info-name 昵称
+					#nick-name.info-content kyzamiz
+					.clear
+				li
+					.info-name 生日
+					#birthday.info-content 1992-05-01
+					.clear
+				li
+					.info-name 城市
+					#lacation.info-content 北京市 北京市
+					.clear
+				li
+					.info-name 年级
+					#admission-year.info-content 2010 本科生
+					.clear
+				li
+					.info-name 院系
+					#department.info-content 新闻与传播学院
+					.clear
+				li
+					.info-name 学号
+					#school-id.info-content 100014402
+					.clear
+				li
+					.info-name 校外
+					#non-school.info-content /
+					.clear
+				li
+					p.question-card
+						| 问题一
+						span 想加入哪个组？（设计组、技术组）
+					textarea(type="text", name="custom-question1", placeholder="用户填写的答案。", disabled)
+					.clear
+				li
+					p.question-card
+						| 问题二
+						span 是否想成为骨干？
+					textarea(type="text", name="custom-question2", placeholder="用户填写的答案。", disabled)
+					.clear
+				li
+					p.question-card
+						| 问题三
+						span 有何设计或开发经验？会用什么软件、会写哪些语言？
+					textarea(type="text", name="custom-question3", placeholder="用户填写的答案。", disabled)
+					.clear
+			.button-box
+				button.cancel-stage 关闭
+			.clear
+
+#popup-stage-change-group.popup-stage.hidden
+	#change-group-box.popup-stage-box.medium
+		.box-content
+			ul#change-group-selector
+				li
+					input(type="checkbox", name="group01", checked)
+					.info-content 分组一
+					.clear
+				li
+					input(type="checkbox", name="group02", checked)
+					.info-content 分组二
+					.clear
+				li
+					input(type="checkbox", name="group03")
+					.info-content 最多只能10个字啊啊
+					.clear
+				li
+					input(type="checkbox", name="group04")
+					.info-content 分组四
+					.clear
+			.button-box
+				button#submit-change-group 更新分组
+				button.cancel-stage 取消
+			.clear
+
+#popup-stage-delete-user.popup-stage.hidden
+	#delete-user-box.popup-stage-box.xsmall
+		.box-content
+			.description-content
+				| 确定删除用户吗？
+				span 删除后重新申请才能入会
+			.button-box
+				button#submit-delete-user 确定删除
+				button.cancel-stage 取消
+			.clear
+
+#popup-stage-delete-group.popup-stage.hidden
+	#delete-group-box.popup-stage-box.xsmall
+		.box-content
+			.description-content
+				| 确定删除分组吗？
+				span 组内成员不会被删除
+			.button-box
+				button#submit-delete-group 确定删除
+				button.cancel-stage 取消
+			.clear
+
+#popup-stage-delete-admin.popup-stage.hidden
+	#delete-admin-box.popup-stage-box.xsmall
+		.box-content
+			.description-content
+				| 确定删除管理员吗？
+			.button-box
+				button#submit-delete-admin 确定删除
+				button.cancel-stage 取消
+			.clear
+
+#popup-stage-delete-activity.popup-stage.hidden
+	#delete-activity-box.popup-stage-box.xsmall
+		.box-content
+			.description-content
+				| 确定删除活动吗？
+				span 删除后不可恢复
+			.button-box
+				button#submit-delete-activity 确定删除
+				button.cancel-stage 取消
+			.clear

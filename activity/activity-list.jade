@@ -40,12 +40,12 @@ html.no-js
 						h1.inline 开展的活动
 						.tiny-description-bar 25个活动 / 1个正在进行
 						.tiny-menu-bar
-							a(href="#") 申请活动
+							a#apply-for-activity 申请活动
 						.hr
 						.activity-list-box
 							ul.box-content(style="margin-top:38px")
 								li
-									a(href="activity-id1024.html")
+									a(href="activity-id001.html")
 										.activity-avatar-large
 											img.activity-avatar-large-img(src="../img/club-id001/club-id001-cover1.jpg")
 										.activity-list-name CUBA北大男篮
@@ -106,14 +106,36 @@ html.no-js
 										.activity-list-name “群雄问鼎，侠者未名”武侠主题...
 								.clear
 							.page-bar
-								a(href="#") 1
-								a(href="#") 2
-								a(href="#") 3
+								a.current-page 1
+								a 2
+								a 3
 								span ...
-								a(href="#") 10
+								a 10
 								span /
-								a(href="#") 显示全部
+								a 显示全部
 					.clear
 			.clear
+
+		#popup-stage-apply-for-activity.popup-stage.hidden
+			#apply-for-activity-box.popup-stage-box.xmedium
+				.box-content
+					#how-to-apply-for-activity
+						h2 社团如何申请开展活动
+						p.description-card(style="margin-top:10px")
+							| 目前，由于活动功能处于测试期，暂时仅接受人工申请。
+							br
+							| 有意向的社团请负责人直接联系 010-62753838 或 QQ 6632170 。
+						h3 申请所需材料
+						p.description-card
+							| 活动介绍一份（应包括：社团名称、活动简介、活动方案、活动规模等）；
+							br
+							| 活动相关图片一张（活动照片、宣传海报皆可）。
+							br
+						p.description-card
+							| 收到材料后1个工作日内我们会与您联系。
+					.button-box
+						//- button#submit-apply-for-activity 确定申请
+						button.cancel-stage 关闭
+					.clear
 
 		include footer

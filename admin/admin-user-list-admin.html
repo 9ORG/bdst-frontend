@@ -92,7 +92,7 @@
           <div id="admin-user-list-admin" class="column-1-1">
             <h2 class="inline">管理员</h2>
             <div class="tiny-description-bar">共3名成员</div>
-            <div class="tiny-menu-bar"><a id="add-admin" href="#">增加管理员</a><a href="#">增减显示信息</a><a href="#">搜索</a></div>
+            <div class="tiny-menu-bar"><a id="add-admin">增加管理员</a><a id="info-display">增减显示信息</a><a id="search">搜索</a></div>
             <div class="hr"></div>
             <div class="admin-user-list-admin-box">
               <div class="box-content overflow-scroll">
@@ -120,7 +120,7 @@
                       <td>男</td>
                       <td>/</td>
                       <td>/</td>
-                      <td><a href="#">详细信息</a><a href="#">发起讨论</a><a href="#">删除管理员</a></td>
+                      <td><a class="popup-stage-user-detail">详细信息</a><a>发起讨论</a><a class="popup-stage-delete-admin">删除管理员</a></td>
                     </tr>
                     <tr>
                       <td>
@@ -132,7 +132,7 @@
                       <td>男</td>
                       <td>2009</td>
                       <td>信息科学与技术学院</td>
-                      <td><a href="#">详细信息</a><a href="#">发起讨论</a><a href="#">删除管理员</a></td>
+                      <td><a class="popup-stage-user-detail">详细信息</a><a>发起讨论</a><a class="popup-stage-delete-admin">删除管理员</a></td>
                     </tr>
                     <tr>
                       <td>
@@ -144,13 +144,13 @@
                       <td>女</td>
                       <td>2010</td>
                       <td>新闻与传播学院</td>
-                      <td><a href="#">详细信息</a><a href="#">发起讨论</a><a href="#">删除管理员</a></td>
+                      <td><a class="popup-stage-user-detail">详细信息</a><a>发起讨论</a><a class="popup-stage-delete-admin">删除管理员</a></td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <div class="batch-menu-bar"><a href="#">全部选中</a><a href="#">批量发起讨论</a><a href="#">批量删除管理员</a></div>
-              <div class="page-bar"><a href="#">1</a><a href="#">2</a><a href="#">3</a><span>...</span><a href="#">10</a><span>/</span><a href="#">显示全部</a></div>
+              <div class="batch-menu-bar"><a>全部选中</a><a>批量发起讨论</a><a class="popup-stage-delete-admin">批量删除管理员</a></div>
+              <div class="page-bar"><a class="current-page">1</a><a>2</a><a>3</a><span>...</span><a>10</a><span>/</span><a>显示全部</a></div>
               <div class="clear"></div>
             </div>
           </div>
@@ -163,9 +163,286 @@
       <div id="add-admin-box" class="popup-stage-box small">
         <div class="box-content">
           <div class="info-name">用户编号</div>
-          <input type="text" name="user-id">
+          <input type="text" name="user-id" placeholder="用户编号可在成员详细信息页找到">
           <button id="submit-add-admin">增加管理员</button>
           <button class="cancel-stage">取消</button>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <div id="popup-stage-import-excel" class="popup-stage hidden">
+      <div id="import-excel-box" class="popup-stage-box xmedium">
+        <div class="box-content">
+          <div id="import-excel-guide">
+            <h3>使用方法</h3>
+            <p class="description-card">在Excel文件中，第一列输入成员姓名，第二列输入手机号码，第三列输入邮箱，每一行为一名成员（如下图所示）。点击下方按钮浏览上传文件即可。</p><img src="../img/import-excel-screenshot.png">
+          </div>
+          <div class="button-box">
+            <button id="submit-import-excel">开始上传</button>
+            <button class="cancel-stage">取消</button>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <div id="popup-stage-add-custom-group" class="popup-stage hidden">
+      <div id="add-custom-group-box" class="popup-stage-box small">
+        <div class="box-content">
+          <div class="info-name">分组名称</div>
+          <input type="text" name="group-name" placeholder="最多10个字哦">
+          <button id="submit">增加分组</button>
+          <button class="cancel-stage">取消</button>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <div id="popup-stage-change-club-group-name" class="popup-stage hidden">
+      <div id="change-club-group-name-box" class="popup-stage-box small">
+        <div class="box-content">
+          <div class="info-name">新的名称</div>
+          <input type="text" name="group-name" placeholder="最多10个字哦">
+          <button id="submit-change-group-name">更改名称</button>
+          <button class="cancel-stage">取消</button>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <div id="popup-stage-search" class="popup-stage hidden">
+      <div id="search-box" class="popup-stage-box small">
+        <div class="box-content">
+          <div class="info-name">关键词</div>
+          <input type="text" name="keyword">
+          <button id="submit-search">搜索</button>
+          <button class="cancel-stage">取消</button>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <div id="popup-stage-info-display" class="popup-stage hidden">
+      <div id="info-display-box" class="popup-stage-box medium">
+        <div class="box-content">
+          <ul id="info-display-selector">
+            <li>
+              <input type="checkbox" name="real-name" checked>
+              <div class="info-name">真实姓名</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <input type="checkbox" name="sex" checked>
+              <div class="info-name">性别</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <input type="checkbox" name="nick-name">
+              <div class="info-name">昵称</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <input type="checkbox" name="birthday">
+              <div class="info-name">生日</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <input type="checkbox" name="location">
+              <div class="info-name">城市</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <input type="checkbox" name="admission-year" checked>
+              <div class="info-name">年级</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <input type="checkbox" name="department" checked>
+              <div class="info-name">院系</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <input type="checkbox" name="school-id">
+              <div class="info-name">学号</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <input type="checkbox" name="non-school-info">
+              <div class="info-name">校外</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <input type="checkbox" name="club-question">
+              <div class="info-name">入会问题</div>
+              <div class="clear"></div>
+            </li>
+          </ul>
+          <div class="button-box">
+            <button id="submit-info-display">更新信息</button>
+            <button class="cancel-stage">取消</button>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <div id="popup-stage-user-detail" class="popup-stage hidden">
+      <div id="user-detail-box" class="popup-stage-box large">
+        <div class="box-content">
+          <h2>#0001<span>张楠</span></h2>
+          <ul id="user-detail-info">
+            <li>
+              <div class="info-name">真实姓名</div>
+              <div id="real-name" class="info-content">张楠</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <div class="info-name">性别</div>
+              <div id="sex" class="info-content">女</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <div class="info-name">昵称</div>
+              <div id="nick-name" class="info-content">kyzamiz</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <div class="info-name">生日</div>
+              <div id="birthday" class="info-content">1992-05-01</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <div class="info-name">城市</div>
+              <div id="lacation" class="info-content">北京市 北京市</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <div class="info-name">年级</div>
+              <div id="admission-year" class="info-content">2010 本科生</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <div class="info-name">院系</div>
+              <div id="department" class="info-content">新闻与传播学院</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <div class="info-name">学号</div>
+              <div id="school-id" class="info-content">100014402</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <div class="info-name">校外</div>
+              <div id="non-school" class="info-content">/</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <p class="question-card">问题一<span>想加入哪个组？（设计组、技术组）</span></p>
+              <textarea type="text" name="custom-question1" placeholder="用户填写的答案。" disabled></textarea>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <p class="question-card">问题二<span>是否想成为骨干？</span></p>
+              <textarea type="text" name="custom-question2" placeholder="用户填写的答案。" disabled></textarea>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <p class="question-card">问题三<span>有何设计或开发经验？会用什么软件、会写哪些语言？</span></p>
+              <textarea type="text" name="custom-question3" placeholder="用户填写的答案。" disabled></textarea>
+              <div class="clear"></div>
+            </li>
+          </ul>
+          <div class="button-box">
+            <button class="cancel-stage">关闭</button>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <div id="popup-stage-change-group" class="popup-stage hidden">
+      <div id="change-group-box" class="popup-stage-box medium">
+        <div class="box-content">
+          <ul id="change-group-selector">
+            <li>
+              <input type="checkbox" name="group01" checked>
+              <div class="info-content">分组一</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <input type="checkbox" name="group02" checked>
+              <div class="info-content">分组二</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <input type="checkbox" name="group03">
+              <div class="info-content">最多只能10个字啊啊</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <input type="checkbox" name="group04">
+              <div class="info-content">分组四</div>
+              <div class="clear"></div>
+            </li>
+          </ul>
+          <div class="button-box">
+            <button id="submit-change-group">更新分组</button>
+            <button class="cancel-stage">取消</button>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <div id="popup-stage-delete-user" class="popup-stage hidden">
+      <div id="delete-user-box" class="popup-stage-box xsmall">
+        <div class="box-content">
+          <div class="description-content">确定删除用户吗？<span>删除后重新申请才能入会</span></div>
+          <div class="button-box">
+            <button id="submit-delete-user">确定删除</button>
+            <button class="cancel-stage">取消</button>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <div id="popup-stage-delete-group" class="popup-stage hidden">
+      <div id="delete-box" class="popup-stage-box xsmall">
+        <div class="box-content">
+          <div class="description-content">确定删除分组吗？<span>组内成员不会被删除</span></div>
+          <div class="button-box">
+            <button id="submit-delete-group">确定删除</button>
+            <button class="cancel-stage">取消</button>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <div id="popup-stage-delete-admin" class="popup-stage hidden">
+      <div id="delete-admin-box" class="popup-stage-box xsmall">
+        <div class="box-content">
+          <div class="description-content">确定删除管理员吗？</div>
+          <div class="button-box">
+            <button id="submit-delete-admin">确定删除</button>
+            <button class="cancel-stage">取消</button>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <div id="popup-stage-delete-activity" class="popup-stage hidden">
+      <div id="delete-activity-box" class="popup-stage-box xsmall">
+        <div class="box-content">
+          <div class="description-content">确定删除活动吗？<span>删除后不可恢复</span></div>
+          <div class="button-box">
+            <button id="submit-delete-activity">确定删除</button>
+            <button class="cancel-stage">取消</button>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <div id="popup-stage-exit-activity" class="popup-stage hidden">
+      <div id="exit-activity-box" class="popup-stage-box xsmall">
+        <div class="box-content">
+          <div class="description-content">确定退出活动吗？<span>退出后需重新申请参加</span></div>
+          <div class="button-box">
+            <button id="submit-exit-activity">确定退出</button>
+            <button class="cancel-stage">取消</button>
+          </div>
           <div class="clear"></div>
         </div>
       </div>

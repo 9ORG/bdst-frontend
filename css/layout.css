@@ -47,6 +47,7 @@ a {
 }
 a:hover {
   color: #fcb03c;
+  cursor: pointer;
 }
 ul,
 li {
@@ -113,6 +114,9 @@ button:hover {
 }
 .show {
   display: auto;
+}
+.overflow-hidden {
+  overflow: hidden;
 }
 .button {
   width: 140px;
@@ -252,7 +256,7 @@ button:hover {
 }
 .main-content-full .tiny-tab-bar {
   margin-left: 10px;
-  float: right;
+  float: left;
 }
 .main-content-full .tiny-tab-bar > a {
   position: relative;
@@ -1087,6 +1091,10 @@ button:hover {
   margin-left: 10px;
   float: left;
 }
+.main-content .page-bar > a.current-page,
+.main-content-full .page-bar > a.current-page {
+  color: #aaa;
+}
 .main-content .page-bar > span,
 .main-content-full .page-bar > span {
   color: #aaa;
@@ -1149,7 +1157,7 @@ button:hover {
 }
 /* 弹窗 - 增加管理员 */
 .popup-stage {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -1158,7 +1166,6 @@ button:hover {
   z-index: 9999;
 }
 .popup-stage .popup-stage-box {
-  width: 592px;
   background-color: #fff;
   -webkit-border-radius: 4px;
   border-radius: 4px;
@@ -1166,12 +1173,44 @@ button:hover {
   -webkit-box-shadow: 0 1px 8px 0 rgba(51,51,51,0.5);
   box-shadow: 0 1px 8px 0 rgba(51,51,51,0.5);
 }
-.popup-stage .popup-stage-box.small {
-  margin: 220px auto 0 auto;
+.popup-stage .popup-stage-box.xsmall {
+  margin: 190px auto 0 auto;
+  width: 492px;
   height: 34px;
+}
+.popup-stage .popup-stage-box.xsmall .button-box {
+  float: right;
+}
+.popup-stage .popup-stage-box.small {
+  margin: 190px auto 0 auto;
+  width: 592px;
+  height: 34px;
+}
+.popup-stage .popup-stage-box.medium {
+  margin: 170px auto 0 auto;
+  width: 592px;
+  height: 100px;
+}
+.popup-stage .popup-stage-box.medium button {
+  margin-top: 20px;
+}
+.popup-stage .popup-stage-box.medium .button-box {
+  float: right;
+}
+.popup-stage .popup-stage-box.xmedium {
+  margin: 140px auto 0 auto;
+  width: 592px;
+  height: 335px;
+}
+.popup-stage .popup-stage-box.xmedium button {
+  margin-top: 20px;
+}
+.popup-stage .popup-stage-box.xmedium .button-box {
+  float: right;
 }
 .popup-stage .popup-stage-box.large {
   margin: 100px auto 0 auto;
+  width: 592px;
   height: 480px;
 }
 .popup-stage .popup-stage-box.large button {
@@ -1198,7 +1237,7 @@ button:hover {
   float: left;
 }
 .popup-stage .popup-stage-box input {
-  width: 290px;
+  width: 294px;
   height: 20px;
   line-height: 20px;
   color: #666;
@@ -1217,6 +1256,14 @@ button:hover {
 }
 .popup-stage .popup-stage-box input:focus {
   border-color: #aaa;
+}
+.popup-stage .popup-stage-box input[type="checkbox"] {
+  width: 13px;
+  margin: 6px 10px 0 0;
+}
+.popup-stage .popup-stage-box input#excel-file {
+  margin: 20px 20px 0 10px;
+  width: 230px;
 }
 .popup-stage .popup-stage-box textarea {
   width: 574px;
@@ -1272,6 +1319,52 @@ button:hover {
   color: #666;
   font-weight: bold;
   float: left;
+}
+.popup-stage .popup-stage-box #info-display-selector,
+.popup-stage .popup-stage-box #change-group-selector {
+  height: 60px;
+  overflow: scroll;
+}
+.popup-stage .popup-stage-box #info-display-selector li,
+.popup-stage .popup-stage-box #change-group-selector li {
+  margin: 0 20px 0 0;
+  float: left;
+}
+.popup-stage .popup-stage-box #info-display-selector li .info-content,
+.popup-stage .popup-stage-box #change-group-selector li .info-content {
+  width: 140px;
+  height: 30px;
+  line-height: 30px;
+  margin: 0;
+  color: #666;
+  font-weight: bold;
+  float: left;
+  overflow: hidden;
+}
+.popup-stage .popup-stage-box #import-excel-guide {
+  height: 280px;
+}
+.popup-stage .popup-stage-box #import-excel-guide h3 {
+  line-height: 16px;
+}
+.popup-stage .popup-stage-box #import-excel-guide p.description-card {
+  margin: 10px 0 20px 0;
+}
+.popup-stage .popup-stage-box .description-content {
+  width: 290px;
+  float: left;
+  line-height: 32px;
+}
+.popup-stage .popup-stage-box .description-content span {
+  margin-left: 5px;
+  color: #aaa;
+  font-size: 12px;
+}
+.popup-stage .popup-stage-box #how-to-apply-for-activity {
+  height: 280px;
+}
+.popup-stage .popup-stage-box #how-to-apply-for-activity h3 {
+  margin-top: 20px;
 }
 /* 社团首页 - 封面 */
 #club-cover {

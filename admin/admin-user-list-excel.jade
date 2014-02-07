@@ -91,9 +91,9 @@ html.no-js
 						h2.inline Excel导入
 						.tiny-description-bar 共40名成员
 						.tiny-menu-bar
-							a(href="#") Excel导入
-							a(href="#") 增减显示信息
-							a(href="#") 搜索
+							a#import-excel Excel导入
+							a#info-display 增减显示信息
+							a#search 搜索
 						.hr
 						.admin-user-list-excel-box
 							.box-content.overflow-scroll
@@ -121,10 +121,10 @@ html.no-js
 											td /
 											//- td 在线
 											td
-												a(href="#") 详细信息
-												a(href="#") 发起讨论
-												a(href="#") 转移分组
-												a(href="#") 退社
+												a.popup-stage-user-detail 详细信息
+												a 发起讨论
+												a.popup-stage-change-group 转移分组
+												a.popup-stage-delete-user 退社
 										tr
 											td
 												input(type="checkbox")
@@ -136,10 +136,10 @@ html.no-js
 											td 信息科学与技术学院
 											//- td 在线
 											td
-												a(href="#") 详细信息
-												a(href="#") 发起讨论
-												a(href="#") 转移分组
-												a(href="#") 退社
+												a.popup-stage-user-detail 详细信息
+												a 发起讨论
+												a.popup-stage-change-group 转移分组
+												a.popup-stage-delete-user 退社
 										tr
 											td
 												input(type="checkbox")
@@ -151,10 +151,10 @@ html.no-js
 											td 新闻与传播学院
 											//- td 短信
 											td
-												a(href="#") 详细信息
-												a(href="#") 发起讨论
-												a(href="#") 转移分组
-												a(href="#") 退社
+												a.popup-stage-user-detail 详细信息
+												a 发起讨论
+												a.popup-stage-change-group 转移分组
+												a.popup-stage-delete-user 退社
 										tr.font-color-grey
 											td
 												input(type="checkbox")
@@ -166,10 +166,10 @@ html.no-js
 											td /
 											//- td 短信
 											td
-												a(href="#") 详细信息
-												a(href="#") 发起讨论
-												a(href="#") 转移分组
-												a(href="#") 退社
+												a.popup-stage-user-detail 详细信息
+												a 发起讨论
+												a.popup-stage-change-group 转移分组
+												a.popup-stage-delete-user 退社
 										tr.font-color-grey
 											td
 												input(type="checkbox")
@@ -181,10 +181,10 @@ html.no-js
 											td /
 											//- td 短信
 											td
-												a(href="#") 详细信息
-												a(href="#") 发起讨论
-												a(href="#") 转移分组
-												a(href="#") 退社
+												a.popup-stage-user-detail 详细信息
+												a 发起讨论
+												a.popup-stage-change-group 转移分组
+												a.popup-stage-delete-user 退社
 										tr
 											td
 												input(type="checkbox")
@@ -196,10 +196,10 @@ html.no-js
 											td /
 											//- td 在线
 											td
-												a(href="#") 详细信息
-												a(href="#") 发起讨论
-												a(href="#") 转移分组
-												a(href="#") 退社
+												a.popup-stage-user-detail 详细信息
+												a 发起讨论
+												a.popup-stage-change-group 转移分组
+												a.popup-stage-delete-user 退社
 										tr
 											td
 												input(type="checkbox")
@@ -211,10 +211,10 @@ html.no-js
 											td 信息科学与技术学院
 											//- td 在线
 											td
-												a(href="#") 详细信息
-												a(href="#") 发起讨论
-												a(href="#") 转移分组
-												a(href="#") 退社
+												a.popup-stage-user-detail 详细信息
+												a 发起讨论
+												a.popup-stage-change-group 转移分组
+												a.popup-stage-delete-user 退社
 										tr
 											td
 												input(type="checkbox")
@@ -226,10 +226,10 @@ html.no-js
 											td 新闻与传播学院
 											//- td 短信
 											td
-												a(href="#") 详细信息
-												a(href="#") 发起讨论
-												a(href="#") 转移分组
-												a(href="#") 退社
+												a.popup-stage-user-detail 详细信息
+												a 发起讨论
+												a.popup-stage-change-group 转移分组
+												a.popup-stage-delete-user 退社
 										tr.font-color-grey
 											td
 												input(type="checkbox")
@@ -241,10 +241,10 @@ html.no-js
 											td /
 											//- td 短信
 											td
-												a(href="#") 详细信息
-												a(href="#") 发起讨论
-												a(href="#") 转移分组
-												a(href="#") 退社
+												a.popup-stage-user-detail 详细信息
+												a 发起讨论
+												a.popup-stage-change-group 转移分组
+												a.popup-stage-delete-user 退社
 										tr.font-color-grey
 											td
 												input(type="checkbox")
@@ -256,25 +256,27 @@ html.no-js
 											td /
 											//- td 短信
 											td
-												a(href="#") 详细信息
-												a(href="#") 发起讨论
-												a(href="#") 转移分组
-												a(href="#") 退社
+												a.popup-stage-user-detail 详细信息
+												a 发起讨论
+												a.popup-stage-change-group 转移分组
+												a.popup-stage-delete-user 退社
 							.batch-menu-bar
-								a(href="#") 全部选中
-								a(href="#") 批量发起讨论
-								a(href="#") 批量转移分组
-								a(href="#") 批量退社
+								a 全部选中
+								a 批量发起讨论
+								a.popup-stage-change-group 批量转移分组
+								a.popup-stage-delete-user 批量退社
 							.page-bar
-								a(href="#") 1
-								a(href="#") 2
-								a(href="#") 3
+								a.current-page 1
+								a 2
+								a 3
 								span ...
-								a(href="#") 10
+								a 10
 								span /
-								a(href="#") 显示全部
+								a 显示全部
 							.clear
 					.clear
 			.clear
+
+		include popup-stage
 
 		include footer

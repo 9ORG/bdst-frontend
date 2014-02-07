@@ -57,6 +57,7 @@ a
 	transition .25s
 a:hover
 	color org
+	cursor pointer
 
 ul, li
 	margin 0
@@ -107,6 +108,8 @@ button
 	display none
 .show
 	display auto
+.overflow-hidden
+	overflow hidden
 .button
 	width 140px
 	height 34px
@@ -254,7 +257,7 @@ button
 			float left
 	.tiny-tab-bar
 		margin-left 10px
-		float right
+		float left
 		& > a
 			position relative
 			top 2px
@@ -777,6 +780,8 @@ button
 			font-size extra-small
 			margin-left 10px
 			float left
+			&.current-page
+				color light-grey
 		& > span
 			color light-grey
 			font-size extra-small
@@ -826,7 +831,7 @@ button
 
 /* 弹窗 - 增加管理员 */
 .popup-stage
-	position absolute
+	position fixed
 	top 0
 	left 0
 	width 100%
@@ -834,20 +839,43 @@ button
 	background-color rgba(0,0,0,.5)
 	z-index 9999
 	.popup-stage-box
-		width 592px
 		background-color #fff
 		border-radius 4px
 		padding 40px
 		box-shadow 0 1px 8px 0 rgba(51,51,51,.5)
-		&.small
-			margin 220px auto 0 auto
+		&.xsmall
+			margin 190px auto 0 auto
+			width 492px
 			height 34px
+			.button-box
+				float right
+		&.small
+			margin 190px auto 0 auto
+			width 592px
+			height 34px
+		&.medium
+			margin 170px auto 0 auto
+			width 592px
+			height 100px
+			button
+				margin-top 20px
+			.button-box
+				float right
+		&.xmedium
+			margin 140px auto 0 auto
+			width 592px
+			height 335px
+			button
+				margin-top 20px
+			.button-box
+				float right
 		&.large
 			margin 100px auto 0 auto
+			width 592px
 			height 480px
-			& button
+			button
 				margin-top 20px
-			& .button-box
+			.button-box
 				float right
 		h2
 			margin -5px 0 0 0
@@ -864,7 +892,7 @@ button
 			font-weight bold
 			float left
 		input
-			width 290px
+			width 294px
 			height 20px
 			line-height 20px
 			color grey
@@ -877,6 +905,12 @@ button
 			transition .25s
 			&:focus
 				border-color light-grey
+			&[type="checkbox"]
+				width small
+				margin 6px 10px 0 0
+			&#excel-file
+				margin 20px 20px 0 10px
+				width 230px
 		textarea
 			width 574px
 			color grey
@@ -913,16 +947,50 @@ button
 			height 380px
 			overflow scroll
 		#user-detail-info li
-				margin-top 5px
+			margin-top 5px
+			float left
+			.info-content
+				width 210px
+				height 30px
+				line-height 30px
+				margin 0 10px 0 0
+				color grey
+				font-weight bold
+				float left
+		#info-display-selector
+		#change-group-selector
+			height 60px
+			overflow scroll
+			li
+				margin 0 20px 0 0
 				float left
 				.info-content
-					width 210px
+					width 140px
 					height 30px
 					line-height 30px
-					margin 0 10px 0 0
+					margin 0
 					color grey
 					font-weight bold
 					float left
+					overflow hidden
+		#import-excel-guide
+			height 280px
+			h3
+				line-height large
+			p.description-card
+				margin 10px 0 20px 0
+		.description-content
+			width 290px
+			float left
+			line-height 32px
+			span
+				margin-left 5px
+				color light-grey
+				font-size extra-small
+		#how-to-apply-for-activity
+			height 280px
+			h3
+				margin-top 20px
 
 /* 社团首页 - 封面 */
 #club-cover

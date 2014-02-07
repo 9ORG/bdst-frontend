@@ -91,7 +91,7 @@ html.no-js
 						h2.inline 自定义分组
 						.tiny-description-bar 共4个分组
 						.tiny-menu-bar
-							a#add-custom-group(href="#") 增加分组
+							a#add-custom-group 增加分组
 						.hr
 						.admin-user-list-custom-box
 							.box-content.overflow-scroll
@@ -110,80 +110,73 @@ html.no-js
 											td 分组一
 											td 100
 											td
-												a(href="#") 上移
-												a(href="#") 下移
+												a 上移
+												a 下移
 											td
-												a(href="#") 详细成员
-												a(href="#") 发起讨论
-												a(href="#") 更改名称
-												a(href="#") 转移分组
-												a(href="#") 删除分组
+												a(href="admin-user-list-custom-group01.html") 详细成员
+												a 发起讨论
+												a.popup-stage-change-club-group-name 更改名称
+												a.popup-stage-change-group 转移分组
+												a.popup-stage-delete-group 删除分组
 										tr
 											td
 												input(type="checkbox")
 											td 分组二
 											td 100
 											td
-												a(href="#") 上移
-												a(href="#") 下移
+												a 上移
+												a 下移
 											td
-												a(href="#") 详细成员
-												a(href="#") 发起讨论
-												a(href="#") 更改名称
-												a(href="#") 转移分组
-												a(href="#") 删除分组
+												a(href="admin-user-list-custom-group01.html") 详细成员
+												a 发起讨论
+												a.popup-stage-change-club-group-name 更改名称
+												a.popup-stage-change-group 转移分组
+												a.popup-stage-delete-group 删除分组
 										tr
 											td
 												input(type="checkbox")
 											td 分组三
 											td 100
 											td
-												a(href="#") 上移
-												a(href="#") 下移
+												a 上移
+												a 下移
 											td
-												a(href="#") 详细成员
-												a(href="#") 发起讨论
-												a(href="#") 更改名称
-												a(href="#") 转移分组
-												a(href="#") 删除分组
+												a(href="admin-user-list-custom-group01.html") 详细成员
+												a 发起讨论
+												a.popup-stage-change-club-group-name 更改名称
+												a.popup-stage-change-group 转移分组
+												a.popup-stage-delete-group 删除分组
 										tr
 											td
 												input(type="checkbox")
 											td 分组四
 											td 100
 											td
-												a(href="#") 上移
-												a(href="#") 下移
+												a 上移
+												a 下移
 											td
-												a(href="#") 详细成员
-												a(href="#") 发起讨论
-												a(href="#") 更改名称
-												a(href="#") 转移分组
-												a(href="#") 删除分组
+												a(href="admin-user-list-custom-group01.html") 详细成员
+												a 发起讨论
+												a.popup-stage-change-club-group-name 更改名称
+												a.popup-stage-change-group 转移分组
+												a.popup-stage-delete-group 删除分组
 							.batch-menu-bar
-								a(href="#") 全部选中
-								a(href="#") 批量发起讨论
-								a(href="#") 批量转移分组
-								a(href="#") 批量删除分组
+								a 全部选中
+								a 批量发起讨论
+								a.popup-stage-change-group 批量转移分组
+								a.popup-stage-delete-group 批量删除分组
 							.page-bar
-								a(href="#") 1
-								a(href="#") 2
-								a(href="#") 3
+								a.current-page 1
+								a 2
+								a 3
 								span ...
-								a(href="#") 10
+								a 10
 								span /
-								a(href="#") 显示全部
+								a 显示全部
 							.clear
 					.clear
 			.clear
 
-		#popup-stage-add-custom-group.popup-stage.hidden
-			#add-custom-group.popup-stage-box.small
-				.box-content
-					.info-name 分组名称
-					input(type="text", name="user-id")
-					button#submit 增加分组
-					button#cancel-stage 取消
-					.clear
+		include popup-stage
 
 		include footer

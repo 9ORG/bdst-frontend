@@ -81,7 +81,7 @@ $(document).ready(function(){
 		$("#"+id+"-tips").fadeOut(1000);
 	});
 
-	/* 用户 - 编辑信息 - 更改手机号码 更改密码 更改邮箱 */
+	/* 用户 - 编辑信息 - 更改手机号码 更改密码 更改邮箱 退出活动*/
 	$("#change-phone-num").click(function(){
 		// $("#toggle-change-phone-num-box").fadeToggle(250);
 		if ($("#toggle-change-phone-num-box").css("display") == "none") {
@@ -112,6 +112,10 @@ $(document).ready(function(){
 			$("#toggle-change-email-box").fadeOut(250);
 		}
 	});
+	$(".popup-stage-exit-activity").click(function(){
+		$("#popup-stage-exit-activity").show();
+		$("body").addClass("overflow-hidden");
+	});
 
 	/* 社团后台 - SideBar - 自定义分组菜单 */
 	// $(".popup-custom-button").mouseenter(function(){
@@ -136,44 +140,58 @@ $(document).ready(function(){
 		// $("#popup-user-list-custom").fadeOut(250);
 		$("#popup-user-list-custom").slideUp(250);
 	});
-	/* 社团后台 - 增加管理员 增加分组 搜索 增减显示信息 用户~详细信息 */
+	/* 社团后台 - 增加管理员 Excel导入 增加分组 修改分组名称 搜索 增减显示信息 用户~详细信息 用户~转移分组 删除用户 删除分组 删除管理员 删除活动 */
 	$("#cancel-stage").click(function(){
 		$(".popup-stage").hide();
+		$("body").removeClass("overflow-hidden");
 	});
 	$("#add-admin").click(function(){
-		if ($("#popup-stage-add-admin").css("display") == "none") {
-			$("#popup-stage-add-admin").show();
-		} else {
-			$("#popup-stage-add-admin").hide();
-		}
+		$("#popup-stage-add-admin").show();
+		$("body").addClass("overflow-hidden");
+	});
+	$("#import-excel").click(function(){
+		$("#popup-stage-import-excel").show();
+		$("body").addClass("overflow-hidden");
 	});
 	$("#add-custom-group").click(function(){
-		if ($("#popup-stage-add-custom-group").css("display") == "none") {
-			$("#popup-stage-add-custom-group").show();
-		} else {
-			$("#popup-stage-add-custom-group").hide();
-		}
+		$("#popup-stage-add-custom-group").show();
+		$("body").addClass("overflow-hidden");
+	});
+	$(".change-club-group-name").click(function(){
+		$("#popup-stage-change-club-group-name").show();
+		$("body").addClass("overflow-hidden");
 	});
 	$("#search").click(function(){
-		if ($("#popup-stage-search").css("display") == "none") {
-			$("#popup-stage-search").show();
-		} else {
-			$("#popup-stage-search").hide();
-		}
+		$("#popup-stage-search").show();
+		$("body").addClass("overflow-hidden");
 	});
 	$("#info-display").click(function(){
-		if ($("#popup-stage-info-display").css("display") == "none") {
-			$("#popup-stage-info-display").show();
-		} else {
-			$("#popup-stage-info-display").hide();
-		}
+		$("#popup-stage-info-display").show();
+		$("body").addClass("overflow-hidden");
 	});
-	$(".popup-user-detail").click(function(){
-		if ($("#popup-stage-user-detail").css("display") == "none") {
-			$("#popup-stage-user-detail").show();
-		} else {
-			$("#popup-stage-user-detail").hide();
-		}
+	$(".popup-stage-user-detail").click(function(){
+		$("#popup-stage-user-detail").show();
+		$("body").addClass("overflow-hidden");
+	});
+	$(".popup-stage-change-group").click(function(){
+		$("#popup-stage-change-group").show();
+		$("body").addClass("overflow-hidden");
+	});
+	$(".popup-stage-delete-user").click(function(){
+		$("#popup-stage-delete-user").show();
+		$("body").addClass("overflow-hidden");
+	});
+	$(".popup-stage-delete-group").click(function(){
+		$("#popup-stage-delete-group").show();
+		$("body").addClass("overflow-hidden");
+	});
+	$(".popup-stage-delete-admin").click(function(){
+		$("#popup-stage-delete-admin").show();
+		$("body").addClass("overflow-hidden");
+	});
+	$(".popup-stage-delete-activity").click(function(){
+		$("#popup-stage-delete-activity").show();
+		$("body").addClass("overflow-hidden");
 	});
 
 	/* 活动首页 - Tab切换 */
@@ -189,6 +207,12 @@ $(document).ready(function(){
 		$("#activity-library-tab").removeClass("hidden");
 		$("#activity-detail-tab").addClass("hidden");
 	});
+	/* 活动列表 - 申请活动 */
+	$("#apply-for-activity").click(function(){
+		$("#popup-stage-apply-for-activity").show();
+		$("body").addClass("overflow-hidden");
+	});
+
 	/* 社团 - 编辑信息 - 上传封面 */
 	$("#club-change-cover").click(function(){
 		// $("#toggle-club-change-cover-box").fadeToggle(250);
@@ -202,6 +226,7 @@ $(document).ready(function(){
 	/* 社团首页 - 申请入会 */
 	$("#apply").click(function(){
 		$("#popup-stage-apply-for-club").show();
+		$("body").addClass("overflow-hidden");
 	});
 	$("#submit-regulation").click(function(){
 		$("#apply-step1").hide();
@@ -216,6 +241,7 @@ $(document).ready(function(){
 		$("#apply-step1").show();
 		$("#apply-step2").hide();
 		$("#apply-step3").hide();
+		$("body").removeClass("overflow-hidden");
 	});
 	/* 社团首页 - 全屏背景 */
 	var theWindow = $(window),

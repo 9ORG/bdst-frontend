@@ -91,9 +91,9 @@ html.no-js
 						h2.inline 管理员
 						.tiny-description-bar 共3名成员
 						.tiny-menu-bar
-							a#add-admin(href="#") 增加管理员
-							a(href="#") 增减显示信息
-							a(href="#") 搜索
+							a#add-admin 增加管理员
+							a#info-display 增减显示信息
+							a#search 搜索
 						.hr
 						.admin-user-list-admin-box
 							.box-content.overflow-scroll
@@ -121,9 +121,9 @@ html.no-js
 											td /
 											//- td 在线
 											td
-												a(href="#") 详细信息
-												a(href="#") 发起讨论
-												a(href="#") 删除管理员
+												a.popup-stage-user-detail 详细信息
+												a 发起讨论
+												a.popup-stage-delete-admin 删除管理员
 										tr
 											td
 												input(type="checkbox")
@@ -135,9 +135,9 @@ html.no-js
 											td 信息科学与技术学院
 											//- td 在线
 											td
-												a(href="#") 详细信息
-												a(href="#") 发起讨论
-												a(href="#") 删除管理员
+												a.popup-stage-user-detail 详细信息
+												a 发起讨论
+												a.popup-stage-delete-admin 删除管理员
 										tr
 											td
 												input(type="checkbox")
@@ -149,32 +149,25 @@ html.no-js
 											td 新闻与传播学院
 											//- td 短信
 											td
-												a(href="#") 详细信息
-												a(href="#") 发起讨论
-												a(href="#") 删除管理员
+												a.popup-stage-user-detail 详细信息
+												a 发起讨论
+												a.popup-stage-delete-admin 删除管理员
 							.batch-menu-bar
-								a(href="#") 全部选中
-								a(href="#") 批量发起讨论
-								a(href="#") 批量删除管理员
+								a 全部选中
+								a 批量发起讨论
+								a.popup-stage-delete-admin 批量删除管理员
 							.page-bar
-								a(href="#") 1
-								a(href="#") 2
-								a(href="#") 3
+								a.current-page 1
+								a 2
+								a 3
 								span ...
-								a(href="#") 10
+								a 10
 								span /
-								a(href="#") 显示全部
+								a 显示全部
 							.clear
 					.clear
 			.clear
 
-		#popup-stage-add-admin.popup-stage.hidden
-			#add-admin-box.popup-stage-box.small
-				.box-content
-					.info-name 用户编号
-					input(type="text", name="user-id")
-					button#submit-add-admin 增加管理员
-					button.cancel-stage 取消
-					.clear
+		include popup-stage
 
 		include footer
