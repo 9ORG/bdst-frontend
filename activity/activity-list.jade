@@ -34,7 +34,7 @@ html.no-js
 		include header
  
 		#body-container
-			.main-content-full(style="margin-bottom:140px")
+			.main-content-full
 				#main-content-activity-list
 					#activity-list
 						h1.inline 开展的活动
@@ -94,7 +94,26 @@ html.no-js
 										.activity-avatar-large
 											img.activity-avatar-large-img(src="../img/club-avatar-default.png")
 										.activity-list-name “群雄问鼎，侠者未名”武侠主题...
-							.clear
+								li
+									a(href="#")
+										.activity-avatar-large
+											img.activity-avatar-large-img(src="../img/club-avatar-default.png")
+										.activity-list-name “情人节”之情侣定向
+								li
+									a(href="#")
+										.activity-avatar-large
+											img.activity-avatar-large-img(src="../img/club-avatar-default.png")
+										.activity-list-name “群雄问鼎，侠者未名”武侠主题...
+								.clear
+							.page-bar
+								a(href="#") 1
+								a(href="#") 2
+								a(href="#") 3
+								span ...
+								a(href="#") 10
+								span /
+								a(href="#") 显示全部
+					.clear
 			.clear
 
 		include footer

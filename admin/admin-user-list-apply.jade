@@ -90,8 +90,8 @@ html.no-js
 					#admin-user-list-apply.column-1-1
 						h2.inline 入会审核
 						.tiny-menu-bar
-							a(href="#") 增减显示信息
-							a(href="#") 搜索
+							a#info-display(href="#") 增减显示信息
+							a#search(href="#") 搜索
 						.hr
 						.admin-user-list-apply-box
 							.box-content.overflow-scroll
@@ -119,7 +119,7 @@ html.no-js
 											//- td 在线
 											td 待审核
 											td
-												a(href="#") 详细信息
+												a.popup-user-detail(href="#") 详细信息
 												a(href="#") 发起讨论
 												a(href="#") 同意
 												a(href="#") 拒绝
@@ -135,7 +135,7 @@ html.no-js
 											//- td 在线
 											td 已通过
 											td
-												a(href="#") 详细信息
+												a.popup-user-detail(href="#") 详细信息
 												a(href="#") 发起讨论
 												a(href="#") 同意
 												a(href="#") 拒绝
@@ -151,7 +151,7 @@ html.no-js
 											//- td 短信
 											td 已通过
 											td
-												a(href="#") 详细信息
+												a.popup-user-detail(href="#") 详细信息
 												a(href="#") 发起讨论
 												a(href="#") 同意
 												a(href="#") 拒绝
@@ -167,7 +167,7 @@ html.no-js
 											//- td 短信
 											td 未通过
 											td
-												a(href="#") 详细信息
+												a.popup-user-detail(href="#") 详细信息
 												a(href="#") 发起讨论
 												a(href="#") 同意
 												a(href="#") 拒绝
@@ -183,7 +183,7 @@ html.no-js
 											//- td 短信
 											td 已通过
 											td
-												a(href="#") 详细信息
+												a.popup-user-detail(href="#") 详细信息
 												a(href="#") 发起讨论
 												a(href="#") 同意
 												a(href="#") 拒绝
@@ -199,7 +199,7 @@ html.no-js
 											//- td 在线
 											td 待审核
 											td
-												a(href="#") 详细信息
+												a.popup-user-detail(href="#") 详细信息
 												a(href="#") 发起讨论
 												a(href="#") 同意
 												a(href="#") 拒绝
@@ -215,7 +215,7 @@ html.no-js
 											//- td 在线
 											td 已通过
 											td
-												a(href="#") 详细信息
+												a.popup-user-detail(href="#") 详细信息
 												a(href="#") 发起讨论
 												a(href="#") 同意
 												a(href="#") 拒绝
@@ -231,7 +231,7 @@ html.no-js
 											//- td 短信
 											td 已通过
 											td
-												a(href="#") 详细信息
+												a.popup-user-detail(href="#") 详细信息
 												a(href="#") 发起讨论
 												a(href="#") 同意
 												a(href="#") 拒绝
@@ -247,7 +247,7 @@ html.no-js
 											//- td 短信
 											td 未通过
 											td
-												a(href="#") 详细信息
+												a.popup-user-detail(href="#") 详细信息
 												a(href="#") 发起讨论
 												a(href="#") 同意
 												a(href="#") 拒绝
@@ -263,7 +263,7 @@ html.no-js
 											//- td 短信
 											td 已通过
 											td
-												a(href="#") 详细信息
+												a.popup-user-detail(href="#") 详细信息
 												a(href="#") 发起讨论
 												a(href="#") 同意
 												a(href="#") 拒绝
@@ -285,5 +285,88 @@ html.no-js
 							.clear
 					.clear
 			.clear
+
+		#popup-stage-search.popup-stage.hidden
+			#search-box.popup-stage-box.small
+				.box-content
+					.info-name 关键词
+					input(type="text", name="keyword")
+					button#submit-search 搜索
+					button.cancel-stage 取消
+					.clear
+
+		#popup-stage-info-display.popup-stage.hidden
+			#info-display-box.popup-stage-box.small
+				.box-content
+					.info-name 关键词
+					input(type="text", name="keyword")
+					button#submit-info-display 更新信息
+					button.cancel-stage 取消
+					.clear
+
+		#popup-stage-user-detail.popup-stage.hidden
+			#user-detail-box.popup-stage-box.large
+					.box-content
+						h2
+							| #0001
+							span 张楠
+						ul#user-detail-info
+							li
+								.info-name 真实姓名
+								#real-name.info-content 张楠
+								.clear
+							li
+								.info-name 性别
+								#sex.info-content 女
+								.clear
+							li
+								.info-name 昵称
+								#nick-name.info-content kyzamiz
+								.clear
+							li
+								.info-name 生日
+								#birthday.info-content 1992-05-01
+								.clear
+							li
+								.info-name 城市
+								#lacation.info-content 北京市 北京市
+								.clear
+							li
+								.info-name 年级
+								#admission-year.info-content 2010 本科生
+								.clear
+							li
+								.info-name 院系
+								#department.info-content 新闻与传播学院
+								.clear
+							li
+								.info-name 学号
+								#school-id.info-content 100014402
+								.clear
+							li
+								.info-name 校外
+								#non-scool.info-content /
+								.clear
+							li
+								p.question-card
+									| 问题一
+									span 想加入哪个组？（设计组、技术组）
+								textarea(type="text", name="custom-question1", placeholder="用户填写的答案。", disabled)
+								.clear
+							li
+								p.question-card
+									| 问题二
+									span 是否想成为骨干？
+								textarea(type="text", name="custom-question2", placeholder="用户填写的答案。", disabled)
+								.clear
+							li
+								p.question-card
+									| 问题三
+									span 有何设计或开发经验？会用什么软件、会写哪些语言？
+								textarea(type="text", name="custom-question3", placeholder="用户填写的答案。", disabled)
+								.clear
+						.button-box
+							button.cancel-stage 取消
+					.clear
 
 		include footer

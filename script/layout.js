@@ -55,6 +55,17 @@ $(document).ready(function(){
 		$("#popup-user-menu").addClass("animated fadeOutLeft");
 		$("#popup-user-menu").fadeOut(1000);
 	});
+	$("#top-user-menu").click(function(){
+		if ($("#popup-user-menu").css("display") == "none") {
+			$("#popup-user-menu").removeClass("animated fadeOutLeft");
+			$("#popup-user-menu").addClass("animated fadeInLeft");
+			$("#popup-user-menu").fadeIn(1000);
+		} else {
+			$("#popup-user-menu").removeClass("animated fadeInLeft");
+			$("#popup-user-menu").addClass("animated fadeOutLeft");
+			$("#popup-user-menu").fadeOut(1000);
+		}
+	});
 
 	/* 编辑信息 - 信息提示 */
 	$(".popup-tips").focusin(function(){
@@ -125,7 +136,7 @@ $(document).ready(function(){
 		// $("#popup-user-list-custom").fadeOut(250);
 		$("#popup-user-list-custom").slideUp(250);
 	});
-	/* 社团后台 - 增加管理员 增加分组 */
+	/* 社团后台 - 增加管理员 增加分组 搜索 增减显示信息 用户~详细信息 */
 	$("#cancel-stage").click(function(){
 		$(".popup-stage").hide();
 	});
@@ -141,6 +152,27 @@ $(document).ready(function(){
 			$("#popup-stage-add-custom-group").show();
 		} else {
 			$("#popup-stage-add-custom-group").hide();
+		}
+	});
+	$("#search").click(function(){
+		if ($("#popup-stage-search").css("display") == "none") {
+			$("#popup-stage-search").show();
+		} else {
+			$("#popup-stage-search").hide();
+		}
+	});
+	$("#info-display").click(function(){
+		if ($("#popup-stage-info-display").css("display") == "none") {
+			$("#popup-stage-info-display").show();
+		} else {
+			$("#popup-stage-info-display").hide();
+		}
+	});
+	$(".popup-user-detail").click(function(){
+		if ($("#popup-stage-user-detail").css("display") == "none") {
+			$("#popup-stage-user-detail").show();
+		} else {
+			$("#popup-stage-user-detail").hide();
 		}
 	});
 

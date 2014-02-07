@@ -243,6 +243,7 @@ button
 		&:first-child
 			margin-top 0px
 	.activity-detail-box
+	.message-detail-box
 		& li
 			margin-bottom 10px
 			display inline
@@ -290,8 +291,19 @@ button
 			&:hover
 				border-color org
 				cursor pointer
-			img
+			.library-item-img
 				width 142px
+				height 92px
+				img
+					width 142px
+			.library-item
+				width 122px
+				height 72px
+				padding 10px
+				font-size extra-small
+				line-height 72px
+				text-align center
+				vertical-align middle
 	.activity-library-upload-box
 		width 288px
 		height 190px
@@ -396,6 +408,8 @@ button
 				button
 					margin 10px 0 0 0
 					float right
+	.page-bar
+		margin-top 10px
 
 .main-content
 	.user-club-list-box
@@ -420,6 +434,8 @@ button
 			margin 40px 0 0 10px
 			background-color light-grey
 			border-color light-grey
+	.page-bar
+		margin-top 5px
 
 .main-content
 .main-content-full
@@ -755,7 +771,6 @@ button
 			&:first-child
 				margin-left 0px
 	.page-bar
-		margin-top 5px
 		float right
 		& > a
 			color blu
@@ -882,7 +897,6 @@ button
 			& textarea
 				height 60px
 				margin 0 0 20px 0
-		button#cancel-stage
 		button.cancel-stage
 			width 60px
 			margin-left 10px
@@ -894,9 +908,21 @@ button
 			span
 				margin-left 10px
 		#club-custom-question
+		#user-detail-info
 			margin 10px 0 0 0
 			height 380px
 			overflow scroll
+		#user-detail-info li
+				margin-top 5px
+				float left
+				.info-content
+					width 210px
+					height 30px
+					line-height 30px
+					margin 0 10px 0 0
+					color grey
+					font-weight bold
+					float left
 
 /* 社团首页 - 封面 */
 #club-cover

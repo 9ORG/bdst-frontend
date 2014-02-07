@@ -1,0 +1,32 @@
+header
+	#top-bar
+		#top-bar-content-container
+			a#top-logo-box(href="../welcome/welcome.html")
+				#top-logo
+					img(src="../img/top-logo.png")
+				#top-logo-text
+					//- | 社团管理平台
+					img(src="../img/logo-text.png")
+			ul#top-nav
+				li
+					a#club(href="../club/club-list.html") 社团
+				li
+					a#activity(href="../activity/activity-list.html") 活动
+				li
+					a#user(href="index.html") 我的参与
+				li
+					a(href="http://bdst.pku.edu.cn/",target="_blank")
+						| 在线借教室
+						//- span NEW
+			#top-user-menu
+				#username
+					| kyzamizzzzzzzz
+					span#new-message N2
+				ul#popup-user-menu.hidden
+					li
+						a.menu-logout(href="../welcome/welcome.html") 登出
+					li
+						a.menu-background(href="../admin/index.html") 管理后台
+					li
+						a.menu-setting(href="../userpage/user-edit-info.html") 设置
+	#top-line
