@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<!--if lt IE 7html.no-js.lt-ie9.lt-ie8.lt-ie7
+-->
+<!--if IE 7html.no-js.lt-ie9.lt-ie8
+-->
+<!--if IE 8html.no-js.lt-ie9
+-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>社团管理平台 | 为学生和社团提供一站式服务</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../lib/animate.min.css">
+    <script src="../lib/jquery-1.10.2.min.js"></script>
+    <script src="../script/layout.js"></script>
+  </head>
+  <body>
+    <!--if lt IE 7
+    p.chromeframe.
+    You are using an outdated browser.
+    Please <a href="http://browsehappy.com/">upgrade your browser</a> or
+    <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>
+    to improve your experience.
+    
+    -->
+    <header>
+      <div id="top-bar">
+        <div id="top-bar-content-container"><a id="top-logo-box" href="../welcome/welcome.html">
+            <div id="top-logo"><img src="../img/top-logo.png"></div>
+            <div id="top-logo-text"><img src="../img/logo-text.png">
+            </div></a>
+          <div id="top-admin-name"><a>超级管理员后台</a></div>
+          <div id="top-user-menu">
+            <div id="username">kyzamizzzzzzzz<span id="new-message">N2</span></div>
+            <ul id="popup-user-menu" class="hidden">
+              <li><a href="../welcome/welcome.html" class="menu-logout">登出</a></li>
+              <li><a href="../userpage/index.html" class="menu-background">返回个人</a></li>
+              <li><a href="../userpage/user-edit-info.html" class="menu-setting">设置</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="top-line"></div>
+    </header>
+    <div id="body-container">
+      <div id="sidebar">
+        <ul id="side-menu">
+          <li>社团管理
+            <ul class="side-menu-button">
+              <li><a href="s-admin-create-club.html">创建社团</a></li>
+              <li><a href="s-admin-club-list.html">全部社团</a></li>
+            </ul>
+          </li>
+          <li>成员管理
+            <ul class="side-menu-button">
+              <li><a href="s-admin-user-list-all.html" class="current">全部成员</a></li>
+            </ul>
+          </li>
+          <li>活动管理
+            <ul class="side-menu-button">
+              <li><a href="s-admin-activity-list.html">全部活动</a></li>
+            </ul>
+          </li>
+          <li>讨论管理
+            <ul class="side-menu-button">
+              <li><a href="s-admin-message-list-all.html">全部讨论</a></li>
+              <li><a href="s-admin-message-list.html">历史记录</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="main-content">
+        <div id="main-content-s-admin-user-list">
+          <div id="s-admin-user-list-all" class="column-1-1">
+            <h2 class="inline">全部成员</h2>
+            <div class="tiny-description-bar">共10200名成员</div>
+            <div class="tiny-menu-bar"><a id="info-display">增减显示信息</a><a id="search">搜索</a></div>
+            <div class="hr"></div>
+            <div class="admin-user-list-all-box">
+              <div class="box-content overflow-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th id="select" class="w30"></th>
+                      <th id="user-apply-time" class="w100">注册时间</th>
+                      <th id="user-real-name" class="w60">姓名</th>
+                      <th id="user-sex" class="w60">性别</th>
+                      <th id="user-department" class="w140">院系</th>
+                      <th id="user-phone-num" class="w140">手机号码</th>
+                      <th id="manage" class="m200">管理操作</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <input type="checkbox">
+                      </td>
+                      <td>2014-01-30</td>
+                      <td>向毅明</td>
+                      <td>男</td>
+                      <td>/</td>
+                      <td>18610096949</td>
+                      <td><a class="popup-stage-user-detail">详细信息</a><a>发起讨论</a><a class="popup-stage-delete-website-user">删除成员</a></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox">
+                      </td>
+                      <td>2014-01-28</td>
+                      <td>王仲禹</td>
+                      <td>男</td>
+                      <td>信息科学与技术学院</td>
+                      <td>18610096949</td>
+                      <td><a class="popup-stage-user-detail">详细信息</a><a>发起讨论</a><a class="popup-stage-delete-website-user">删除成员</a></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox">
+                      </td>
+                      <td>2014-01-27</td>
+                      <td>张楠</td>
+                      <td>女</td>
+                      <td>新闻与传播学院</td>
+                      <td>18610096949</td>
+                      <td><a class="popup-stage-user-detail">详细信息</a><a>发起讨论</a><a class="popup-stage-delete-website-user">删除成员</a></td>
+                    </tr>
+                    <tr class="font-color-grey">
+                      <td>
+                        <input type="checkbox">
+                      </td>
+                      <td>2014-01-20</td>
+                      <td>吴春华</td>
+                      <td>/</td>
+                      <td>/</td>
+                      <td>18610096949</td>
+                      <td><a class="popup-stage-user-detail">详细信息</a><a>发起讨论</a><a class="popup-stage-delete-website-user">删除成员</a></td>
+                    </tr>
+                    <tr class="font-color-grey">
+                      <td>
+                        <input type="checkbox">
+                      </td>
+                      <td>2014-01-20</td>
+                      <td>张天然</td>
+                      <td>/</td>
+                      <td>/</td>
+                      <td>18610096949</td>
+                      <td><a class="popup-stage-user-detail">详细信息</a><a>发起讨论</a><a class="popup-stage-delete-website-user">删除成员</a></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox">
+                      </td>
+                      <td>2014-01-30</td>
+                      <td>向毅明</td>
+                      <td>男</td>
+                      <td>/</td>
+                      <td>18610096949</td>
+                      <td><a class="popup-stage-user-detail">详细信息</a><a>发起讨论</a><a class="popup-stage-delete-website-user">删除成员</a></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox">
+                      </td>
+                      <td>2014-01-28</td>
+                      <td>王仲禹</td>
+                      <td>男</td>
+                      <td>信息科学与技术学院</td>
+                      <td>18610096949</td>
+                      <td><a class="popup-stage-user-detail">详细信息</a><a>发起讨论</a><a class="popup-stage-delete-website-user">删除成员</a></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox">
+                      </td>
+                      <td>2014-01-27</td>
+                      <td>张楠</td>
+                      <td>女</td>
+                      <td>新闻与传播学院</td>
+                      <td>18610096949</td>
+                      <td><a class="popup-stage-user-detail">详细信息</a><a>发起讨论</a><a class="popup-stage-delete-website-user">删除成员</a></td>
+                    </tr>
+                    <tr class="font-color-grey">
+                      <td>
+                        <input type="checkbox">
+                      </td>
+                      <td>2014-01-20</td>
+                      <td>吴春华</td>
+                      <td>/</td>
+                      <td>/</td>
+                      <td>18610096949</td>
+                      <td><a class="popup-stage-user-detail">详细信息</a><a>发起讨论</a><a class="popup-stage-delete-website-user">删除成员</a></td>
+                    </tr>
+                    <tr class="font-color-grey">
+                      <td>
+                        <input type="checkbox">
+                      </td>
+                      <td>2014-01-20</td>
+                      <td>张天然</td>
+                      <td>/</td>
+                      <td>/</td>
+                      <td>18610096949</td>
+                      <td><a class="popup-stage-user-detail">详细信息</a><a>发起讨论</a><a class="popup-stage-delete-website-user">删除成员</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="batch-menu-bar"><a>全部选中</a><a>批量发起讨论</a><a class="popup-stage-delete-website-user">批量删除成员</a></div>
+              <div class="page-bar"><a class="current-page">1</a><a>2</a><a>3</a><span>...</span><a>10</a><span>/</span><a>显示全部</a></div>
+              <div class="clear"></div>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div id="popup-stage-user-detail" class="popup-stage hidden">
+      <div id="user-detail-box" class="popup-stage-box large">
+        <div class="box-content">
+          <h2>#0001<span>张楠</span></h2>
+          <ul id="user-detail-info">
+            <li>
+              <div class="info-name">真实姓名</div>
+              <div id="real-name" class="info-content">张楠</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <div class="info-name">性别</div>
+              <div id="sex" class="info-content">女</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <div class="info-name">昵称</div>
+              <div id="nick-name" class="info-content">kyzamiz</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <div class="info-name">生日</div>
+              <div id="birthday" class="info-content">1992-05-01</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <div class="info-name">城市</div>
+              <div id="lacation" class="info-content">北京市 北京市</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <div class="info-name">年级</div>
+              <div id="admission-year" class="info-content">2010 本科生</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <div class="info-name">院系</div>
+              <div id="department" class="info-content">新闻与传播学院</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <div class="info-name">学号</div>
+              <div id="school-id" class="info-content">100014402</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <div class="info-name">校外</div>
+              <div id="non-school" class="info-content">/</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <p class="question-card">问题一<span>想加入哪个组？（设计组、技术组）</span></p>
+              <textarea type="text" name="custom-question1" placeholder="用户填写的答案。" disabled></textarea>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <p class="question-card">问题二<span>是否想成为骨干？</span></p>
+              <textarea type="text" name="custom-question2" placeholder="用户填写的答案。" disabled></textarea>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <p class="question-card">问题三<span>有何设计或开发经验？会用什么软件、会写哪些语言？</span></p>
+              <textarea type="text" name="custom-question3" placeholder="用户填写的答案。" disabled></textarea>
+              <div class="clear"></div>
+            </li>
+          </ul>
+          <div class="button-box">
+            <button class="cancel-stage">关闭</button>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <div id="popup-stage-delete-website-user" class="popup-stage hidden">
+      <div id="delete-website-user-box" class="popup-stage-box xsmall">
+        <div class="box-content">
+          <div class="description-content">确定删除用户吗？<span>删除后所有信息也会一并删除</span></div>
+          <div class="button-box">
+            <button id="submit-delete-user">确定删除</button>
+            <button class="cancel-stage">取消</button>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <div id="popup-stage-search" class="popup-stage hidden">
+      <div id="search-box" class="popup-stage-box small">
+        <div class="box-content">
+          <div class="info-name">关键词</div>
+          <input type="text" name="keyword">
+          <button id="submit-search">搜索</button>
+          <button class="cancel-stage">取消</button>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <div id="popup-stage-info-display" class="popup-stage hidden">
+      <div id="info-display-box" class="popup-stage-box medium">
+        <div class="box-content">
+          <ul id="info-display-selector">
+            <li>
+              <input type="checkbox" name="real-name" checked>
+              <div class="info-name">真实姓名</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <input type="checkbox" name="sex" checked>
+              <div class="info-name">性别</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <input type="checkbox" name="nick-name">
+              <div class="info-name">昵称</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <input type="checkbox" name="birthday">
+              <div class="info-name">生日</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <input type="checkbox" name="location">
+              <div class="info-name">城市</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <input type="checkbox" name="admission-year" checked>
+              <div class="info-name">年级</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <input type="checkbox" name="department" checked>
+              <div class="info-name">院系</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <input type="checkbox" name="school-id">
+              <div class="info-name">学号</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <input type="checkbox" name="non-school-info">
+              <div class="info-name">校外</div>
+              <div class="clear"></div>
+            </li>
+            <li>
+              <input type="checkbox" name="club-question">
+              <div class="info-name">入会问题</div>
+              <div class="clear"></div>
+            </li>
+          </ul>
+          <div class="button-box">
+            <button id="submit-info-display">更新信息</button>
+            <button class="cancel-stage">取消</button>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div id="foot-bar">
+        <div id="foot-bar-content-container">
+          <div class="footer-decro"><img src="../img/footer-decro.png"></div>
+          <div class="clear"></div>
+          <div class="foot-bar-info">
+            <div class="foot-bar-title">关于</div>
+            <ul>
+              <li class="foot-bar-content"><a href="../about-us.html">关于我们</a></li>
+              <li class="foot-bar-content"><a href="../recruit.html">招纳贤才
+                  <div class="foot-bar-info"></div></a></li>
+            </ul>
+          </div>
+          <div class="foot-bar-info">
+            <div class="foot-bar-title">社团</div>
+            <ul>
+              <li class="foot-bar-content"><a href="../club/club-list.html">已有社团
+                  <div class="foot-bar-info"></div></a></li>
+            </ul>
+          </div>
+          <div class="foot-bar-info">
+            <div class="foot-bar-title">活动</div>
+            <ul>
+              <li class="foot-bar-content"><a href="../activity/activity-list.html">已有活动
+                  <div class="foot-bar-info"></div></a></li>
+            </ul>
+          </div>
+          <div class="foot-bar-info">
+            <div class="foot-bar-title">合作</div>
+            <ul>
+              <li class="foot-bar-content"><a href="../contact.html">联系我们</a></li>
+            </ul>
+          </div>
+          <div class="foot-bar-info">
+            <div class="foot-bar-title">版权信息</div>
+            <ul>
+              <li class="foot-bar-content">
+                <p>本网站会员及进驻社团所发布展示的所有内容版权均归原作者所有。任何商业用途均需联系原作者。</p>
+                <p>Copyright (c) 2012-2014 社团管理平台.<br/>All rights reserved.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

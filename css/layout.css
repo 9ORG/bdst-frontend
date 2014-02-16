@@ -2028,3 +2028,13 @@ footer #foot-bar #foot-bar-content-container .foot-bar-info:last-child li.foot-b
   position: relative;
   top: -140px;
 }
+.s-admin-create-club-box button#submit {
+  width: 180px;
+  margin: 40px 0 0 0px;
+}
+.s-admin-create-club-box button#cancel {
+  width: 60px;
+  margin: 40px 0 0 10px;
+  background-color: #aaa;
+  border-color: #aaa;
+}

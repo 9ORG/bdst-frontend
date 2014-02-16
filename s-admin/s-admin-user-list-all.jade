@@ -1,0 +1,373 @@
+doctype html
+//if lt IE 7
+	html.no-js.lt-ie9.lt-ie8.lt-ie7
+//if IE 7
+	html.no-js.lt-ie9.lt-ie8
+//if IE 8
+	html.no-js.lt-ie9
+//[if gt IE 8]><!
+html.no-js
+	//<![endif]
+
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+
+		title 社团管理平台 | 为学生和社团提供一站式服务
+
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width')
+
+		link(rel='stylesheet', href='../css/layout.css')
+		link(rel='stylesheet', href='../lib/animate.min.css')
+		script(src="../lib/jquery-1.10.2.min.js")
+		script(src='../script/layout.js')
+
+	body
+		//if lt IE 7
+			p.chromeframe.
+			You are using an outdated browser.
+			Please <a href="http://browsehappy.com/">upgrade your browser</a> or
+			<a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>
+			to improve your experience.
+
+		include header
+
+		#body-container
+			#sidebar
+				ul#side-menu
+					li 社团管理
+						ul.side-menu-button
+							li
+								a(href="s-admin-create-club.html") 创建社团
+							li
+								a(href="s-admin-club-list.html") 全部社团
+					li 成员管理
+						ul.side-menu-button
+							li
+								a.current(href="s-admin-user-list-all.html") 全部成员
+					li 活动管理
+						ul.side-menu-button
+							li
+								a(href="s-admin-activity-list.html") 全部活动
+					li 讨论管理
+						ul.side-menu-button
+							li
+								a(href="s-admin-message-list-all.html") 全部讨论
+							li
+								a(href="s-admin-message-list.html") 历史记录
+			.main-content
+				#main-content-s-admin-user-list
+					#s-admin-user-list-all.column-1-1
+						h2.inline 全部成员
+						.tiny-description-bar 共10200名成员
+						.tiny-menu-bar
+							a#info-display 增减显示信息
+							a#search 搜索
+						.hr
+						.admin-user-list-all-box
+							.box-content.overflow-scroll
+								table
+									thead
+										tr
+											th#select.w30
+											th#user-apply-time.w100 注册时间
+											th#user-real-name.w60 姓名
+											th#user-sex.w60 性别
+											//- th#user-admission-year.w60 年级
+											th#user-department.w140 院系
+											th#user-phone-num.w140 手机号码
+											//- th#apply-approach.w60 报名方式
+											th#manage.m200 管理操作
+									tbody
+										tr
+											td
+												input(type="checkbox")
+											td 2014-01-30
+											td 向毅明
+											td 男
+											//- td /
+											td /
+											//- td 在线
+											td 18610096949
+											td
+												a.popup-stage-user-detail 详细信息
+												a 发起讨论
+												a.popup-stage-delete-website-user 删除成员
+										tr
+											td
+												input(type="checkbox")
+											td 2014-01-28
+											td 王仲禹
+											td 男
+											//- td 2009
+											td 信息科学与技术学院
+											//- td 在线
+											td 18610096949
+											td
+												a.popup-stage-user-detail 详细信息
+												a 发起讨论
+												a.popup-stage-delete-website-user 删除成员
+										tr
+											td
+												input(type="checkbox")
+											td 2014-01-27
+											td 张楠
+											td 女
+											//- td 2010
+											td 新闻与传播学院
+											//- td 短信
+											td 18610096949
+											td
+												a.popup-stage-user-detail 详细信息
+												a 发起讨论
+												a.popup-stage-delete-website-user 删除成员
+										tr.font-color-grey
+											td
+												input(type="checkbox")
+											td 2014-01-20
+											td 吴春华
+											td /
+											//- td /
+											td /
+											//- td 短信
+											td 18610096949
+											td
+												a.popup-stage-user-detail 详细信息
+												a 发起讨论
+												a.popup-stage-delete-website-user 删除成员
+										tr.font-color-grey
+											td
+												input(type="checkbox")
+											td 2014-01-20
+											td 张天然
+											td /
+											//- td /
+											td /
+											//- td 短信
+											td 18610096949
+											td
+												a.popup-stage-user-detail 详细信息
+												a 发起讨论
+												a.popup-stage-delete-website-user 删除成员
+										tr
+											td
+												input(type="checkbox")
+											td 2014-01-30
+											td 向毅明
+											td 男
+											//- td /
+											td /
+											//- td 在线
+											td 18610096949
+											td
+												a.popup-stage-user-detail 详细信息
+												a 发起讨论
+												a.popup-stage-delete-website-user 删除成员
+										tr
+											td
+												input(type="checkbox")
+											td 2014-01-28
+											td 王仲禹
+											td 男
+											//- td 2009
+											td 信息科学与技术学院
+											//- td 在线
+											td 18610096949
+											td
+												a.popup-stage-user-detail 详细信息
+												a 发起讨论
+												a.popup-stage-delete-website-user 删除成员
+										tr
+											td
+												input(type="checkbox")
+											td 2014-01-27
+											td 张楠
+											td 女
+											//- td 2010
+											td 新闻与传播学院
+											//- td 短信
+											td 18610096949
+											td
+												a.popup-stage-user-detail 详细信息
+												a 发起讨论
+												a.popup-stage-delete-website-user 删除成员
+										tr.font-color-grey
+											td
+												input(type="checkbox")
+											td 2014-01-20
+											td 吴春华
+											td /
+											//- td /
+											td /
+											//- td 短信
+											td 18610096949
+											td
+												a.popup-stage-user-detail 详细信息
+												a 发起讨论
+												a.popup-stage-delete-website-user 删除成员
+										tr.font-color-grey
+											td
+												input(type="checkbox")
+											td 2014-01-20
+											td 张天然
+											td /
+											//- td /
+											td /
+											//- td 短信
+											td 18610096949
+											td
+												a.popup-stage-user-detail 详细信息
+												a 发起讨论
+												a.popup-stage-delete-website-user 删除成员
+							.batch-menu-bar
+								a 全部选中
+								a 批量发起讨论
+								a.popup-stage-delete-website-user 批量删除成员
+							.page-bar
+								a.current-page 1
+								a 2
+								a 3
+								span ...
+								a 10
+								span /
+								a 显示全部
+							.clear
+					.clear
+			.clear
+
+		#popup-stage-user-detail.popup-stage.hidden
+			#user-detail-box.popup-stage-box.large
+				.box-content
+					h2
+						| #0001
+						span 张楠
+					ul#user-detail-info
+						li
+							.info-name 真实姓名
+							#real-name.info-content 张楠
+							.clear
+						li
+							.info-name 性别
+							#sex.info-content 女
+							.clear
+						li
+							.info-name 昵称
+							#nick-name.info-content kyzamiz
+							.clear
+						li
+							.info-name 生日
+							#birthday.info-content 1992-05-01
+							.clear
+						li
+							.info-name 城市
+							#lacation.info-content 北京市 北京市
+							.clear
+						li
+							.info-name 年级
+							#admission-year.info-content 2010 本科生
+							.clear
+						li
+							.info-name 院系
+							#department.info-content 新闻与传播学院
+							.clear
+						li
+							.info-name 学号
+							#school-id.info-content 100014402
+							.clear
+						li
+							.info-name 校外
+							#non-school.info-content /
+							.clear
+						li
+							p.question-card
+								| 问题一
+								span 想加入哪个组？（设计组、技术组）
+							textarea(type="text", name="custom-question1", placeholder="用户填写的答案。", disabled)
+							.clear
+						li
+							p.question-card
+								| 问题二
+								span 是否想成为骨干？
+							textarea(type="text", name="custom-question2", placeholder="用户填写的答案。", disabled)
+							.clear
+						li
+							p.question-card
+								| 问题三
+								span 有何设计或开发经验？会用什么软件、会写哪些语言？
+							textarea(type="text", name="custom-question3", placeholder="用户填写的答案。", disabled)
+							.clear
+					.button-box
+						button.cancel-stage 关闭
+					.clear
+
+		#popup-stage-delete-website-user.popup-stage.hidden
+			#delete-website-user-box.popup-stage-box.xsmall
+				.box-content
+					.description-content
+						| 确定删除用户吗？
+						span 删除后所有信息也会一并删除
+					.button-box
+						button#submit-delete-user 确定删除
+						button.cancel-stage 取消
+					.clear
+
+		#popup-stage-search.popup-stage.hidden
+			#search-box.popup-stage-box.small
+				.box-content
+					.info-name 关键词
+					input(type="text", name="keyword")
+					button#submit-search 搜索
+					button.cancel-stage 取消
+					.clear
+
+		#popup-stage-info-display.popup-stage.hidden
+			#info-display-box.popup-stage-box.medium
+				.box-content
+					ul#info-display-selector
+						li
+							input(type="checkbox", name="real-name", checked)
+							.info-name 真实姓名
+							.clear
+						li
+							input(type="checkbox", name="sex", checked)
+							.info-name 性别
+							.clear
+						li
+							input(type="checkbox", name="nick-name")
+							.info-name 昵称
+							.clear
+						li
+							input(type="checkbox", name="birthday")
+							.info-name 生日
+							.clear
+						li
+							input(type="checkbox", name="location")
+							.info-name 城市
+							.clear
+						li
+							input(type="checkbox", name="admission-year", checked)
+							.info-name 年级
+							.clear
+						li
+							input(type="checkbox", name="department", checked)
+							.info-name 院系
+							.clear
+						li
+							input(type="checkbox", name="school-id")
+							.info-name 学号
+							.clear
+						li
+							input(type="checkbox", name="non-school-info")
+							.info-name 校外
+							.clear
+						li
+							input(type="checkbox", name="club-question")
+							.info-name 入会问题
+							.clear
+					.button-box
+						button#submit-info-display 更新信息
+						button.cancel-stage 取消
+					.clear
+						
+		include footer

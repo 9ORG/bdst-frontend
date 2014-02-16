@@ -1,0 +1,151 @@
+doctype html
+//if lt IE 7
+	html.no-js.lt-ie9.lt-ie8.lt-ie7
+//if IE 7
+	html.no-js.lt-ie9.lt-ie8
+//if IE 8
+	html.no-js.lt-ie9
+//[if gt IE 8]><!
+html.no-js
+	//<![endif]
+
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+
+		title 社团管理平台 | 为学生和社团提供一站式服务
+
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width')
+
+		link(rel='stylesheet', href='../css/layout.css')
+		link(rel='stylesheet', href='../lib/animate.min.css')
+		script(src="../lib/jquery-1.10.2.min.js")
+		script(src='../script/layout.js')
+
+	body
+		//if lt IE 7
+			p.chromeframe.
+			You are using an outdated browser.
+			Please <a href="http://browsehappy.com/">upgrade your browser</a> or
+			<a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>
+			to improve your experience.
+
+		include header
+
+		#body-container
+			#sidebar
+				ul#side-menu
+					li 社团管理
+						ul.side-menu-button
+							li
+								a.current(href="s-admin-create-club.html") 创建社团
+							li
+								a(href="s-admin-club-list.html") 全部社团
+					li 成员管理
+						ul.side-menu-button
+							li
+								a(href="s-admin-user-list-all.html") 全部成员
+					li 活动管理
+						ul.side-menu-button
+							li
+								a(href="s-admin-activity-list.html") 全部活动
+					li 讨论管理
+						ul.side-menu-button
+							li
+								a(href="s-admin-message-list-all.html") 全部讨论
+							li
+								a(href="s-admin-message-list.html") 历史记录
+			.main-content
+				#main-content-s-admin-create-club
+					#s-admin-create-club.column-3-2.column-span
+						h2.inline 创建社团
+						.hr
+						.s-admin-create-club-box
+							form
+								ul.box-content
+									p.description-card 社团展示信息，访问社团主页时会看到。
+									li
+										.info-name 社团名称
+										input(type="text", name="club-name")#club-name.normal
+										.clear
+									li
+										.info-name 短信代码
+										input(type="text", name="club-shortcut")#club-name.normal
+										.clear
+									li
+										.info-name 所属学校
+										input(type="text", name="club-school")#club-school.normal
+										.clear
+									li
+										.info-name 指导单位
+										input(type="text", name="club-department")#club-department.normal
+										.clear
+									li
+										.info-name 指导老师
+										input(type="text", name="club-advisor")#club-advisor.normal
+										.clear
+									li
+										.info-name 简介
+										textarea(type="text", name="club-introduction")#club-introduction
+										.clear
+								ul.box-content
+									p.description-card 入会信息，申请加入社团时会看到。
+									li
+										.info-name 章程
+										textarea(type="text", name="club-regulation")#club-regulation
+										.clear
+									li
+										.info-name 组织架构
+										textarea(type="text", name="club-group")#club-group
+										.clear
+									li
+										.info-name 入会问题
+										textarea(type="text", name="club-question", placeholder="每一行为一个问题。句尾可添标点，句首无需序号。")#club-question
+										.clear
+								button#submit 确认创建
+								button#cancel 取消
+					#club-avatar.column-3-1
+						.avatar-box
+							h2.inline LOGO
+							.hr
+							#club-avatar-large
+								img(src="../img/club-avatar-default.png")
+							.club-avatar-box.box-content
+								.upload-info 拖拽至图片 或 使用普通方式
+								#club-change-avatar 浏览上传
+							.clear
+						.cover-box
+							h2.inline(style="margin-top:20px") 封面图集
+							.hr
+							ul.club-cover-list
+								li
+									img.club-cover-img1(src="../img/club-avatar-default.png")
+								li
+									img.club-cover-img2(src="../img/club-avatar-default.png")
+								li
+									img.club-cover-img3(src="../img/club-avatar-default.png")
+								li
+									img.club-cover-img4(src="../img/club-avatar-default.png")
+								li
+									img.club-cover-img5(src="../img/club-avatar-default.png")
+								li
+									img.club-cover-img6(src="../img/club-avatar-default.png")
+							.club-cover-box.box-content
+								.upload-info 拖拽至图片 或 使用普通方式
+								//- .club-change-cover-box
+								#club-change-cover 浏览上传
+								.clear
+								#toggle-club-change-cover-box.hidden
+									#club-change-cover-1 封面①
+									#club-change-cover-2 封面②
+									#club-change-cover-3 封面③
+									#club-change-cover-4 封面④
+									#club-change-cover-5 封面⑤
+									#club-change-cover-6 封面⑥
+								.clear
+							.clear
+					.clear
+			.clear
+
+		include footer

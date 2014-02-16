@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<!--if lt IE 7html.no-js.lt-ie9.lt-ie8.lt-ie7
+-->
+<!--if IE 7html.no-js.lt-ie9.lt-ie8
+-->
+<!--if IE 8html.no-js.lt-ie9
+-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>社团管理平台 | 为学生和社团提供一站式服务</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../lib/animate.min.css">
+    <script src="../lib/jquery-1.10.2.min.js"></script>
+    <script src="../script/layout.js"></script>
+  </head>
+  <body>
+    <!--if lt IE 7
+    p.chromeframe.
+    You are using an outdated browser.
+    Please <a href="http://browsehappy.com/">upgrade your browser</a> or
+    <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>
+    to improve your experience.
+    
+    -->
+    <header>
+      <div id="top-bar">
+        <div id="top-bar-content-container"><a id="top-logo-box" href="../welcome/welcome.html">
+            <div id="top-logo"><img src="../img/top-logo.png"></div>
+            <div id="top-logo-text"><img src="../img/logo-text.png">
+            </div></a>
+          <div id="top-admin-name"><a>超级管理员后台</a></div>
+          <div id="top-user-menu">
+            <div id="username">kyzamizzzzzzzz<span id="new-message">N2</span></div>
+            <ul id="popup-user-menu" class="hidden">
+              <li><a href="../welcome/welcome.html" class="menu-logout">登出</a></li>
+              <li><a href="../userpage/index.html" class="menu-background">返回个人</a></li>
+              <li><a href="../userpage/user-edit-info.html" class="menu-setting">设置</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="top-line"></div>
+    </header>
+    <div id="body-container">
+      <div id="sidebar">
+        <ul id="side-menu">
+          <li>社团管理
+            <ul class="side-menu-button">
+              <li><a href="s-admin-create-club.html">创建社团</a></li>
+              <li><a href="s-admin-club-list.html">全部社团</a></li>
+            </ul>
+          </li>
+          <li>成员管理
+            <ul class="side-menu-button">
+              <li><a href="s-admin-user-list-all.html">全部成员</a></li>
+            </ul>
+          </li>
+          <li>活动管理
+            <ul class="side-menu-button">
+              <li><a href="s-admin-activity-list.html">全部活动</a></li>
+            </ul>
+          </li>
+          <li>讨论管理
+            <ul class="side-menu-button">
+              <li><a href="s-admin-message-list-all.html" class="current">全部讨论</a></li>
+              <li><a href="s-admin-message-list.html">历史记录</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="main-content">
+        <div id="main-content-s-admin-message-list-all">
+          <div id="s-admin-admin-message-list-all" class="column-1-1">
+            <h2 class="inline">全部讨论</h2>
+            <div class="tiny-description-bar">共200000个讨论</div>
+            <div class="tiny-menu-bar"><a id="search">搜索</a></div>
+            <div class="hr"></div>
+            <div class="admin-message-list-box">
+              <div class="box-content overflow-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th id="select" class="w30"></th>
+                      <th id="message-id" class="w60">编号</th>
+                      <th id="message-time" class="w140">发起时间</th>
+                      <th id="message-club" class="w140">发起社团</th>
+                      <th id="message-content" class="w220">内容预览</th>
+                      <th id="message-count" class="w60">短信数</th>
+                      <th id="manage" class="m200">管理操作</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <input type="checkbox">
+                      </td>
+                      <td>1024</td>
+                      <td>2014-01-13 12:01</td>
+                      <td>计算机应用设计协会</td>
+                      <td>今天中午大象请客吃饭。</td>
+                      <td>10人</td>
+                      <td><a href="../admin/admin-message-id1024-detail.html">详细信息</a><a href="../message/message-id1024.html" target="_blank">进入讨论区</a></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox">
+                      </td>
+                      <td>1023</td>
+                      <td>2014-01-12 12:01</td>
+                      <td>计算机应用设计协会</td>
+                      <td>明天中午大象请客吃饭。</td>
+                      <td>10人</td>
+                      <td><a>详细信息</a><a href="../message/message-id1024.html" target="_blank">进入讨论区</a></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox">
+                      </td>
+                      <td>1022</td>
+                      <td>2014-01-11 12:01</td>
+                      <td>计算机应用设计协会</td>
+                      <td>后天中午大象请客吃饭。别忘了。</td>
+                      <td>10人</td>
+                      <td><a>详细信息</a><a href="../message/message-id1024.html" target="_blank">进入讨论区</a></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox">
+                      </td>
+                      <td>1021</td>
+                      <td>2014-01-10 12:01</td>
+                      <td>计算机应用设计协会</td>
+                      <td>一白遮百丑，一胖毁所有。</td>
+                      <td>10人</td>
+                      <td><a>详细信息</a><a href="../message/message-id1024.html" target="_blank">进入讨论区</a></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox">
+                      </td>
+                      <td>1020</td>
+                      <td>2014-01-10 10:01</td>
+                      <td>计算机应用设计协会</td>
+                      <td>不能再吃了！</td>
+                      <td>10人</td>
+                      <td><a>详细信息</a><a href="../message/message-id1024.html" target="_blank">进入讨论区</a></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox">
+                      </td>
+                      <td>1024</td>
+                      <td>2014-01-13 12:01</td>
+                      <td>计算机应用设计协会</td>
+                      <td>今天中午大象请客吃饭。</td>
+                      <td>10人</td>
+                      <td><a>详细信息</a><a href="../message/message-id1024.html" target="_blank">进入讨论区</a></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox">
+                      </td>
+                      <td>1023</td>
+                      <td>2014-01-12 12:01</td>
+                      <td>计算机应用设计协会</td>
+                      <td>明天中午大象请客吃饭。</td>
+                      <td>10人</td>
+                      <td><a>详细信息</a><a href="../message/message-id1024.html" target="_blank">进入讨论区</a></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox">
+                      </td>
+                      <td>1022</td>
+                      <td>2014-01-11 12:01</td>
+                      <td>计算机应用设计协会</td>
+                      <td>后天中午大象请客吃饭。别忘了。</td>
+                      <td>10人</td>
+                      <td><a>详细信息</a><a href="../message/message-id1024.html" target="_blank">进入讨论区</a></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox">
+                      </td>
+                      <td>1021</td>
+                      <td>2014-01-10 12:01</td>
+                      <td>计算机应用设计协会</td>
+                      <td>一白遮百丑，一胖毁所有。</td>
+                      <td>10人</td>
+                      <td><a>详细信息</a><a href="../message/message-id1024.html" target="_blank">进入讨论区</a></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox">
+                      </td>
+                      <td>1020</td>
+                      <td>2014-01-10 10:01</td>
+                      <td>计算机应用设计协会</td>
+                      <td>不能再吃了！</td>
+                      <td>10人</td>
+                      <td><a>详细信息</a><a href="../message/message-id1024.html" target="_blank">进入讨论区</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="page-bar"><a class="current-page">1</a><a>2</a><a>3</a><span>...</span><a>10</a><span>/</span><a>显示全部</a></div>
+              <div class="clear"></div>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div id="popup-stage-search" class="popup-stage hidden">
+      <div id="search-box" class="popup-stage-box small">
+        <div class="box-content">
+          <div class="info-name">关键词</div>
+          <input type="text" name="keyword">
+          <button id="submit-search">搜索</button>
+          <button class="cancel-stage">取消</button>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div id="foot-bar">
+        <div id="foot-bar-content-container">
+          <div class="footer-decro"><img src="../img/footer-decro.png"></div>
+          <div class="clear"></div>
+          <div class="foot-bar-info">
+            <div class="foot-bar-title">关于</div>
+            <ul>
+              <li class="foot-bar-content"><a href="../about-us.html">关于我们</a></li>
+              <li class="foot-bar-content"><a href="../recruit.html">招纳贤才
+                  <div class="foot-bar-info"></div></a></li>
+            </ul>
+          </div>
+          <div class="foot-bar-info">
+            <div class="foot-bar-title">社团</div>
+            <ul>
+              <li class="foot-bar-content"><a href="../club/club-list.html">已有社团
+                  <div class="foot-bar-info"></div></a></li>
+            </ul>
+          </div>
+          <div class="foot-bar-info">
+            <div class="foot-bar-title">活动</div>
+            <ul>
+              <li class="foot-bar-content"><a href="../activity/activity-list.html">已有活动
+                  <div class="foot-bar-info"></div></a></li>
+            </ul>
+          </div>
+          <div class="foot-bar-info">
+            <div class="foot-bar-title">合作</div>
+            <ul>
+              <li class="foot-bar-content"><a href="../contact.html">联系我们</a></li>
+            </ul>
+          </div>
+          <div class="foot-bar-info">
+            <div class="foot-bar-title">版权信息</div>
+            <ul>
+              <li class="foot-bar-content">
+                <p>本网站会员及进驻社团所发布展示的所有内容版权均归原作者所有。任何商业用途均需联系原作者。</p>
+                <p>Copyright (c) 2012-2014 社团管理平台.<br/>All rights reserved.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

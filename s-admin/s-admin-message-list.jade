@@ -1,0 +1,234 @@
+doctype html
+//if lt IE 7
+	html.no-js.lt-ie9.lt-ie8.lt-ie7
+//if IE 7
+	html.no-js.lt-ie9.lt-ie8
+//if IE 8
+	html.no-js.lt-ie9
+//[if gt IE 8]><!
+html.no-js
+	//<![endif]
+
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+
+		title 社团管理平台 | 为学生和社团提供一站式服务
+
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width')
+
+		link(rel='stylesheet', href='../css/layout.css')
+		link(rel='stylesheet', href='../lib/animate.min.css')
+		script(src="../lib/jquery-1.10.2.min.js")
+		script(src='../script/layout.js')
+
+	body
+		//if lt IE 7
+			p.chromeframe.
+			You are using an outdated browser.
+			Please <a href="http://browsehappy.com/">upgrade your browser</a> or
+			<a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>
+			to improve your experience.
+
+		include header
+
+		#body-container
+			#sidebar
+				ul#side-menu
+					li 社团管理
+						ul.side-menu-button
+							li
+								a(href="s-admin-create-club.html") 创建社团
+							li
+								a(href="s-admin-club-list.html") 全部社团
+					li 成员管理
+						ul.side-menu-button
+							li
+								a(href="s-admin-user-list-all.html") 全部成员
+					li 活动管理
+						ul.side-menu-button
+							li
+								a(href="s-admin-activity-list.html") 全部活动
+					li 讨论管理
+						ul.side-menu-button
+							li
+								a(href="s-admin-message-list-all.html") 全部讨论
+							li
+								a.current(href="s-admin-message-list.html") 历史记录
+			.main-content
+				#main-content-s-admin-message-list
+					#s-admin-admin-message-list.column-1-1
+						h2.inline 历史记录
+						.tiny-description-bar 共20个讨论
+						.tiny-menu-bar
+							a#search 搜索
+						.hr
+						.admin-message-list-box
+							.box-content.overflow-scroll
+								table
+									thead
+										tr
+											th#select.w30
+											th#message-id.w60 编号
+											th#message-time.160w 发起时间
+											th#message-content.w220 内容预览
+											th#message-count.w60 短信数
+											th#manage.m200 管理操作
+									tbody
+										tr
+											td
+												input(type="checkbox")
+											td 1024
+											td 2014-01-13 12:01
+											td 今天中午大象请客吃饭。
+											td 10人
+											td
+												a(href="admin-message-id1024-detail.html") 详细信息
+												a 重发
+												a 追加消息
+												a 转发消息
+												a(href="../message/message-id1024.html", target="_blank") 进入讨论区
+										tr
+											td
+												input(type="checkbox")
+											td 1023
+											td 2014-01-12 12:01
+											td 明天中午大象请客吃饭。
+											td 10人
+											td
+												a 详细信息
+												a 重发
+												a 追加消息
+												a 转发消息
+												a(href="../message/message-id1024.html", target="_blank") 进入讨论区
+										tr
+											td
+												input(type="checkbox")
+											td 1022
+											td 2014-01-11 12:01
+											td 后天中午大象请客吃饭。别忘了。
+											td 10人
+											td
+												a 详细信息
+												a 重发
+												a 追加消息
+												a 转发消息
+												a(href="../message/message-id1024.html", target="_blank") 进入讨论区
+										tr
+											td
+												input(type="checkbox")
+											td 1021
+											td 2014-01-10 12:01
+											td 一白遮百丑，一胖毁所有。
+											td 10人
+											td
+												a 详细信息
+												a 重发
+												a 追加消息
+												a 转发消息
+												a(href="../message/message-id1024.html", target="_blank") 进入讨论区
+										tr
+											td
+												input(type="checkbox")
+											td 1020
+											td 2014-01-10 10:01
+											td 不能再吃了！
+											td 10人
+											td
+												a 详细信息
+												a 重发
+												a 追加消息
+												a 转发消息
+												a(href="../message/message-id1024.html", target="_blank") 进入讨论区
+										tr
+											td
+												input(type="checkbox")
+											td 1024
+											td 2014-01-13 12:01
+											td 今天中午大象请客吃饭。
+											td 10人
+											td
+												a 详细信息
+												a 重发
+												a 追加消息
+												a 转发消息
+												a(href="../message/message-id1024.html", target="_blank") 进入讨论区
+										tr
+											td
+												input(type="checkbox")
+											td 1023
+											td 2014-01-12 12:01
+											td 明天中午大象请客吃饭。
+											td 10人
+											td
+												a 详细信息
+												a 重发
+												a 追加消息
+												a 转发消息
+												a(href="../message/message-id1024.html", target="_blank") 进入讨论区
+										tr
+											td
+												input(type="checkbox")
+											td 1022
+											td 2014-01-11 12:01
+											td 后天中午大象请客吃饭。别忘了。
+											td 10人
+											td
+												a 详细信息
+												a 重发
+												a 追加消息
+												a 转发消息
+												a(href="../message/message-id1024.html", target="_blank") 进入讨论区
+										tr
+											td
+												input(type="checkbox")
+											td 1021
+											td 2014-01-10 12:01
+											td 一白遮百丑，一胖毁所有。
+											td 10人
+											td
+												a 详细信息
+												a 重发
+												a 追加消息
+												a 转发消息
+												a(href="../message/message-id1024.html", target="_blank") 进入讨论区
+										tr
+											td
+												input(type="checkbox")
+											td 1020
+											td 2014-01-10 10:01
+											td 不能再吃了！
+											td 10人
+											td
+												a 详细信息
+												a 重发
+												a 追加消息
+												a 转发消息
+												a(href="../message/message-id1024.html", target="_blank") 进入讨论区
+							.batch-menu-bar
+								a 全部选中
+								a 批量重发
+								a 批量追加消息
+							.page-bar
+								a.current-page 1
+								a 2
+								a 3
+								span ...
+								a 10
+								span /
+								a 显示全部
+							.clear
+					.clear
+			.clear
+
+		#popup-stage-search.popup-stage.hidden
+			#search-box.popup-stage-box.small
+				.box-content
+					.info-name 关键词
+					input(type="text", name="keyword")
+					button#submit-search 搜索
+					button.cancel-stage 取消
+					.clear
+
+		include footer
