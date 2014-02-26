@@ -54,45 +54,178 @@ html.no-js
 								a(href="user-message-list.html") 接收记录
 			.main-content
 				#main-content-user-club-list
-					#club-list.column-3-2.column-span
+					#club-list.column-1-1
 						h2.inline 已加入社团
 						.tiny-description-bar 共5个社团
+						.tiny-menu-bar
+							a#search 搜索
 						.hr
 						.user-club-list-box
-							ul.box-content
-								li
-									a(href="#")
-										.club-avatar
-											img(src="../img/club-avatar-default.png")
-								li
-									a(href="#")
-										.club-avatar
-											img(src="../img/club-avatar-default.png")
-								li
-									a(href="#")
-										.club-avatar
-											img(src="../img/club-avatar-default.png")
-								li
-									a(href="#")
-										.club-avatar
-											img(src="../img/club-avatar-default.png")
-								li
-									a(href="#")
-										.club-avatar
-											img(src="../img/club-avatar-default.png")
-								.clear
-					#club-application.column-3-1
-						h2.inline 入会申请
-						.hr
-						.message-box
-							ul.box-content
-								li.message-card
-									a(href="#") 计算机应用设计协会
-									|  审核中
-								li.message-card
-									a(href="#") 北大青年摄影协会
-									|  拒绝了你的申请
+							.box-content.overflow-scroll
+								table
+									thead
+										tr
+											th#select.w30
+											th#club-id.w60 社团编号
+											th#club-shortcut.w60 短信代码
+											th#club-name.w220 社团名称
+											th#club-user-count.w60 成员数
+											th#user-apply-time.w100 加入时间
+											th#manage.m200 管理操作
+									tbody
+										tr
+											td
+												input(type="checkbox")
+											td 001
+											td cada
+											td 计算机应用设计协会
+											td 100人
+											td 2014-02-22
+											td
+												a(href="../club/club-id001.html", target="_blank") 详细信息
+												a(href="club-id001-contact.html") 通讯录
+												a.popup-stage-exit-club 退出社团
+										tr
+											td
+												input(type="checkbox")
+											td 001
+											td cada
+											td 计算机应用设计协会
+											td 100人
+											td 2014-02-22
+											td
+												a(href="../club/club-id001.html", target="_blank") 详细信息
+												a(href="club-id001-contact.html") 通讯录
+												a.popup-stage-exit-club 退出社团
+										tr.font-color-grey
+											td
+												input(type="checkbox")
+											td 001
+											td cada
+											td 计算机应用设计协会
+											td 100人
+											td 2014-02-22
+											td
+												a(href="../club/club-id001.html", target="_blank") 详细信息
+												a(href="club-id001-contact.html") 通讯录
+												a.popup-stage-exit-club 退出社团
+										tr
+											td
+												input(type="checkbox")
+											td 001
+											td cada
+											td 计算机应用设计协会
+											td 100人
+											td 2014-02-22
+											td
+												a(href="../club/club-id001.html", target="_blank") 详细信息
+												a(href="club-id001-contact.html") 通讯录
+												a.popup-stage-exit-club 退出社团
+										tr
+											td
+												input(type="checkbox")
+											td 001
+											td cada
+											td 计算机应用设计协会
+											td 100人
+											td 2014-02-22
+											td
+												a(href="../club/club-id001.html", target="_blank") 详细信息
+												a(href="club-id001-contact.html") 通讯录
+												a.popup-stage-exit-club 退出社团
+										tr
+											td
+												input(type="checkbox")
+											td 001
+											td cada
+											td 计算机应用设计协会
+											td 100人
+											td 2014-02-22
+											td
+												a(href="../club/club-id001.html", target="_blank") 详细信息
+												a(href="club-id001-contact.html") 通讯录
+												a.popup-stage-exit-club 退出社团
+										tr
+											td
+												input(type="checkbox")
+											td 001
+											td cada
+											td 计算机应用设计协会
+											td 100人
+											td 2014-02-22
+											td
+												a(href="../club/club-id001.html", target="_blank") 详细信息
+												a(href="club-id001-contact.html") 通讯录
+												a.popup-stage-exit-club 退出社团
+										tr
+											td
+												input(type="checkbox")
+											td 001
+											td cada
+											td 计算机应用设计协会
+											td 100人
+											td 2014-02-22
+											td
+												a(href="../club/club-id001.html", target="_blank") 详细信息
+												a(href="club-id001-contact.html") 通讯录
+												a.popup-stage-exit-club 退出社团
+										tr
+											td
+												input(type="checkbox")
+											td 001
+											td cada
+											td 计算机应用设计协会
+											td 100人
+											td 2014-02-22
+											td
+												a(href="../club/club-id001.html", target="_blank") 详细信息
+												a(href="club-id001-contact.html") 通讯录
+												a.popup-stage-exit-club 退出社团
+										tr
+											td
+												input(type="checkbox")
+											td 001
+											td cada
+											td 计算机应用设计协会
+											td 100人
+											td 2014-02-22
+											td
+												a(href="../club/club-id001.html", target="_blank") 详细信息
+												a(href="club-id001-contact.html") 通讯录
+												a.popup-stage-exit-club 退出社团
+							.batch-menu-bar
+								a 全部选中
+								a.popup-stage-delete-club 批量退出社团
+							.page-bar
+								a.current-page 1
+								a 2
+								a 3
+								span ...
+								a 10
+								span /
+								a 显示全部
+							.clear
 					.clear
 			.clear
+
+		#popup-stage-exit-club.popup-stage.hidden
+			#exit-club-box.popup-stage-box.xsmall
+				.box-content
+					.description-content
+						| 确定退出社团吗？
+						span 退出后需重新申请入会
+					.button-box
+						button#submit-exit-club 确定退出
+						button.cancel-stage 取消
+					.clear
+
+		#popup-stage-search.popup-stage.hidden
+			#search-box.popup-stage-box.small
+				.box-content
+					.info-name 关键词
+					input(type="text", name="keyword")
+					button#submit-search 搜索
+					button.cancel-stage 取消
+					.clear
 
 		include footer

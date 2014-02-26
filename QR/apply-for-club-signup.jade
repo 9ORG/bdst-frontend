@@ -1,0 +1,67 @@
+doctype html
+
+html
+
+	head
+		meta(charset='utf-8')
+
+		title 社团管理平台 | 为学生和社团提供一站式服务
+
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width')
+
+		link(rel='stylesheet', href='../css/mobile-layout.css')
+
+	body
+
+		header
+			#top-bar
+				| 社团管理平台
+				span @PKU
+
+		#body-container
+			#club-info
+				#club-avatar
+					img(src="../img/club-id001/club-id001-logo.jpg")
+				p 欢迎加入
+				h2 计算机应用设计协会
+			#apply-for-club-box
+				#apply-for-club-signup-box
+					#input-user-info-box
+						p.description 验证手机号码
+						ul
+							li
+								input(type="text", name="phone-num", placeholder="18610096949", disabled)#phone-num
+							li
+								input(type="text", name="phone-validate-num", placeholder="验证码")#phone-validate-num.validator-short
+								a#phone-validate 重新获取验证码
+						p.description 设定密码及填写信息
+						ul
+							li
+								input(type="password", name="password", placeholder="密码")#password
+							li
+								input(type="password", name="password-double-check", placeholder="确认密码")#password-double-check
+							li
+								input(type="text", name="real-name", placeholder="真实姓名")#real-name
+							li
+								input(type="text", name="email", placeholder="邮箱")
+						p.description 社团章程
+						ul
+							li
+								textarea#club-regulation(type="text", name="club-regulation", placeholder="这里是一堆社团章程。" disabled)
+						p.description 社团组织架构
+						ul
+							li
+								textarea#club-group(type="text", name="club-group", placeholder="这里是一堆社团组织架构。" disabled)
+						p.description 社团入会问题
+						ul
+							li
+								textarea(type="text", name="custom-question1", placeholder="想加入哪个组？（设计组、技术组）")
+							li
+								textarea(type="text", name="custom-question2", placeholder="是否想成为骨干？")
+							li
+								textarea(type="text", name="custom-question3", placeholder="有何设计或开发经验？会用什么软件、会写哪些语言？")
+						button#apply-for-club-signup 申请入会
+					p.description 已有账号？
+					a(href="apply-for-club.html")
+						#go-to-login.button 现在登录

@@ -1,0 +1,312 @@
+doctype html
+//if lt IE 7
+	html.no-js.lt-ie9.lt-ie8.lt-ie7
+//if IE 7
+	html.no-js.lt-ie9.lt-ie8
+//if IE 8
+	html.no-js.lt-ie9
+//[if gt IE 8]><!
+html.no-js
+	//<![endif]
+
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+
+		title 社团管理平台 | 为学生和社团提供一站式服务
+
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width')
+
+		link(rel='stylesheet', href='../css/layout.css')
+		link(rel='stylesheet', href='../lib/animate.min.css')
+		script(src="../lib/jquery-1.10.2.min.js")
+		script(src='../script/layout.js')
+
+	body
+		//if lt IE 7
+			p.chromeframe.
+			You are using an outdated browser.
+			Please <a href="http://browsehappy.com/">upgrade your browser</a> or
+			<a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>
+			to improve your experience.
+
+		include header
+
+		#body-container
+			#sidebar
+				ul#side-menu
+					li 个人信息
+						ul.side-menu-button
+							li
+								a(href="user-edit-info.html") 编辑信息
+					li 社团管理
+						ul.side-menu-button
+							li
+								a.current(href="user-club-list.html") 已加入社团
+					li 活动管理
+						ul.side-menu-button
+							li
+								a(href="user-activity-list.html") 已参加活动
+					li 参与讨论
+						ul.side-menu-button
+							li
+								a(href="user-message-list.html") 接收记录
+			.main-content
+				#main-content-user-club-list
+					#club-list.column-1-1
+						h2.inline 已加入社团 > 计算机应用设计协会 通讯录
+						.tiny-description-bar 共102名成员
+						.tiny-menu-bar
+							a#info-display 增减显示信息
+							a#search 搜索
+						.hr
+						.user-club-list-box
+							.box-content.overflow-scroll
+								table
+									thead
+										tr
+											th#user-apply-time.w100 加入时间
+											th#user-real-name.w60 姓名
+											th#user-admission-year.w60 年级
+											th#user-department.w140 院系
+											th#user-phone-num.w140 手机号码
+											th#user-email.w220 邮箱
+											th#manage 管理操作
+									tbody
+										tr
+											td 2014-01-30
+											td 向毅明
+											td /
+											td /
+											td 18610096949
+											td summerz0501@gmail.com
+											//- td 在线
+											td
+												a.popup-stage-user-detail 详细信息
+										tr
+											td 2014-01-28
+											td 王仲禹
+											td 2009
+											td 信息科学与技术学院
+											td 18610096949
+											td summerz0501@gmail.com
+											//- td 在线
+											td
+												a.popup-stage-user-detail 详细信息
+										tr
+											td 2014-01-27
+											td 张楠
+											td 2010
+											td 新闻与传播学院
+											td 18610096949
+											td summerz0501@gmail.com
+											//- td 短信
+											td
+												a.popup-stage-user-detail 详细信息
+										tr.font-color-grey
+											td 2014-01-20
+											td 吴春华
+											td /
+											td /
+											td 18610096949
+											td summerz0501@gmail.com
+											//- td 短信
+											td
+												a.popup-stage-user-detail 详细信息
+										tr.font-color-grey
+											td 2014-01-20
+											td 张天然
+											td /
+											td /
+											td 18610096949
+											td summerz0501@gmail.com
+											//- td 短信
+											td
+												a.popup-stage-user-detail 详细信息
+										tr
+											td 2014-01-30
+											td 向毅明
+											td /
+											td /
+											td 18610096949
+											td summerz0501@gmail.com
+											//- td 在线
+											td
+												a.popup-stage-user-detail 详细信息
+										tr
+											td 2014-01-28
+											td 王仲禹
+											td 2009
+											td 信息科学与技术学院
+											td 18610096949
+											td summerz0501@gmail.com
+											//- td 在线
+											td
+												a.popup-stage-user-detail 详细信息
+										tr
+											td 2014-01-27
+											td 张楠
+											td 2010
+											td 新闻与传播学院
+											td 18610096949
+											td summerz0501@gmail.com
+											//- td 短信
+											td
+												a.popup-stage-user-detail 详细信息
+										tr.font-color-grey
+											td 2014-01-20
+											td 吴春华
+											td /
+											td /
+											td 18610096949
+											td summerz0501@gmail.com
+											//- td 短信
+											td
+												a.popup-stage-user-detail 详细信息
+										tr.font-color-grey
+											td 2014-01-20
+											td 张天然
+											td /
+											td /
+											td 18610096949
+											td summerz0501@gmail.com
+											//- td 短信
+											td
+												a.popup-stage-user-detail 详细信息
+							.page-bar
+								a.current-page 1
+								a 2
+								a 3
+								span ...
+								a 10
+								span /
+								a 显示全部
+							.clear
+					.clear
+			.clear
+
+		#popup-stage-info-display.popup-stage.hidden
+			#info-display-box.popup-stage-box.medium
+				.box-content
+					ul#info-display-selector
+						li
+							input(type="checkbox", name="real-name", checked)
+							.info-name 真实姓名
+							.clear
+						li
+							input(type="checkbox", name="sex", checked)
+							.info-name 性别
+							.clear
+						li
+							input(type="checkbox", name="nick-name")
+							.info-name 昵称
+							.clear
+						li
+							input(type="checkbox", name="birthday")
+							.info-name 生日
+							.clear
+						li
+							input(type="checkbox", name="location")
+							.info-name 城市
+							.clear
+						li
+							input(type="checkbox", name="admission-year", checked)
+							.info-name 年级
+							.clear
+						li
+							input(type="checkbox", name="department", checked)
+							.info-name 院系
+							.clear
+						li
+							input(type="checkbox", name="school-id")
+							.info-name 学号
+							.clear
+						li
+							input(type="checkbox", name="non-school-info")
+							.info-name 校外
+							.clear
+						li
+							input(type="checkbox", name="club-question")
+							.info-name 入会问题
+							.clear
+					.button-box
+						button#submit-info-display 更新信息
+						button.cancel-stage 取消
+					.clear
+
+		#popup-stage-user-detail.popup-stage.hidden
+			#user-detail-box.popup-stage-box.large
+				.box-content
+					h2
+						| #0001
+						span 张楠
+					ul#user-detail-info
+						li
+							.info-name 真实姓名
+							#real-name.info-content 张楠
+							.clear
+						li
+							.info-name 性别
+							#sex.info-content 女
+							.clear
+						li
+							.info-name 昵称
+							#nick-name.info-content kyzamiz
+							.clear
+						li
+							.info-name 生日
+							#birthday.info-content 1992-05-01
+							.clear
+						li
+							.info-name 城市
+							#lacation.info-content 北京市 北京市
+							.clear
+						li
+							.info-name 年级
+							#admission-year.info-content 2010 本科生
+							.clear
+						li
+							.info-name 院系
+							#department.info-content 新闻与传播学院
+							.clear
+						li
+							.info-name 学号
+							#school-id.info-content 100014402
+							.clear
+						li
+							.info-name 校外
+							#non-school.info-content /
+							.clear
+						li
+							p.question-card
+								| 问题一
+								span 想加入哪个组？（设计组、技术组）
+							textarea(type="text", name="custom-question1", placeholder="用户填写的答案。", disabled)
+							.clear
+						li
+							p.question-card
+								| 问题二
+								span 是否想成为骨干？
+							textarea(type="text", name="custom-question2", placeholder="用户填写的答案。", disabled)
+							.clear
+						li
+							p.question-card
+								| 问题三
+								span 有何设计或开发经验？会用什么软件、会写哪些语言？
+							textarea(type="text", name="custom-question3", placeholder="用户填写的答案。", disabled)
+							.clear
+					.button-box
+						button.cancel-stage 关闭
+					.clear
+
+		#popup-stage-search.popup-stage.hidden
+			#search-box.popup-stage-box.small
+				.box-content
+					.info-name 关键词
+					input(type="text", name="keyword")
+					button#submit-search 搜索
+					button.cancel-stage 取消
+					.clear
+
+		include footer

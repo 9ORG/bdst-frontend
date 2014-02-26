@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>社团管理平台 | 为学生和社团提供一站式服务</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="../css/mobile-layout.css">
+  </head>
+  <body>
+    <header>
+      <div id="top-bar">社团管理平台<span>@PKU</span></div>
+    </header>
+    <div id="body-container">
+      <div id="club-info">
+        <div id="club-avatar"><img src="../img/club-id001/club-id001-logo.jpg"></div>
+        <p>欢迎加入</p>
+        <h2>计算机应用设计协会</h2>
+      </div>
+      <div id="apply-for-club-box">
+        <div id="apply-for-club-signup-box">
+          <div id="input-user-info-box">
+            <p class="description">验证手机号码</p>
+            <ul>
+              <li>
+                <input type="text" name="phone-num" placeholder="18610096949" disabled id="phone-num">
+              </li>
+              <li>
+                <input type="text" name="phone-validate-num" placeholder="验证码" id="phone-validate-num" class="validator-short"><a id="phone-validate">重新获取验证码</a>
+              </li>
+            </ul>
+            <p class="description">设定密码及填写信息</p>
+            <ul>
+              <li>
+                <input type="password" name="password" placeholder="密码" id="password">
+              </li>
+              <li>
+                <input type="password" name="password-double-check" placeholder="确认密码" id="password-double-check">
+              </li>
+              <li>
+                <input type="text" name="real-name" placeholder="真实姓名" id="real-name">
+              </li>
+              <li>
+                <input type="text" name="email" placeholder="邮箱">
+              </li>
+            </ul>
+            <p class="description">社团章程</p>
+            <ul>
+              <li>
+                <textarea id="club-regulation" type="text" name="club-regulation" placeholder="这里是一堆社团章程。" disabled></textarea>
+              </li>
+            </ul>
+            <p class="description">社团组织架构</p>
+            <ul>
+              <li>
+                <textarea id="club-group" type="text" name="club-group" placeholder="这里是一堆社团组织架构。" disabled></textarea>
+              </li>
+            </ul>
+            <p class="description">社团入会问题</p>
+            <ul>
+              <li>
+                <textarea type="text" name="custom-question1" placeholder="想加入哪个组？（设计组、技术组）"></textarea>
+              </li>
+              <li>
+                <textarea type="text" name="custom-question2" placeholder="是否想成为骨干？"></textarea>
+              </li>
+              <li>
+                <textarea type="text" name="custom-question3" placeholder="有何设计或开发经验？会用什么软件、会写哪些语言？"></textarea>
+              </li>
+            </ul>
+            <button id="apply-for-club-signup">申请入会</button>
+          </div>
+          <p class="description">已有账号？</p><a href="apply-for-club.html">
+            <div id="go-to-login" class="button">现在登录</div></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

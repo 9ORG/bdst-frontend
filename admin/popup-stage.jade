@@ -239,6 +239,17 @@
 				button.cancel-stage 取消
 			.clear
 
+#popup-stage-exit-club.popup-stage.hidden
+	#exit-club-box.popup-stage-box.xsmall
+		.box-content
+			.description-content
+				| 确定退出社团吗？
+				span 退出后需重新申请入会
+			.button-box
+				button#submit-exit-club 确定退出
+				button.cancel-stage 取消
+			.clear
+
 #popup-stage-delete-club.popup-stage.hidden
 	#delete-club-box.popup-stage-box.xsmall
 		.box-content
@@ -259,4 +270,22 @@
 			.button-box
 				button#submit-delete-user 确定删除
 				button.cancel-stage 取消
+			.clear
+
+#popup-stage-succeed.popup-stage.hidden
+	#succeed-box.popup-stage-box.xsmall
+		.box-content
+			.description-content
+				| 操作成功了！^ω^
+			.button-box
+				button.cancel-stage 关闭
+			.clear
+
+#popup-stage-failed.popup-stage.hidden
+	#failed-box.popup-stage-box.xsmall
+		.box-content
+			.description-content
+				| 操作失败了！T..T
+			.button-box
+				button.cancel-stage 关闭
 			.clear

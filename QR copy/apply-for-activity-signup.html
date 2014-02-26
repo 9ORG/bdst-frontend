@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>社团管理平台 | 为学生和社团提供一站式服务</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="../css/mobile-layout.css">
+  </head>
+  <body>
+    <header>
+      <div id="top-bar">社团管理平台<span>@PKU</span></div>
+    </header>
+    <div id="body-container">
+      <div id="activity-info">
+        <p>欢迎参加</p>
+        <h2>周末PS讲座</h2>
+      </div>
+      <div id="apply-for-activity-box">
+        <div id="apply-for-activity-signup-box">
+          <div id="input-user-info-box">
+            <p class="description">验证手机号码</p>
+            <ul>
+              <li>
+                <input type="text" name="phone-num" placeholder="18610096949" disabled id="phone-num">
+              </li>
+              <li>
+                <input type="text" name="phone-validate-num" placeholder="验证码" id="phone-validate-num" class="validator-short"><a id="phone-validate">重新获取验证码</a>
+              </li>
+            </ul>
+            <p class="description">设定密码及填写信息</p>
+            <ul>
+              <li>
+                <input type="password" name="password" placeholder="密码" id="password">
+              </li>
+              <li>
+                <input type="password" name="password-double-check" placeholder="确认密码" id="password-double-check">
+              </li>
+              <li>
+                <input type="text" name="real-name" placeholder="真实姓名" id="real-name">
+              </li>
+              <li>
+                <input type="text" name="email" placeholder="邮箱">
+              </li>
+            </ul>
+            <button id="apply-for-activity-signup">报名参加</button>
+          </div>
+          <p class="description">已有账号？</p><a href="apply-for-activity.html">
+            <div id="go-to-login" class="button">现在登录</div></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

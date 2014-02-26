@@ -1,0 +1,44 @@
+doctype html
+
+html
+
+	head
+		meta(charset='utf-8')
+
+		title 社团管理平台 | 为学生和社团提供一站式服务
+
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width')
+
+		link(rel='stylesheet', href='../css/mobile-layout.css')
+
+	body
+
+		header
+			#top-bar
+				| 社团管理平台
+				span @PKU
+
+		#body-container
+			#activity-info
+				p 欢迎参加
+				h2 周末PS讲座
+			#apply-for-activity-box
+				#apply-for-activity-login-box
+					p.description 已有账号
+					ul
+						li
+							input(type="text", name="phone-num", placeholder="手机号码")#phone-num
+						li
+							input(type="password", name="password" placeholder="密码")#password
+						li
+							input(type="checkbox", name="remember")#remember-me
+							.info-name 记住我
+							a#forget-password(href="forget-password.html", target="_blank") 忘记密码
+					button#apply-for-activity-login 报名参加
+					p.description 还未注册？
+					ul
+						li
+							input(type="text", placeholder="手机号码")#phone-num
+					a(href="apply-for-activity-signup.html")
+						#go-to-signup.button 现在加入

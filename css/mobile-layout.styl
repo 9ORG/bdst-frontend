@@ -1,0 +1,301 @@
+org = #fcb03c
+deep-org = #ff9900
+blu = #77bfdf
+bro = #ba8879
+
+body-width = 1080px
+
+toggle-grey = #f4f4f4
+border-grey = #e4e4e4
+light-grey = #aaa
+grey = #666
+deep-grey = #333
+
+extra-small = 12px
+small = 13px
+medium = 14px
+large = 16px
+
+*
+	margin 0
+	padding 0
+	&:focus
+		outline none
+
+body, p
+	font-family "微软雅黑", "Microsoft Yahei", "黑体", "Arial", "Hei", sans-serif
+	color grey
+	font-size small
+
+p
+	margin-top 10px
+	&:first-child
+		margin-top 0px
+
+h1
+	font-size 26px
+	color deep-grey
+	line-height 44px
+	margin-top -4px
+h2
+	font-size 20px
+	color deep-grey
+	line-height 40px
+h3
+	font-size large
+	color deep-grey
+	line-height 36px
+
+a
+	color deep-grey
+	font-size small
+	font-weight	bold
+	text-decoration none
+	transition .25s
+a:hover
+	color org
+	cursor pointer
+
+ul, li
+	margin 0
+	padding 0
+	list-style none
+
+button
+	margin-top 20px
+	width 250px
+	font-size medium
+	color #fff
+	text-align center
+	transition .25s
+	line-height 20px
+	padding 5px 8px 5px 8px
+	font-weight bold
+	border 1px solid blu
+	border-radius 5px
+	background-color blu
+	&:hover
+		border-color org
+		background-color org
+		cursor pointer
+.button
+	margin-top 20px
+	width 232px
+	font-size medium
+	color #fff
+	text-align center
+	transition .25s
+	line-height 20px
+	padding 5px 8px 5px 8px
+	font-weight bold
+	border 1px solid blu
+	border-radius 5px
+	background-color blu
+	&:hover
+		border-color org
+		background-color org
+		cursor pointer
+
+.hr
+	height 1px
+	background-color border-grey
+	margin 20px 0 20px 0
+	clear both
+
+input
+	width 232px
+	height 20px
+	line-height 20px
+	color grey
+	padding 5px 8px 5px 8px
+	border 1px solid border-grey
+	border-radius 4px
+	font-size small
+	transition .25s
+	&:focus
+		border-color light-grey
+	&[type="checkbox"]
+		width small
+		margin 0 5px 0 10px
+		float left
+		&:first-child
+			margin-left 0
+	&[type="radio"]
+		width extra-small
+		margin 0 6px 0 10px
+		float left
+		&:first-child
+			margin-left 0
+select
+	margin 0 0 0 6px
+	width 120px
+	&:first-child
+		margin-left 0
+textarea
+	width 232px
+	height 60px
+	color grey
+	padding 9px 8px 9px 8px
+	border 1px solid border-grey
+	border-radius 4px
+	font-size small
+	overflow auto
+	&:focus
+		border-color light-grey
+
+.clear
+	clear both
+.hidden
+	display none
+
+header
+	background-color org
+	#top-bar
+		margin 0 auto 0 auto
+		width 250px
+		height 44px
+		padding 0 0 0 12px
+		text-align center
+		line-height 44px
+		font-size large
+		color #fff
+		font-weight bold
+		span
+			margin 0 0 0 4px
+			position relative
+			top -8px
+			font-size 8px
+
+#body-container
+	margin 0 auto 0 auto
+	width 250px
+
+#club-info
+#activity-info
+#forget-password-info
+#mobile-message-info
+	margin 40px auto 0 auto
+	#club-avatar
+		margin 0 auto 0 auto
+		width 120px
+		height 120px
+		border 1px solid border-grey
+		border-radius 100%
+		overflow hidden
+		img
+			width 120px
+			height 120px
+	p
+		text-align center
+		color light-grey
+	h2
+		text-align center
+		line-height 26px
+		margin-top 5px
+#apply-for-club-box
+#apply-for-activity-box
+#forget-password-box
+#login-box
+	margin 40px auto 60px auto
+	p
+		color light-grey
+		&.description
+			margin-top 25px
+	li
+		margin-top 15px
+		.info-name
+			line-height 20px
+			float left
+		.radio-name
+			width 102px
+			line-height 20px
+			float left
+		.validator-short
+			width 100px
+	#forget-password
+		color blu
+		// text-decoration underline
+		font-size extra-small
+		line-height 20px
+		float right
+		transition .25s
+	#apply-for-club-signup-box
+	#apply-for-activity-signup-box
+		#phone-validate
+			color blu
+			font-size extra-small
+			line-height 30px
+			float right
+			transition .25s
+		#non-school
+			margin-top 5px
+		#non-school-info
+			width 214px
+			float left
+	#go-to-signup
+	#go-to-login
+	// #check-phone-num
+		background-color org
+		border-color org
+	#back-to-check-phone-num
+		background-color light-grey
+		border-color light-grey
+	#apply-result-box
+		p
+			text-align center
+
+#mobile-message-box
+	margin 20px auto 60px auto
+#mobile-message-detail
+	margin 20px auto 0 auto
+	h2
+		line-height 26px
+		margin-top 5px
+	li
+		.message-time
+			margin-top 5px
+			color light-grey
+		.message-content
+			margin-top 15px
+		.message-pic
+			margin-top 7px
+			color light-grey
+			a
+				margin-left 5px
+				color blu
+#mobile-message-comment
+	margin 20px auto 0 auto
+	p
+		color light-grey
+		&.description
+			margin-top 25px
+	h2
+		line-height 26px
+		margin-top 5px
+	.comment-detail
+		margin-top 10px
+	.comment-author
+		float left
+	.comment-time
+		margin-left 5px
+		color light-grey
+		float left
+	#logout
+		margin-left 5px
+		color light-grey
+		font-size extra-small
+		float right
+	#submit-new-comment
+		margin-top 10px
+		background-color org
+		border-color org
+	.reply-button
+		float right
+		a
+			font-size extra-small
+			color blu
+	.comment-content
+		margin-top 10px
+	#show-all-comment
+		background-color light-grey
+		border-color light-grey
